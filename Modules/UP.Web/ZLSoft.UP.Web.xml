@@ -1,0 +1,2073 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZLSoft.UP.Web</name>
+    </assembly>
+    <members>
+        <member name="T:UP.Web.BasicsController">
+            <summary>
+            所有系统模块模块的基础控制器类
+            </summary>
+        </member>
+        <member name="F:UP.Web.BasicsController.requestHeader">
+            <summary>
+            接口公共请求头信息
+            </summary>
+        </member>
+        <member name="F:UP.Web.BasicsController.interfaceName">
+            <summary>
+            接口请求名称，中文名
+            </summary>
+        </member>
+        <member name="M:UP.Web.BasicsController.GetAllActions">
+            <summary>
+            获取当前应用系统所有方法的集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.BasicsController.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            复写父类的该方法。执行控制器中的方法之前先执行该方法。从而实现过滤的功能。
+            </summary>
+            <param name="filterContext"></param>
+        </member>
+        <member name="M:UP.Web.BasicsController.ApiLog_Moni(System.Object,UP.Basics.ResponseModel)">
+            <summary>
+            日志监控
+            </summary>
+            <param name="inparm">w未加密入参</param>
+            <param name="outparm">输出参数</param>
+        </member>
+        <member name="M:UP.Web.BasicsController.Json(UP.Basics.ResponseModel)">
+            <summary>
+            统一进行接口返回输出
+            </summary>
+            <param name="item">接口返回对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.BasicsController.GetEndpoint(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            获取节点信息
+            </summary>
+            <param name="context">请求上下文</param>
+            <returns></returns>
+        </member>
+        <member name="T:UP.Web.Controllers.Admin.BasicDataManager.BasicDataController">
+            <summary>
+            基础数据管理（胡家源）
+            </summary>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BasicDataManager.BasicDataController.GetBasicDataList(UP.Web.Models.Admin.BasicData.BasicDataParam)">
+            <summary>
+            分页查询国籍的列表
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BasicDataManager.BasicDataController.AddoUpdate(UP.Models.Admin.BasicData.BasicDataDto)">
+            <summary>
+            新增或修改国籍
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BasicDataManager.BasicDataController.GetBasicInfo(UP.Models.Admin.BasicData.BasicDataDto)">
+            <summary>
+            获取基础数据信息
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BasicDataManager.BasicDataController.DelBasicInfo(UP.Models.Admin.BasicData.BasicDataDto)">
+            <summary>
+            删除基础数据
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UP.Web.Controllers.Admin.BasicDataManager.B_RegionController">
+            <summary>
+            行政区划管理(胡家源)
+            </summary>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BasicDataManager.B_RegionController.GetRegionList(UP.Web.Models.Admin.BasicData.BasicDataParam)">
+            <summary>
+            查询行政区划列表(胡家源)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BasicDataManager.B_RegionController.AddorUpdate(UP.Models.DB.BasicData.b_region)">
+            <summary>
+            新增或修改行政区划
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BasicDataManager.B_RegionController.GetRegion(UP.Web.Models.Admin.BasicData.BasicDataParam)">
+            <summary>
+            根据id查询行政区划
+            </summary>
+            <param name="id">guid</param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BasicDataManager.B_RegionController.UpdateRegionState(UP.Web.Models.Admin.BasicData.BasicDataParam)">
+            <summary>
+            根据id修改行政区划状态
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BasicDataManager.B_RegionController.CheckCode(UP.Web.Models.Admin.BasicData.BasicDataParam)">
+            <summary>
+            验证编码是否重复
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UP.Web.Controllers.Admin.BasicDataManager.Sys_Code_CatgoryController">
+            <summary>
+            基础数据分类
+            </summary>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BasicDataManager.Sys_Code_CatgoryController.GetCatgoryList">
+            <summary>
+            查询基础数据分类列表(胡家源)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BasicDataManager.Sys_Code_CatgoryController.AddorUpdate(UP.Models.DB.BasicData.sys_code_catgory)">
+            <summary>
+            新增或修改基础数据分类
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BasicDataManager.Sys_Code_CatgoryController.GetCatgory(UP.Web.Models.Admin.BasicData.BasicDataParam)">
+            <summary>
+            根据id查询类型分类
+            </summary>
+            <param name="id">guid</param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BasicDataManager.Sys_Code_CatgoryController.UpdateCatgoryState(UP.Web.Models.Admin.BasicData.BasicDataParam)">
+            <summary>
+            根据id修改分类状态
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BasicDataManager.Sys_Code_CatgoryController.CheckName(UP.Web.Models.Admin.BasicData.BasicDataParam)">
+            <summary>
+            验证名称是否重复
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BasicDataManager.Sys_Code_CatgoryController.CheckTableName(UP.Web.Models.Admin.BasicData.BasicDataParam)">
+            <summary>
+            验证动态表名是否重复
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UP.Web.Controllers.Admin.BasicDataManager.Sys_Code_ItemsController">
+            <summary>
+            基础数据
+            </summary>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BasicDataManager.Sys_Code_ItemsController.GetitemsListByCid(UP.Web.Models.Admin.BasicData.BasicDataParam)">
+            <summary>
+            查询基础数据分类列表(胡家源)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BasicDataManager.Sys_Code_ItemsController.AddorUpdate(UP.Models.DB.BasicData.sys_code_items)">
+            <summary>
+            新增或修改基础数据
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BasicDataManager.Sys_Code_ItemsController.GetItems(UP.Web.Models.Admin.BasicData.BasicDataParam)">
+            <summary>
+            根据id查询基础数据信息
+            </summary>
+            <param name="id">guid</param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BasicDataManager.Sys_Code_ItemsController.UpdateItemsState(UP.Web.Models.Admin.BasicData.BasicDataParam)">
+            <summary>
+            根据id修改基础数据状态
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BasicDataManager.Sys_Code_ItemsController.GetItemsList(UP.Web.Models.Admin.BasicData.BasicDataParam)">
+            <summary>
+            根据分类id获取基础数据
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BasicDataManager.Sys_Code_ItemsController.TableIsExist(UP.Web.Models.Admin.BasicData.BasicDataParam)">
+            <summary>
+            根据id验证基础数据表是否存在
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BasicDataManager.Sys_Code_ItemsController.SynchroBasicTable(UP.Web.Models.Admin.BasicData.BasicDataParam)">
+            <summary>
+             同步基础数据
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BasicDataManager.Sys_Code_ItemsController.CheckCode(UP.Web.Models.Admin.BasicData.BasicDataParam)">
+            <summary>
+            验证编码是否重复
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UP.Web.Controllers.Admin.BusinessSysManager.AppInformationController">
+            <summary>
+            产品应用信息管理（胡家源）
+            </summary>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BusinessSysManager.AppInformationController.GetAppInformationList(UP.Web.Models.Admin.BussinessSys.BussinessSysPram)">
+            <summary>
+            分页查询所有产品应用信息的列表
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BusinessSysManager.AppInformationController.AddoUpdate(UP.Models.DB.BusinessSys.AppInformation)">
+            <summary>
+            新增或修改应用信息
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BusinessSysManager.AppInformationController.GetAppInformationInfo(UP.Web.Models.Admin.BussinessSys.BussinessSysPram)">
+            <summary>
+            根据应用信息ID 查询应用信息信息
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BusinessSysManager.AppInformationController.DelAppInformation(UP.Web.Models.Admin.BussinessSys.BussinessSysPram)">
+            <summary>
+            根据应用信息ID删除应用信息
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BusinessSysManager.AppInformationController.UpdateAppInformationState(UP.Web.Models.Admin.BussinessSys.BussinessSysPram)">
+            <summary>
+            根据应用信息appid修改应用状态
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UP.Web.Controllers.Admin.BusinessSysManager.DataSourceController">
+            <summary>
+            产品数据源管理（胡家源）
+            </summary>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BusinessSysManager.DataSourceController.GetDataScoureList(UP.Web.Models.Admin.BussinessSys.BussinessSysPram)">
+            <summary>
+            分页查询所有产品数据源的列表
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BusinessSysManager.DataSourceController.AddoUpdate(UP.Models.DB.BusinessSys.DataSource)">
+            <summary>
+            新增或修改数据源
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BusinessSysManager.DataSourceController.GetDataScoureInfo(UP.Web.Models.Admin.BussinessSys.BussinessSysPram)">
+            <summary>
+            根据数据源ID 查询数据源信息
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BusinessSysManager.DataSourceController.DelDataScoure(UP.Web.Models.Admin.BussinessSys.BussinessSysPram)">
+            <summary>
+            根据数据源ID删除数据源
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BusinessSysManager.DataSourceController.ResetPassword(UP.Web.Models.Admin.BussinessSys.BussinessSysPram)">
+            <summary>
+            重置数据源密码(胡家源)
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UP.Web.Controllers.Admin.BusinessSysManager.ProductController">
+            <summary>
+            产品管理（胡家源）
+            </summary>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BusinessSysManager.ProductController.GetProductList">
+            <summary>
+            查询所有产品
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BusinessSysManager.ProductController.GetProductPageList(UP.Web.Models.Admin.BussinessSys.BussinessSysPram)">
+            <summary>
+            分页查询所有产品的列表
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BusinessSysManager.ProductController.AddoUpdate(UP.Models.DB.BusinessSys.Product)">
+            <summary>
+            新增或修改产品
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BusinessSysManager.ProductController.GetProductInfo(UP.Web.Models.Admin.BussinessSys.BussinessSysPram)">
+            <summary>
+            根据产品ID 查询产品信息
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BusinessSysManager.ProductController.DelProductScoure(UP.Web.Models.Admin.BussinessSys.BussinessSysPram)">
+            <summary>
+            根据产品修改产品状态
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UP.Web.Controllers.Admin.BusinessSysManager.ProductScoureController">
+            <summary>
+            产品服务源管理（胡家源）
+            </summary>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BusinessSysManager.ProductScoureController.GetProductScoureList(UP.Web.Models.Admin.BussinessSys.BussinessSysPram)">
+            <summary>
+            分页查询所有产品服务源的列表
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BusinessSysManager.ProductScoureController.AddoUpdate(UP.Models.DB.BusinessSys.ProductSource)">
+            <summary>
+            新增或修改服务源
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BusinessSysManager.ProductScoureController.GetProductScoureInfo(UP.Web.Models.Admin.BussinessSys.BussinessSysPram)">
+            <summary>
+            根据服务源ID 查询服务源信息
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BusinessSysManager.ProductScoureController.DelProductScoure(UP.Web.Models.Admin.BussinessSys.BussinessSysPram)">
+            <summary>
+            根据服务源ID删除服务源
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.BusinessSysManager.ProductScoureController.ResetPassword(UP.Web.Models.Admin.BussinessSys.BussinessSysPram)">
+            <summary>
+            重置服务源密码(胡家源)
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UP.Web.Controllers.Admin.InterfaceManager.ExternalInterfaceController">
+            <summary>
+            外部接口管理控制器 ( 肖烜 )
+            </summary>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.InterfaceManager.ExternalInterfaceController.GetInterfaceGroupTree">
+            <summary>
+            获取接口分组树形数据接口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.InterfaceManager.ExternalInterfaceController.EditInterfaceGroup(UP.Web.Models.Admin.Interface.InterfaceCatgoryParam)">
+            <summary>
+            新增、编辑接口分组接口
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.InterfaceManager.ExternalInterfaceController.DeleteInterfaceGroup(System.String)">
+            <summary>
+            删除接口分组接口
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.InterfaceManager.ExternalInterfaceController.GetInterfaceList(UP.Web.Models.Admin.Interface.InterfaceItemSearchParam)">
+            <summary>
+            根据分组ID获取接口注册列表[分页]
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.InterfaceManager.ExternalInterfaceController.EditInterfaceItem(UP.Web.Models.Admin.Interface.InterfaceItemEditParam)">
+            <summary>
+            新增、修改外部注册接口   [自动生成接口路径]
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.InterfaceManager.ExternalInterfaceController.DeleteInterfaceItem(System.String)">
+            <summary>
+            删除外部注册接口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.InterfaceManager.ExternalInterfaceController.GetInterfaceParamList(System.String)">
+            <summary>
+            获取外部注册接口参数列表
+            </summary>
+            <param name="interfaceId">接口ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.InterfaceManager.ExternalInterfaceController.EditInterfaceParam(UP.Web.Models.Admin.Interface.InterfaceParamEditParam)">
+            <summary>
+            新增、修改外部注册接口参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.InterfaceManager.ExternalInterfaceController.DeleteInterfaceParam(System.String)">
+            <summary>
+            删除外部注册接口参数
+            </summary>
+            <param name="paramId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.InterfaceManager.ExternalInterfaceController.GetInterfaceSynFunList(System.String)">
+            <summary>
+            获取外部注册接口同步方法列表
+            </summary>
+            <param name="interfaceId">接口ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.InterfaceManager.ExternalInterfaceController.EditInterfaceSynFun(UP.Web.Models.Admin.Interface.InterfaceSyncEditParam)">
+            <summary>
+            新增、编辑外部注册接口同步方法
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.InterfaceManager.ExternalInterfaceController.DeleteInterfaceSynFun(System.String)">
+            <summary>
+            删除外部注册接口同步方法
+            </summary>
+            <param name="synFunId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.InterfaceManager.ExternalInterfaceController.GetInterfaceAsyncFunList(System.String)">
+            <summary>
+            获取外部注册接口异步方法列表
+            </summary>
+            <param name="interfaceId">接口ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.InterfaceManager.ExternalInterfaceController.EditInterfaceAsyncFun(UP.Web.Models.Admin.Interface.InterfaceAsyncEditParam)">
+            <summary>
+            新增、编辑外部注册接口异步方法
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.InterfaceManager.ExternalInterfaceController.DeleteInterfaceAsyncFun(System.String)">
+            <summary>
+            删除外部注册接口异步方法
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.InterfaceManager.ExternalInterfaceController.GetInterfaceAuthList(System.String)">
+            <summary>
+            获取外部注册接口授权列表
+            </summary>
+            <param name="interfaceId">接口ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.InterfaceManager.ExternalInterfaceController.EditInterfaceAuth(UP.Web.Models.Admin.Interface.InterfaceAuthEditParam)">
+            <summary>
+            新增、修改外部注册接口授权列表
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.InterfaceManager.ExternalInterfaceController.DeleteInterfaceAuth(System.String)">
+            <summary>
+            删除外部注册接口授权
+            </summary>
+            <param name="id">授权ID</param>
+            <returns></returns>
+        </member>
+        <member name="T:UP.Web.Controllers.Admin.Login.LoginController">
+            <summary>
+            PC登录接口
+            </summary>
+        </member>
+        <member name="F:UP.Web.Controllers.Admin.Login.LoginController._jwt">
+            <summary>
+            认证对象
+            </summary>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.Login.LoginController.#ctor(UP.Basics.IJwt)">
+            <summary>
+            注入jwt
+            </summary>
+            <param name="jwt"></param>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.Login.LoginController.Login(UP.Web.Models.Admin.Login.LoginPara)">
+            <summary>
+            人员PC端-登录
+            </summary>
+            <param name="model">人员PC端-登录入参</param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.Login.LoginController.GetCode">
+            <summary>
+            获取登录验证码(胡家源)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.Login.LoginController.GetModules(UP.Web.Models.Admin.Login.GetModulesParam)">
+            <summary>
+            登录人员模块权限(胡家源)
+            </summary>
+            <param name="param">医生id</param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.Login.LoginController.GetUser(UP.Web.Models.Admin.Login.GetModulesParam)">
+            <summary>
+            获取已登录用户的信息，返回用户信息及可访问的菜单权限等
+            </summary>
+            <param name="param">人员id</param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.Login.LoginController.UpdatePassword(UP.Web.Models.Admin.Login.UpdatePasswordParam)">
+            <summary>
+            修改密码
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UP.Web.Controllers.Admin.ModulesFuncInterfaceManager.ModulesFuncInterfaceController">
+            <summary>
+            模块功能接口管理（胡家源）
+            </summary>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.ModulesFuncInterfaceManager.ModulesFuncInterfaceController.AddModulesFuncInterface(UP.Models.DB.RoleRight.ModulesFunctionInterface)">
+            <summary>
+            新增或修改接口(胡家源)
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.ModulesFuncInterfaceManager.ModulesFuncInterfaceController.SelectInterFaceList(UP.Web.Models.Admin.ModulesFunctionInterface.ModulesFuncInterfaceParam)">
+            <summary>
+            查询接口列表(胡家源)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.ModulesFuncInterfaceManager.ModulesFuncInterfaceController.DisableInterFace(UP.Web.Models.Public.QueryStateParam)">
+            <summary>
+            停用模块功能接口(胡家源)
+            </summary>
+            <param name="param">
+            {
+            "id":服务项目id,
+            }
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.ModulesFuncInterfaceManager.ModulesFuncInterfaceController.getFuncInterface(UP.Web.Models.Admin.ModulesFunctionInterface.ModulesFuncInterfaceParam)">
+            <summary>
+            根据模块功能接口id查询模块功能接口
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.ModulesFuncInterfaceManager.ModulesFuncInterfaceController.SavaRoleFunctionInterface(UP.Web.Models.Admin.ModulesFunctionInterface.ModulesFuncInterfaceParam)">
+            <summary>
+            保存角色模块功能接口
+            </summary>
+            <param name="param">角色id,模块id,功能id,接口ids</param>
+            <returns></returns>
+              [HttpPost]
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.ModulesFuncInterfaceManager.ModulesFuncInterfaceController.GetInterfaceList(UP.Web.Models.Admin.ModulesFunctionInterface.ModulesFuncInterfaceParam)">
+            <summary>
+            根据角色id,模块id和功能id查询接口
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.ModulesFuncInterfaceManager.ModulesFuncInterfaceController.UpdateModulesFuncInterFaceState(UP.Web.Models.Admin.ModulesManager.ModulesParam)">
+            <summary>
+            修改模块功能接口状态（启用=0,禁用=1）
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UP.Web.Controllers.Admin.ModulesManager.ModulesManagerController">
+            <summary>
+            模块管理（胡家源）
+            </summary>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.ModulesManager.ModulesManagerController.AddModules(UP.Models.DB.RoleRight.ModulesInfo)">
+            <summary>
+            新增或修改模块(胡家源)
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.ModulesManager.ModulesManagerController.SelectModulesList">
+            <summary>
+            查询模块列表(胡家源)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.ModulesManager.ModulesManagerController.AloneModules(UP.Web.Models.Admin.ModulesManager.ModulesParam)">
+            <summary>
+            查询单个模块详细信息(胡家源)
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.ModulesManager.ModulesManagerController.DisableModules(UP.Web.Models.Public.QueryStateParam)">
+            <summary>
+            禁用/启用模块(胡家源)
+            </summary>
+            <param name="param">
+            {
+            "id":服务项目id,
+            "state":禁用/启用状态 0-启用 1-禁用
+            }
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.ModulesManager.ModulesManagerController.DelModules(UP.Web.Models.Public.QueryStateParam)">
+            <summary>
+            删除模块(胡家源)
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.ModulesManager.ModulesManagerController.editFunction(UP.Models.DB.RoleRight.ModulesFunction)">
+            <summary>
+            新增或修改模块功能(胡家源)
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.ModulesManager.ModulesManagerController.DisableFunction(UP.Web.Models.Public.QueryStateParam)">
+            <summary>
+            禁用/启用模块功能(胡家源)
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.ModulesManager.ModulesManagerController.DelFunction(UP.Web.Models.Public.QueryStateParam)">
+            <summary>
+            删除模块功能(胡家源)
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.ModulesManager.ModulesManagerController.SingleFunction(UP.Web.Models.Public.QueryModelParm)">
+            <summary>
+            查询单个模块功能信息(胡家源)
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.ModulesManager.ModulesManagerController.SelectFunctionList(UP.Web.Models.Public.QueryModelParm)">
+            <summary>
+            查询模块功能(胡家源)
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.ModulesManager.ModulesManagerController.UpdateModulesState(UP.Web.Models.Admin.ModulesManager.ModulesParam)">
+            <summary>
+            修改模块状态（启用=0,禁用=1）
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.ModulesManager.ModulesManagerController.UpdateModulesFuncState(UP.Web.Models.Admin.ModulesManager.ModulesParam)">
+            <summary>
+            修改模块功能状态（启用=0,禁用=1）
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UP.Web.Controllers.Admin.OrgManager.OrganController">
+            <summary>
+            机构管理
+            </summary>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.OrgManager.OrganController.GetOrganList(UP.Web.Models.Admin.Org.OrgParam)">
+            <summary>
+            分页查询所有机构的列表
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.OrgManager.OrganController.GetOrganListByPid(UP.Web.Models.Admin.Org.OrgParam)">
+            <summary>
+            根据上级id查询所有机构
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.OrgManager.OrganController.GetAllOrganList">
+            <summary>
+            查询机构列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.OrgManager.OrganController.GetOrganInfo(UP.Web.Models.Admin.Org.OrgParam)">
+            <summary>
+            根据机构id查询机构信息
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.OrgManager.OrganController.AddOrganInfo(UP.Models.DB.BasicData.Organ)">
+            <summary>
+            新增或修改机构
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.OrgManager.OrganController.DeleteOrgan(UP.Web.Models.Admin.Org.OrgParam)">
+            <summary>
+            删除机构
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UP.Web.Controllers.Admin.OrgManager.OrgPersonController">
+            <summary>
+            机构人员管理
+            </summary>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.OrgManager.OrgPersonController.GetOrganPersonList(UP.Web.Models.Admin.Org.OrgParam)">
+            <summary>
+            分页查询所有机构的列表
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.OrgManager.OrgPersonController.GetOrganPersonInfo(UP.Web.Models.Admin.Org.OrgParam)">
+            <summary>
+            根据机构id查询机构信息
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.OrgManager.OrgPersonController.AddOrganInfo(UP.Models.Admin.Org.OrgPersonDto)">
+            <summary>
+            新增或修改机构人员
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.OrgManager.OrgPersonController.CheckAccountNum(System.String,System.Int32)">
+            <summary>
+            验证账号重复
+            </summary>
+            <param name="dlzh">账号</param>
+            <param name="ryid">根据账户id判断操作类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.OrgManager.OrgPersonController.ResetPassword(UP.Web.Models.Admin.Org.OrgParam)">
+            <summary>
+            重置机构人员密码(胡家源)
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.OrgManager.OrgPersonController.UpOrgPeopleState(UP.Web.Models.Admin.Org.OrgParam)">
+            <summary>
+            修改人员用户状态(胡家源)
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UP.Web.Controllers.Admin.RoleManager.RoleManagerController">
+            <summary>
+            角色管理（胡家源）
+            </summary>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.RoleManager.RoleManagerController.AddRoles(UP.Models.DB.RoleRight.RoleInfo)">
+            <summary>
+            新增或修改角色（胡家源）
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.RoleManager.RoleManagerController.RoleList(UP.Web.Models.Admin.Role.RoleParam)">
+            <summary>
+            查询角色列表(胡家源)
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.RoleManager.RoleManagerController.RoleInfo(UP.Web.Models.Public.QueryModelParm)">
+            <summary>
+            查询单个角色(胡家源)
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.RoleManager.RoleManagerController.RolemodularList">
+            <summary>
+            查询模块数量(胡家源)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.RoleManager.RoleManagerController.DelModules(UP.Web.Models.Public.QueryModelParm)">
+            <summary>
+            删除角色（胡家源）
+            </summary>
+            <param name="param">角色id</param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.RoleManager.RoleManagerController.DisableRole(UP.Web.Models.Public.QueryStateParam)">
+            <summary>
+            禁用/启用角色(胡家源)
+            </summary>
+            <param name="param">
+            "id":角色id
+            "state":禁用/启用状态 1-启用 0-禁用
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.RoleManager.RoleManagerController.SelRoleModularList(UP.Web.Models.Public.QueryModelParm)">
+            <summary>
+            查询角色的模块(胡家源)
+            </summary>
+            <param name="param">角色id</param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.RoleManager.RoleManagerController.DelRoleModules(UP.Web.Models.Public.QueryModelParm)">
+            <summary>
+            删除角色模块(胡家源)
+            </summary>
+            <param name="param">"id":角色id</param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.RoleManager.RoleManagerController.SelectRoleModularTree(UP.Web.Models.Public.QueryModelParm)">
+            <summary>
+            查询角色模块授权(胡家源)
+            </summary>
+            <param name="param">"id":角色id</param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.RoleManager.RoleManagerController.RoleModularFunctionAuthList(UP.Web.Models.Admin.Role.AuthParam)">
+            <summary>
+            查询角色模块功能授权(胡家源)
+            </summary>
+            <param name="param">
+            "rolemid":角色模块id
+            "modularid":模块id
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.RoleManager.RoleManagerController.SavaRoleModular(UP.Web.Models.Admin.Role.SaveParam)">
+            <summary>
+            保存角色的模块(胡家源)
+            </summary>
+            <param name="param">
+            "roleid"：角色ID
+            "modularids": "模块ids" 多个以逗号分隔
+            </param>
+            <returns></returns>。
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.RoleManager.RoleManagerController.GetRoleFunctionList(UP.Web.Models.Admin.Role.RoleMkParm)">
+            <summary>
+            查询角色模块功能(胡家源)
+            </summary>
+            <param name="param">"id":角色模块id</param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.RoleManager.RoleManagerController.SavaRoleFunction(UP.Web.Models.Admin.Role.SaveRFParam)">
+            <summary>
+            保存角色的功能(胡家源)
+            </summary>
+            <param name="param">
+            "roleid":角色ID
+            "modularid":模块id
+            "fids":"功能ID"，多个以逗号分隔
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.RoleManager.RoleManagerController.DelRoleModulesFunc(UP.Web.Models.Public.QueryModelParm)">
+            <summary>
+            删除角色模块功能(胡家源)
+            </summary>
+            <param name="param">"id":角色id</param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.RoleManager.RoleManagerController.DepartmentPerson(UP.Web.Models.Public.QueryModelParm)">
+            <summary>
+            查询系统人员(胡家源)
+            </summary>
+            <param name="param">"id":科室id</param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.RoleManager.RoleManagerController.AddOrganStaffRelation(UP.Web.Models.Admin.Role.AddOSRParam)">
+            <summary>
+            新增人员角色(胡家源)
+            </summary>
+            <param name="param">
+            "id":"人员ID"，多个以逗号分隔
+            "jsid":角色ID
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.RoleManager.RoleManagerController.DelOrganStaffRelation(UP.Web.Models.Admin.Role.AddOSRParam)">
+            <summary>
+            删除人员角色(胡家源)
+            </summary>
+            <param name="param">
+            "id":"人员ID"，多个以逗号分隔
+            "jsid":角色ID
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.RoleManager.RoleManagerController.RolePersonList(UP.Web.Models.Admin.Role.PersonListParam)">
+            <summary>
+            查询角色人员(胡家源)
+            </summary>
+            <param name="param">
+            "id":角色id
+            "txcx":查询条件
+            "page_num":页码
+            "page_size":分页数据量
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.RoleManager.RoleManagerController.OrgPersonList(UP.Web.Models.Admin.Role.OrgPersonParam)">
+            <summary>
+            查询待分配角色人员(胡家源)
+            </summary>
+            /// <param name="param">
+            "jsid":角色id
+            "sfqy":用户状态，1-启用，其他禁用
+            "txcx":查询条件
+            "page_num":页码
+            "page_size":分页数据量
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.RoleManager.RoleManagerController.getUrlBtnVer(UP.Web.Models.Admin.ModulesFunctionInterface.ModulesFuncInterfaceParam)">
+            <summary>
+            根据角色和模块路径查询功能
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UP.Web.Controllers.Admin.SyncManager.SyncTableController">
+            <summary>
+            数据表同步控制器
+            why:2020-09-10
+            </summary>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.SyncManager.SyncTableController.InitTable(System.String)">
+            <summary>
+            初始化表同步
+            </summary>
+            <returns>返回同步情况</returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.SyncManager.SyncTableController.GetSyncTableInfo(System.Int32)">
+            <summary>
+            获取同步表的信息
+            由于同步表是持续执行的，所以通过该方法获取指定数据源同步表情况
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.SyncManager.SyncTableController.TestAsync">
+            <summary>
+            测试
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.SyncManager.SyncTableController.GetBaseTables">
+            <summary>
+            获取所有基础目录表
+            </summary>
+            <returns>返回基础目录表</returns>
+        </member>
+        <member name="T:UP.Web.Controllers.Admin.SyncManager.TestController">
+            <summary>
+            测试控制器
+            </summary>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.SyncManager.TestController.GetModel(System.String,System.String,System.Int32,System.DateTime)">
+            <summary>
+            根据id获取数据模型
+            </summary>
+            <param name="id">id</param>
+            <returns>返回数据模型</returns>
+        </member>
+        <member name="T:UP.Web.Controllers.Admin.UserManager.UserManagerController">
+            <summary>
+            模块管理（胡家源）
+            </summary>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.UserManager.UserManagerController.GetUserList(UP.Models.Admin.User.UserSelect)">
+            <summary>
+            查询人员(胡家源)
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.UserManager.UserManagerController.ResetPassword(UP.Web.Models.Public.QueryModelParm)">
+            <summary>
+            重置机构人员密码(胡家源)
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.UserManager.UserManagerController.UpOrgPeopleState(UP.Web.Models.Public.QueryStateParam)">
+            <summary>
+            修改人员用户状态(胡家源)
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.UserManager.UserManagerController.CheckAccountNum(System.String,System.Int32)">
+            <summary>
+            验证账号重复
+            </summary>
+            <param name="dlzh">账号</param>
+            <param name="ryid">根据账户id判断操作类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Admin.UserManager.UserManagerController.FindUser(UP.Web.Models.Public.QueryModelParm)">
+            <summary>
+            查询单个人员信息(胡家源)
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UP.Web.Controllers.Api.FileController">
+             <summary>
+            公共接口服务
+             </summary>
+        </member>
+        <member name="M:UP.Web.Controllers.Api.FileController.UploadByteArray(UP.Basics.Plugins.ZlsoftFtp.UploadFileModel)">
+             <summary>
+             上传文件，传入格式以base64（贺伟）
+             </summary>
+             <param name="file">
+             需要上传的文件信息，文件内容使用base64
+            </param>
+             <returns>
+             "本次上传的文件id（有多个用,隔开）"
+             </returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Api.FileController.GetFileUrl(UP.Web.Models.Public.File.FileParam)">
+            <summary>
+            获取多个连接信息
+            </summary>
+            <param name="param">请求文件信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Api.FileController.GetFileUrlItem(UP.Web.Models.Public.File.FileParam)">
+            <summary>
+            获取单个连接信息，直接返回url地址
+            </summary>
+            <param name="param">请求文件信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Api.FileController.GetFileLinkUrl(System.String,System.Int32)">
+            <summary>
+            获取单个文件url，直接返回url地址
+            </summary>
+            <param name="fileid">必填，文件id</param>
+            <param name="imgfiletype">选填，图片文件类型 1原图，2缩略图，3大图</param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Api.FileController.ToFileLinkUrl(System.String,System.Int32)">
+            <summary>
+            跳转单个文件url
+            </summary>
+            <param name="fileid">必填，文件id</param>
+            <param name="imgfiletype">选填，图片文件类型 1原图，2缩略图，3大图</param>
+            <returns></returns>
+        </member>
+        <member name="T:UP.Web.Controllers.Api.PublicController">
+             <summary>
+            公共接口服务
+             </summary>
+        </member>
+        <member name="M:UP.Web.Controllers.Api.PublicController.GetDicItems(UP.Web.Models.Public.ServerDicParam)">
+             <summary>
+            查询字典信息列表
+             </summary>
+             <param name="param">字典表类型: b_民族 = 1, b_社会性别 = 2, b_学历 = 3, b_职务 = 4</param>
+             <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Api.PublicController.GetDbConstr">
+            <summary>
+            获取数据库连接字符串，加密后的串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Api.PublicController.GetDbTime">
+            <summary>
+            获取服务器时间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UP.Web.Controllers.Business.IdentityController">
+            <summary>
+            平台统一身份认证
+            </summary>
+        </member>
+        <member name="F:UP.Web.Controllers.Business.IdentityController._jwt">
+            <summary>
+            认证对象
+            </summary>
+        </member>
+        <member name="M:UP.Web.Controllers.Business.IdentityController.#ctor(UP.Basics.IJwt)">
+            <summary>
+            注入jwt
+            </summary>
+            <param name="jwt"></param>
+        </member>
+        <member name="M:UP.Web.Controllers.Business.IdentityController.UserAuth(UP.Web.Models.Business.Auth.AuthPara)">
+            <summary>
+            平台统一身份认证
+            </summary>
+            <param name="model">人员登录信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.Business.IdentityController.GetUserAuthInfo">
+            <summary>
+            通过身份令牌获取平台身份认证信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.drug.DrugController.GetDrugList(System.String)">
+            <summary>
+            获取药品列表    
+            </summary>
+            <param name="code">药品编码查找药品</param>
+            <returns></returns>
+        </member>
+        <member name="M:UP.Web.Controllers.drug.DrugController.DrugAdd(UP.Models.Drug.DrugBasic)">
+            <summary>
+            新增药品
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:UP.Web.Models.Admin.BasicData.BasicDataParam.code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.BasicData.BasicDataParam.tabletype">
+            <summary>
+            基础数据枚举类型
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.BasicData.BasicDataParam.keyword">
+            <summary>
+            条件查询关键字
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.BasicData.BasicDataParam.page_num">
+            <summary>
+            页码
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.BasicData.BasicDataParam.page_size">
+            <summary>
+            每页数量
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.BasicData.BasicDataParam.id">
+            <summary>
+            基础数据guid
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.BasicData.BasicDataParam.state">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.BasicData.BasicDataParam.cid">
+            <summary>
+            分类id
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.BasicData.BasicDataParam.type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.BasicData.BasicDataParam.name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.BasicData.BasicDataParam.pcode">
+            <summary>
+            上级编码
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.BasicData.BasicDataParam.prop">
+            <summary>
+            性质
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.BussinessSys.BussinessSysPram.keyword">
+            <summary>
+            条件查询关键字
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.BussinessSys.BussinessSysPram.productScoureid">
+            <summary>
+            服务源id
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.BussinessSys.BussinessSysPram.datasoureid">
+            <summary>
+            数据源id
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.BussinessSys.BussinessSysPram.productid">
+            <summary>
+            产品id
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.BussinessSys.BussinessSysPram.appid">
+            <summary>
+            应用信息appidid
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.BussinessSys.BussinessSysPram.state">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.BussinessSys.BussinessSysPram.page_num">
+            <summary>
+            页码
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.BussinessSys.BussinessSysPram.page_size">
+            <summary>
+            每页数量
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.BussinessSys.BussinessSysPram.databasetype">
+            <summary>
+            数据库类型（数据源：筛选条件）
+            </summary>
+        </member>
+        <member name="T:UP.Web.Models.Admin.Interface.InterfaceAsyncEditParam">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceAsyncEditParam.Id">
+            <summary>
+            guid
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceAsyncEditParam.ItemsId">
+            <summary>
+            接口id
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceAsyncEditParam.ExchageId">
+            <summary>
+            MQ exchage 下拉选择一个路由器
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceAsyncEditParam.Keyword">
+            <summary>
+            选择一个关键字
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceAsyncEditParam.Describe">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="M:UP.Web.Models.Admin.Interface.InterfaceAsyncEditParam.ConvertToDBModel">
+            <summary>
+            转换为DB Model
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UP.Web.Models.Admin.Interface.InterfaceAuthEditParam">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceAuthEditParam.Id">
+            <summary>
+            GUID
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceAuthEditParam.ItemsId">
+            <summary>
+            接口ID
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceAuthEditParam.ProductId">
+            <summary>
+            产品ID
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceAuthEditParam.FrequencyInterval">
+            <summary>
+            每分钟调用次数
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceAuthEditParam.Efctime">
+             <summary>
+            可调用时间范围
+             </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceAuthEditParam.Expitdate">
+             <summary>
+            失效的时间
+             </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceAuthEditParam.Describe">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="M:UP.Web.Models.Admin.Interface.InterfaceAuthEditParam.ConvertToDBModel">
+            <summary>
+            转换为DB model
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UP.Web.Models.Admin.Interface.InterfaceCatgoryParam">
+            <summary>
+            接口分类、分组参数实体类
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceCatgoryParam.Id">
+            <summary>
+            分组ID、分类ID
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceCatgoryParam.ParentId">
+            <summary>
+            上级ID
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceCatgoryParam.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceCatgoryParam.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceCatgoryParam.Sno">
+             <summary>
+            分类序号
+             </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceCatgoryParam.Describe">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="M:UP.Web.Models.Admin.Interface.InterfaceCatgoryParam.ConvertToDBModel">
+            <summary>
+            转换为DBmodel
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UP.Web.Models.Admin.Interface.InterfaceItemEditParam">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceItemEditParam.Id">
+            <summary>
+            GUID
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceItemEditParam.CatgoryId">
+            <summary>
+            分类id
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceItemEditParam.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceItemEditParam.Name">
+            <summary>
+            接口名称
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceItemEditParam.Describe">
+            <summary>
+            描述描述
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceItemEditParam.AccessType">
+            <summary>
+            1:post,2:get,3:put,4:delete
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceItemEditParam.ProcType">
+            <summary>
+            1:异常队列 2: 同步执行
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceItemEditParam.Sno">
+            <summary>
+            序号
+            </summary>
+        </member>
+        <member name="M:UP.Web.Models.Admin.Interface.InterfaceItemEditParam.ConvertToDBModel">
+            <summary>
+            转换为数据库实体类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UP.Web.Models.Admin.Interface.InterfaceItemSearchParam">
+            <summary>
+            外部接口查询参数实体类
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceItemSearchParam.CatgoryId">
+            <summary>
+            分类ID
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceItemSearchParam.PageNumber">
+            <summary>
+            页码
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceItemSearchParam.PageSize">
+            <summary>
+            每页数量
+            </summary>
+        </member>
+        <member name="T:UP.Web.Models.Admin.Interface.InterfaceParamEditParam">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceParamEditParam.Id">
+            <summary>
+            GUID
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceParamEditParam.ItemsId">
+            <summary>
+            接口ID
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceParamEditParam.Name">
+             <summary>
+            参数名称，如name
+             </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceParamEditParam.Title">
+            <summary>
+            参数标题
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceParamEditParam.Type">
+            <summary>
+            参数类型
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceParamEditParam.Sno">
+            <summary>
+             序号
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceParamEditParam.Describe">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="M:UP.Web.Models.Admin.Interface.InterfaceParamEditParam.ConvertToDBModel">
+             <summary>
+            
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="T:UP.Web.Models.Admin.Interface.InterfaceSyncEditParam">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceSyncEditParam.Id">
+            <summary>
+            GUID
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceSyncEditParam.ItemsId">
+            <summary>
+            指向的接口id
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceSyncEditParam.Sno">
+            <summary>
+            排序号，也是执行顺序号
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceSyncEditParam.ServiceId">
+            <summary>
+            引用的服务id
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceSyncEditParam.CallAddress">
+            <summary>
+            消息转发调用地址或方法
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceSyncEditParam.CallType">
+            <summary>
+            1:get,2:post
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceSyncEditParam.AuthType">
+            <summary>
+            1:Basic,2:token（通过业务系统进行授权）
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceSyncEditParam.UserName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceSyncEditParam.Password">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Interface.InterfaceSyncEditParam.Describe">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:UP.Web.Models.Admin.Interface.InterfaceSyncEditParam.ConvertToDBModel">
+            <summary>
+            转换为DB Model
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UP.Web.Models.Admin.Login.GetModulesParam">
+            <summary>
+            查询用户模块权限菜单入参条件对象
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Login.GetModulesParam.userid">
+            <summary>
+            用户id
+            </summary>
+        </member>
+        <member name="T:UP.Web.Models.Admin.Login.LoginPara">
+            <summary>
+            登录入参
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Login.LoginPara.account_num">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Login.LoginPara.apptype">
+            <summary>
+            用户来源
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Login.LoginPara.imagecode">
+            <summary>
+            验证码
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Login.LoginPara.password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Login.UpdatePasswordParam.userid">
+            <summary>
+            人员id
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Login.UpdatePasswordParam.old_password">
+            <summary>
+            旧密码
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Login.UpdatePasswordParam.new_password">
+            <summary>
+            新密码
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.ModulesFunctionInterface.ModulesFuncInterfaceParam.id">
+             <summary>
+            主键id
+             </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.ModulesFunctionInterface.ModulesFuncInterfaceParam.mkid">
+            <summary>
+            模块id
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.ModulesFunctionInterface.ModulesFuncInterfaceParam.gnid">
+            <summary>
+            功能id
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.ModulesFunctionInterface.ModulesFuncInterfaceParam.jsid">
+            <summary>
+            角色id
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.ModulesFunctionInterface.ModulesFuncInterfaceParam.jkids">
+            <summary>
+            接口ids
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.ModulesFunctionInterface.ModulesFuncInterfaceParam.keyword">
+             <summary>
+            名称/关键字
+             </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.ModulesFunctionInterface.ModulesFuncInterfaceParam.type">
+            <summary>
+            判断接口列表显示全部或者显示启用（0为显示全部,1为显示启用）
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:UP.Web.Models.Admin.ModulesManager.ModulesParam.id" -->
+        <member name="P:UP.Web.Models.Admin.ModulesManager.ModulesParam.parentid">
+            <summary>
+            上级ID
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.ModulesManager.ModulesParam.code">
+            <summary>
+            模块编码
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.ModulesManager.ModulesParam.name">
+            <summary>
+            模块名称
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.ModulesManager.ModulesParam.path">
+            <summary>
+            模块路径
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.ModulesManager.ModulesParam.disable">
+            <summary>
+            是否停用
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.ModulesManager.ModulesParam.sort">
+            <summary>
+            排列序号
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.ModulesManager.ModulesParam.icon">
+            <summary>
+            模块图标
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.ModulesManager.ModulesParam.homepage">
+            <summary>
+            是否首页
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Org.AreaModel.code">
+            <summary>
+            上级编码
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Org.AreaModel.level">
+            <summary>
+            层级
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Org.AreaModel.tid">
+            <summary>
+            当前id
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Org.OrgParam.keyword">
+            <summary>
+            条件查询关键字
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Org.OrgParam.organid">
+            <summary>
+            机构id
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Org.OrgParam.orgpersonid">
+            <summary>
+            机构人员id
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Org.OrgParam.accountid">
+            <summary>
+            账户id
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Org.OrgParam.userstate">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Org.OrgParam.state">
+            <summary>
+            人员状态
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Org.OrgParam.page_num">
+            <summary>
+            页码
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Org.OrgParam.page_size">
+            <summary>
+            每页数量
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Org.OrgParam.pid">
+            <summary>
+            上级id
+            </summary>
+        </member>
+        <member name="T:UP.Web.Models.Admin.Role.AddOSRParam">
+            <summary>
+            新增人员角色参数
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Role.AddOSRParam.id">
+            <summary>
+            人员ID，多个以逗号分隔
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Role.AddOSRParam.jsid">
+            <summary>
+            角色ID
+            </summary>
+        </member>
+        <member name="T:UP.Web.Models.Admin.Role.AuthParam">
+            <summary>
+            查询角色模块功能授权参数
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Role.AuthParam.rolemid">
+            <summary>
+            角色模块id
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Role.AuthParam.modularid">
+            <summary>
+            模块id
+            </summary>
+        </member>
+        <member name="T:UP.Web.Models.Admin.Role.OrgPersonParam">
+            <summary>
+            查询机构人员参数
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Role.OrgPersonParam.jsid">
+            <summary>
+            角色ID
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Role.OrgPersonParam.sfqy">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Role.OrgPersonParam.txcx">
+            <summary>
+            查询条件
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Role.OrgPersonParam.page_num">
+            <summary>
+            页码
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Role.OrgPersonParam.page_size">
+            <summary>
+            分页数据量
+            </summary>
+        </member>
+        <member name="T:UP.Web.Models.Admin.Role.PersonListParam">
+            <summary>
+            查询角色人员参数
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Role.PersonListParam.id">
+            <summary>
+            角色ID
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Role.PersonListParam.txcx">
+            <summary>
+            查询条件
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Role.PersonListParam.page_num">
+            <summary>
+            页码
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Role.PersonListParam.page_size">
+            <summary>
+            分页数据量
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Role.RoleMkParm.roleid">
+             <summary>
+            角色id
+             </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Role.RoleMkParm.mkid">
+            <summary>
+            模块id
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Role.RoleParam.page_num">
+            <summary>
+            页码
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Role.RoleParam.page_size">
+            <summary>
+            每页数量
+            </summary>
+        </member>
+        <member name="T:UP.Web.Models.Admin.Role.SaveParam">
+            <summary>
+            保存角色的模块参数
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Role.SaveParam.roleid">
+            <summary>
+            角色ID
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Role.SaveParam.modularids">
+            <summary>
+            模块ID，多个以逗号分隔
+            </summary>
+        </member>
+        <member name="T:UP.Web.Models.Admin.Role.SaveRFParam">
+            <summary>
+            保存角色的功能参数
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Role.SaveRFParam.rolemid">
+            <summary>
+            角色模块ID
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Role.SaveRFParam.roleid">
+            <summary>
+            角色ID
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Role.SaveRFParam.modularid">
+            <summary>
+            模块ID
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Admin.Role.SaveRFParam.fids">
+            <summary>
+            功能id,多个以逗号分隔
+            </summary>
+        </member>
+        <member name="T:UP.Web.Models.BaseModel">
+            <summary>
+            所有业务基类
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:UP.Web.Models.BaseModel.token" -->
+        <member name="P:UP.Web.Models.BaseModel.account_name">
+            <summary>
+            帐户名称
+            </summary>
+        </member>
+        <member name="T:UP.Web.Models.Business.Auth.AuthPara">
+            <summary>
+            身份认证参数信息
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Business.Auth.AuthPara.account">
+            <summary>
+            登录账号
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Business.Auth.AuthPara.password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Drug.DrugWeb.ID">
+            <summary>
+            ID:
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Drug.DrugWeb.Name">
+            <summary>
+            Name:
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Drug.DrugWeb.Code">
+            <summary>
+            Code:
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Drug.DrugWeb.EnglishName">
+            <summary>
+            EnglishName:
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Drug.DrugWeb.DosageFormID">
+            <summary>
+            DosageFormID:
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Drug.DrugWeb.ManufacturerID">
+            <summary>
+            ManufacturerID:
+            </summary>
+        </member>
+        <member name="T:UP.Web.Models.Public.File.FileParam">
+            <summary>
+            查询文件信息参数
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Public.File.FileParam.fileid">
+            <summary>
+            文件id,多个以","分隔
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Public.File.FileParam.imgfiletype">
+            <summary>
+            图片文件类型 1原图，2缩略图，3大图
+            </summary>
+        </member>
+        <member name="T:UP.Web.Models.Public.QueryModelParm">
+            <summary>
+            针对单个对象信息条件对象
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Public.QueryModelParm.id">
+             <summary>
+            主键id
+             </summary>
+        </member>
+        <member name="P:UP.Web.Models.Public.QueryModelParm.pid">
+            <summary>
+            上级id
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Public.QueryModelParm.keyword">
+             <summary>
+            名称/关键字
+             </summary>
+        </member>
+        <member name="T:UP.Web.Models.Public.QueryPageParm">
+            <summary>
+            针对单个对象信息条件对象
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Public.QueryPageParm.id">
+             <summary>
+            主键id
+             </summary>
+        </member>
+        <member name="P:UP.Web.Models.Public.QueryPageParm.pid">
+            <summary>
+            上级id
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Public.QueryPageParm.status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Public.QueryPageParm.keyword">
+             <summary>
+            名称/关键字
+             </summary>
+        </member>
+        <member name="P:UP.Web.Models.Public.QueryPageParm.pageindex">
+            <summary>
+            页码
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Public.QueryPageParm.pagesize">
+            <summary>
+            每页数量
+            </summary>
+        </member>
+        <member name="T:UP.Web.Models.Public.QueryStateParam">
+            <summary>
+            修改状态入参
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Public.QueryStateParam.id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Public.QueryStateParam.state">
+            <summary>
+            修改的状态,1启用,0禁用
+            </summary>
+        </member>
+        <member name="T:UP.Web.Models.Public.ServerDicParam">
+            <summary>
+            获取数据字典表请求参数
+            </summary>
+        </member>
+        <member name="P:UP.Web.Models.Public.ServerDicParam.type">
+            <summary>
+            字典表类型:dic_婚姻状况=1, dic_既往项目分类=2, dic_民族=3, dic_社会关系=4, dic_学历=5, dic_证件类别=6, dic_政治面貌=7, dic_执业类别=8, dic_职称等级=9, dic_职务=10, dic_职业=11
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>ZLSoft.UP.Models</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>ZLSoft.UP.Models.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DB\Org\**" />
+    <EmbeddedResource Remove="DB\Org\**" />
+    <None Remove="DB\Org\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Admin\BasicData\aboBloodTypeDto.cs" />
+    <Compile Remove="Admin\BasicData\NationalityDto.cs" />
+    <Compile Remove="Admin\BasicData\rhBloodTypeDto.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ZLSoft.UP.Models.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="5.5.1" />
+    <PackageReference Include="ZLSoft.QWPlatform.DBServiceCore" Version="3.0.7.23" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy $(TargetDir)ZLSoft.UP.Models.dll $(SolutionDir)..\zlsoft.up\Orleans-Server\Services&#xD;&#xA;copy $(TargetDir)ZLSoft.UP.Models.dll $(SolutionDir)..\zlsoft.up\WebApi-Server&#xD;&#xA;copy $(TargetDir)ZLSoft.UP.Models.xml $(SolutionDir)..\zlsoft.up\WebApi-Server" />
+  </Target>
+
+</Project>

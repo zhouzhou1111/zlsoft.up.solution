@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>ZLSoft.UP.Logics</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Admin\BasicData\aboBloodTypeLogic.cs" />
+    <Compile Remove="Admin\BasicData\NationalityLogic.cs" />
+    <Compile Remove="Admin\BasicData\NationLogic.cs" />
+    <Compile Remove="Admin\BasicData\rhBloodTypeLogic.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ZLSoft.QWPlatform.DBServiceCore" Version="3.0.7.23" />
+    <PackageReference Include="ZLSoft.QWPlatform.SystemLibraryCore" Version="3.0.5.19" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Basics\UP.Basics\UP.Basics.csproj" />
+    <ProjectReference Include="..\UP.Models\UP.Models.csproj" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy $(TargetDir)ZLSoft.UP.Logics.dll  $(SolutionDir)..\zlsoft.up\Orleans-Server\Services" />
+  </Target>
+
+</Project>

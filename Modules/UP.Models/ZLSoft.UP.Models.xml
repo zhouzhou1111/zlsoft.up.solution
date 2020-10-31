@@ -1,0 +1,2299 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZLSoft.UP.Models</name>
+    </assembly>
+    <members>
+        <member name="P:UP.Models.Admin.BasicData.BasicDataDto.编码">
+            <summary>
+            编码:
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.BasicData.BasicDataDto.名称">
+            <summary>
+            名称:
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.BasicData.BasicDataDto.简码">
+            <summary>
+            简码:
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.BasicData.BasicDataDto.oldcode">
+            <summary>
+            旧编码
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.BasicData.BasicDataDto.total">
+            <summary>
+            总条数
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.BasicData.BasicDataDto.tabletype">
+            <summary>
+            基础数据枚举表类型
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.BasicData.BasicDataDto.药物">
+            <summary>
+            药物:
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.BasicData.BasicDataDto.层次">
+            <summary>
+            层次:
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.BasicData.BasicDataDto.typeData">
+            <summary>
+            层次:
+            </summary> 
+        </member>
+        <member name="T:UP.Models.Admin.Login.LoginInfoModel">
+            <summary>
+            获取身份信息对象
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Login.LoginInfoModel.account">
+            <summary>
+            account:登录账户
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Login.LoginInfoModel.account_status">
+            <summary>
+            account_state:账户状态 -1-删除;0-停用;1-正常
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Login.LoginInfoModel.id">
+            <summary>
+            id：人员id
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Login.LoginInfoModel.name">
+            <summary>
+            name：人员姓名
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Login.LoginInfoModel.status">
+            <summary>
+            status：人员状态 -1-删除;0-停用;1-正常
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Login.LoginInfoModel.org_id">
+            <summary>
+            org_id：机构id
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Login.LoginInfoModel.org_name">
+            <summary>
+            org_name：机构名称
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Login.LoginInfoModel.token">
+            <summary>
+            token：身份令牌
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Login.LoginInfoModel.token_effective_period">
+            <summary>
+            token：身份令牌有效期(当前服务器时间戳毫秒数)
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Login.LoginInfoModel.角色id">
+            <summary>
+            jsid：角色id
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Login.LoginInfoModel.角色名称">
+            <summary>
+            jsmc：角色名称
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Login.LoginInfoModel.is_super_admin">
+            <summary>
+            is_super_admin：1-超级管理员
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Org.AreaTreeList.id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Org.AreaTreeList.sjid">
+            <summary>
+            上级id
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Org.AreaTreeList.text">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Org.AreaTreeList.name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Org.AreaTreeList.state">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Org.AreaTreeList.iconCls">
+            <summary>
+            树形图标
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Org.OrganDto.数量">
+            <summary>
+            下级数量
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Org.OrganDto.haveChild">
+            <summary>
+            haveChild
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Parameter.PermissionModel.ID">
+            <summary>
+            模块ID
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Parameter.PermissionModel.ParentID">
+            <summary>
+            父级模块ID
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Parameter.PermissionModel.Name">
+            <summary>
+            模块名称
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Parameter.PermissionModel.Path">
+            <summary>
+            模块路径
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Parameter.PermissionModel.Icon">
+            <summary>
+            模块图标
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Parameter.PermissionModel.FunctionCode">
+            <summary>
+            功能编码
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Parameter.PermissionModel.GrantID">
+            <summary>
+            授权ID
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Parameter.PermissionModel.OpenMode">
+            <summary>
+            打开方式
+            0 默认 1 新页面链接打开 2 调用JS方法
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Parameter.PermissionModel.Childrens">
+            <summary>
+            该模块下的子集合
+            </summary>
+        </member>
+        <member name="T:UP.Models.Admin.Sync.sys_database">
+             <summary>
+            sys_database
+             </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Sync.sys_database.id">
+            <summary>
+            id:guid
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Sync.sys_database.name">
+            <summary>
+            name:
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Sync.sys_database.dbtype">
+            <summary>
+            dbtype:1：Oracle; 2：Pg;3：SqlServer;4：MySql
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Sync.sys_database.serverip">
+            <summary>
+            serverip:
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Sync.sys_database.port">
+            <summary>
+            port:
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Sync.sys_database.instance">
+            <summary>
+            instance:pg存储数据库名，oracle存储实例名
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Sync.sys_database.user">
+            <summary>
+            user:
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Sync.sys_database.password">
+            <summary>
+            password:
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Sync.sys_database.describe">
+            <summary>
+            describe:
+            </summary>
+        </member>
+        <member name="T:UP.Models.Admin.Sync.sys_sync_table">
+             <summary>
+            sys_sync_table
+             </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Sync.sys_sync_table.id">
+            <summary>
+            id:
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Sync.sys_sync_table.database_id">
+            <summary>
+            database_id:
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Sync.sys_sync_table.table_name">
+            <summary>
+            table_name:
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Sync.sys_sync_table.sno">
+            <summary>
+            sno:
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Sync.sys_sync_table.is_sync">
+            <summary>
+            是否同步中，0:否，1：是
+            </summary>
+        </member>
+        <member name="T:UP.Models.Admin.Sync.TabStructureModel">
+            <summary>
+            数据表结构
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Sync.TabStructureModel.attnum">
+            <summary>
+            字段顺序
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Sync.TabStructureModel.field">
+            <summary>
+            字段名称
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Sync.TabStructureModel.type">
+            <summary>
+            字段类型
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Sync.TabStructureModel.length">
+            <summary>
+            字段长度
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Sync.TabStructureModel.notnull">
+            <summary>
+            是否非空 
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.Sync.TabStructureModel.comment">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.User.UserDto.角色">
+            <summary>
+            逗号分隔角色名称
+            </summary>
+        </member>
+        <member name="T:UP.Models.Admin.User.UserSelect">
+            <summary>
+            人员列表查询条件
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.User.UserSelect.sfqy">
+            <summary>
+            用户状态
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.User.UserSelect.txcx">
+            <summary>
+            条件查询
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.User.UserSelect.page_num">
+            <summary>
+            页码
+            </summary>
+        </member>
+        <member name="P:UP.Models.Admin.User.UserSelect.page_size">
+            <summary>
+            页数量
+            </summary>
+        </member>
+        <member name="T:UP.Models.Api.DicInfo">
+            <summary>
+            字典信息表
+            </summary>
+        </member>
+        <member name="P:UP.Models.Api.DicInfo.表名">
+            <summary>
+            tablename
+            </summary>
+        </member>
+        <member name="P:UP.Models.Api.DicInfo.编码">
+            <summary>
+            code
+            </summary>
+        </member>
+        <member name="P:UP.Models.Api.DicInfo.简码">
+            <summary>
+            short_code
+            </summary>
+        </member>
+        <member name="P:UP.Models.Api.DicInfo.名称">
+            <summary>
+            name
+            </summary>
+        </member>
+        <member name="T:UP.Models.Api.DicParam">
+            <summary>
+            获取数据字典表请求参数
+            </summary>
+        </member>
+        <member name="P:UP.Models.Api.DicParam.type">
+            <summary>
+            字典表类型: b_民族 = 1, b_社会性别 = 2, b_学历 = 3, b_职务 = 4
+            </summary>
+        </member>
+        <member name="T:UP.Models.Api.FTPModel">
+            <summary>
+            ftp文件信息
+            </summary>
+        </member>
+        <member name="P:UP.Models.Api.FTPModel.filePath">
+            <summary>
+            上传文件路径（不包含根目录名称），
+            </summary>
+        </member>
+        <member name="P:UP.Models.Api.FTPModel.extensionName">
+            <summary>
+            后缀名（文件格式）
+            </summary>
+        </member>
+        <member name="P:UP.Models.Api.FTPModel.fileId">
+            <summary>
+            文件id，long
+            </summary>
+        </member>
+        <member name="P:UP.Models.Api.FTPModel.type">
+             <summary>
+            文件类型： 1身份证,2头像，3协议照片,4面签照片,5个人信息二维码,6医院主页图片，7医院动态图片，8广告，9报告文件，10处方文件，11医生动态，，12 推送文件,13 医生签约签名,14 IM消息抄送,15投诉附件,16富文本文件,17远程审方
+             </summary>
+        </member>
+        <member name="P:UP.Models.Api.FTPModel.ftpFileName">
+            <summary>
+            ftp文件名称 guid+后缀名
+            </summary>
+        </member>
+        <member name="P:UP.Models.Api.FTPModel.uploadDate">
+            <summary>
+            上传时间
+            </summary>
+        </member>
+        <member name="P:UP.Models.Api.FTPModel.realName">
+            <summary>
+            实际名称
+            </summary>
+        </member>
+        <member name="P:UP.Models.Api.FTPModel.watermark">
+            <summary>
+            水印
+            </summary>
+        </member>
+        <member name="P:UP.Models.Api.FTPModel.filedata">
+            <summary>
+            文件byte[]
+            </summary>
+        </member>
+        <member name="P:UP.Models.Api.FTPModel.thumb_filedata">
+            <summary>
+            缩略图文件byte[]
+            </summary>
+        </member>
+        <member name="P:UP.Models.Api.FTPModel.oldfile_url">
+            <summary>
+            原始文件url，只在上传使用
+            </summary>
+        </member>
+        <member name="T:UP.Models.Api.FTPUploadFileModel">
+            <summary>
+            上传文件信息
+            </summary>
+        </member>
+        <member name="P:UP.Models.Api.FTPUploadFileModel.upload_userid">
+            <summary>
+            上传人id
+            </summary>  
+        </member>
+        <member name="P:UP.Models.Api.FTPUploadFileModel.upload_type">
+            <summary>
+            上传类别(1身份证,2头像，3协议照片,4面签照片,5个人信息二维码,6医院主页图片，7医院动态图片，8广告，9报告文件，10处方文件，11医生动态，，12 推送文件,13 医生签约签名,14 IM消息抄送,15投诉附件,16富文本文件,17远程审方)
+            </summary>
+        </member>
+        <member name="P:UP.Models.Api.FTPUploadFileModel.watermark">
+            <summary>
+            水印名称
+            </summary>
+        </member>
+        <member name="P:UP.Models.Api.FTPUploadFileModel.is_thumb">
+            <summary>
+            是否生成缩略图 0否，1是
+            </summary>
+        </member>
+        <member name="P:UP.Models.Api.FTPUploadFileModel.file_items">
+            <summary>
+            文件数据
+            </summary>
+        </member>
+        <member name="P:UP.Models.Api.FTPFileData.filename">
+            <summary>
+            文件名称，带后缀
+            </summary>
+        </member>
+        <member name="P:UP.Models.Api.FTPFileData.filedata">
+            <summary>
+            文件byte[]
+            </summary>
+        </member>
+        <member name="P:UP.Models.Api.FTPFileData.filestr">
+            <summary>
+            文件base64字符串
+            </summary>
+        </member>
+        <member name="P:UP.Models.Api.FTPFileData.file_url">
+            <summary>
+            文件url地址
+            </summary>
+        </member>
+        <member name="T:UP.Models.Api.Mode">
+            <summary>
+            生成缩略图的方式 HW指定高宽缩放(可能变形),W指定宽，高按比例,H指定高，宽按比例,Cut定高宽裁减(不变形),默认HW
+            </summary>
+        </member>
+        <member name="T:UP.Models.Api.ImgFileType">
+            <summary>
+            图片文件类型 1原图，2缩略图，3大图
+            </summary>
+        </member>
+        <member name="T:UP.Models.Business.Auth.AuthInfo">
+            <summary>
+            获取身份信息对象
+            </summary>
+        </member>
+        <member name="P:UP.Models.Business.Auth.AuthInfo.account">
+            <summary>
+            account:登录账户
+            </summary>
+        </member>
+        <member name="P:UP.Models.Business.Auth.AuthInfo.account_status">
+            <summary>
+            account_state:账户状态 -1-删除;0-停用;1-正常
+            </summary>
+        </member>
+        <member name="P:UP.Models.Business.Auth.AuthInfo.id">
+            <summary>
+            id：人员id
+            </summary>
+        </member>
+        <member name="P:UP.Models.Business.Auth.AuthInfo.name">
+            <summary>
+            name：人员姓名
+            </summary>
+        </member>
+        <member name="P:UP.Models.Business.Auth.AuthInfo.status">
+            <summary>
+            status：人员状态 -1-删除;0-停用;1-正常
+            </summary>
+        </member>
+        <member name="P:UP.Models.Business.Auth.AuthInfo.org_id">
+            <summary>
+            org_id：机构id
+            </summary>
+        </member>
+        <member name="P:UP.Models.Business.Auth.AuthInfo.org_name">
+            <summary>
+            org_name：机构名称
+            </summary>
+        </member>
+        <member name="P:UP.Models.Business.Auth.AuthInfo.token">
+            <summary>
+            token：身份令牌
+            </summary>
+        </member>
+        <member name="P:UP.Models.Business.Auth.AuthInfo.token_effective_period">
+            <summary>
+            token：身份令牌有效期(当前服务器时间戳毫秒数)
+            </summary>
+        </member>
+        <member name="T:UP.Models.Apply.AppLyInfo">
+             <summary>
+            系统_应用信息
+             </summary>
+        </member>
+        <member name="P:UP.Models.Apply.AppLyInfo.APPID">
+            <summary>
+            APPID:
+            </summary>
+        </member>
+        <member name="P:UP.Models.Apply.AppLyInfo.应用名称">
+            <summary>
+            应用名称:
+            </summary>
+        </member>
+        <member name="P:UP.Models.Apply.AppLyInfo.公钥">
+            <summary>
+            公钥:调用加密密钥
+            </summary>
+        </member>
+        <member name="P:UP.Models.Apply.AppLyInfo.私钥">
+            <summary>
+            私钥:平台解密密钥
+            </summary>
+        </member>
+        <member name="P:UP.Models.Apply.AppLyInfo.应用状态">
+            <summary>
+             0停用;1 正常
+            </summary>
+        </member>
+        <member name="P:UP.Models.Apply.AppLyInfo.使用平台">
+            <summary>
+            使用平台 PC=1; h5=2;安卓=3;IOS=4
+            </summary>
+        </member>
+        <member name="P:UP.Models.Apply.AppLyInfo.登记时间">
+            <summary>
+            登记时间:
+            </summary>
+        </member>
+        <member name="P:UP.Models.Apply.AppLyInfo.登记人id">
+            <summary>
+            登记人:
+            </summary>
+        </member>
+        <member name="P:UP.Models.Apply.AppLyInfo.变更时间">
+            <summary>
+            变更时间:
+            </summary>
+        </member>
+        <member name="P:UP.Models.Apply.AppLyInfo.变更人id">
+            <summary>
+            变更人:
+            </summary>
+        </member>
+        <member name="P:UP.Models.Apply.AppLyInfo.数据标识">
+            <summary>
+            数据标识:  0 删除（停用）1 正常
+            </summary>
+        </member>
+        <member name="T:UP.Models.DB.BasicData.aboBloodType">
+             <summary>
+            b_abo血型
+             </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.aboBloodType.编码">
+            <summary>
+            编码:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.aboBloodType.名称">
+            <summary>
+            名称:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.aboBloodType.简码">
+            <summary>
+            简码:
+            </summary>
+        </member>
+        <member name="T:UP.Models.DB.BasicData.Account">
+             <summary>
+            b_账户
+             </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.Account.id">
+            <summary>
+            id:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.Account.人员id">
+            <summary>
+            人员id:关联人员id
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.Account.姓名">
+            <summary>
+            姓名:冗余存储人员表的姓名
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.Account.账户">
+            <summary>
+            账户:登录的账户名
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.Account.密码">
+            <summary>
+            密码:加密存储登录密码，MD5加密
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.Account.状态">
+            <summary>
+            状态:数据状态:-1-删除;0-停用;1-正常
+            </summary>
+        </member>
+        <member name="T:UP.Models.DB.BasicData.b_region">
+             <summary>
+            b_region
+             </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.b_region.id">
+            <summary>
+            id:主键ID（业务系统直接引用）
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.b_region.code">
+            <summary>
+            code:同一来源不允许重复
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.b_region.parent_code">
+            <summary>
+            parent_code:上级编码
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.b_region.name">
+            <summary>
+            name:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.b_region.pinyin">
+            <summary>
+            pinyin:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.b_region.prop">
+            <summary>
+            prop:0省 1市级（地市级）2区县级 3乡镇、街道级 4 村级
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.b_region.status">
+            <summary>
+            status:用来标记数据的启用/停用状态，0-停用，1-启用,-1-未生效
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.b_region.location_coordinate">
+            <summary>
+            location_coordinate:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.b_region.range_coordinate">
+            <summary>
+            range_coordinate:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.b_region.source">
+            <summary>
+            source:1:民政部，2:统计局
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.b_region.update_time">
+            <summary>
+            update_time:最后更新时间
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.b_region.year">
+            <summary>
+            year:设置当前行政区划的来源年份
+            </summary>
+        </member>
+        <member name="T:UP.Models.DB.BasicData.DiseaseCodeCatalog">
+             <summary>
+            b_疾病编码目录
+             </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.DiseaseCodeCatalog.ID">
+            <summary>
+            ID:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.DiseaseCodeCatalog.编码">
+            <summary>
+            编码:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.DiseaseCodeCatalog.序号">
+            <summary>
+            序号:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.DiseaseCodeCatalog.附码">
+            <summary>
+            附码:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.DiseaseCodeCatalog.名称">
+            <summary>
+            名称:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.DiseaseCodeCatalog.拼音码">
+            <summary>
+            拼音码:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.DiseaseCodeCatalog.五笔码">
+            <summary>
+            五笔码:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.DiseaseCodeCatalog.说明">
+            <summary>
+            说明:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.DiseaseCodeCatalog.性别限制">
+            <summary>
+            性别限制:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.DiseaseCodeCatalog.疗效限制">
+            <summary>
+            疗效限制:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.DiseaseCodeCatalog.类型">
+            <summary>
+            类型:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.DiseaseCodeCatalog.类别">
+            <summary>
+            类别:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.DiseaseCodeCatalog.分类ID">
+            <summary>
+            分类ID:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.DiseaseCodeCatalog.建档时间">
+            <summary>
+            建档时间:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.DiseaseCodeCatalog.撤档时间">
+            <summary>
+            撤档时间:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.DiseaseCodeCatalog.优先推荐">
+            <summary>
+            优先推荐:
+            </summary>
+        </member>
+        <member name="T:UP.Models.DB.BasicData.DiseaseCodeSort">
+             <summary>
+            b_疾病编码分类
+             </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.DiseaseCodeSort.id">
+            <summary>
+            id:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.DiseaseCodeSort.上级id">
+            <summary>
+            上级id:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.DiseaseCodeSort.序号">
+            <summary>
+            序号:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.DiseaseCodeSort.名称">
+            <summary>
+            名称:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.DiseaseCodeSort.简码">
+            <summary>
+            简码:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.DiseaseCodeSort.类别">
+            <summary>
+            类别:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.DiseaseCodeSort.范围">
+            <summary>
+            范围:
+            </summary>
+        </member>
+        <member name="T:UP.Models.DB.BasicData.DiseaseCodeType">
+             <summary>
+            b_疾病编码类别
+             </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.DiseaseCodeType.编码">
+            <summary>
+            编码:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.DiseaseCodeType.名称">
+            <summary>
+            名称:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.DiseaseCodeType.简码">
+            <summary>
+            简码:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.DiseaseCodeType.说明">
+            <summary>
+            说明:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.DiseaseCodeType.排序">
+            <summary>
+            排序:
+            </summary>
+        </member>
+        <member name="T:UP.Models.DB.BasicData.Education">
+             <summary>
+            b_学历
+             </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.Education.编码">
+            <summary>
+            编码:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.Education.名称">
+            <summary>
+            名称:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.Education.简码">
+            <summary>
+            简码:
+            </summary>
+        </member>
+        <member name="T:UP.Models.DB.BasicData.Gender">
+             <summary>
+            b_社会性别
+             </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.Gender.编码">
+            <summary>
+            编码:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.Gender.名称">
+            <summary>
+            名称:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.Gender.简码">
+            <summary>
+            简码:
+            </summary>
+        </member>
+        <member name="T:UP.Models.DB.BasicData.HealthOrgCategory">
+             <summary>
+            b_卫生机构类别
+             </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.HealthOrgCategory.编码">
+            <summary>
+            编码:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.HealthOrgCategory.名称">
+            <summary>
+            名称:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.HealthOrgCategory.简码">
+            <summary>
+            简码:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.HealthOrgCategory.层次">
+            <summary>
+            层次:
+            </summary>
+        </member>
+        <member name="T:UP.Models.DB.BasicData.Job">
+             <summary>
+            b_职务
+             </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.Job.编码">
+            <summary>
+            编码:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.Job.名称">
+            <summary>
+            名称:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.Job.简码">
+            <summary>
+            简码:
+            </summary>
+        </member>
+        <member name="T:UP.Models.DB.BasicData.Nation">
+             <summary>
+            b_民族
+             </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.Nation.编码">
+            <summary>
+            编码:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.Nation.名称">
+            <summary>
+            名称:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.Nation.简码">
+            <summary>
+            简码:
+            </summary>
+        </member>
+        <member name="T:UP.Models.DB.BasicData.Nationality">
+             <summary>
+            b_国籍
+             </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.Nationality.编码">
+            <summary>
+            编码:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.Nationality.名称">
+            <summary>
+            名称:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.Nationality.简码">
+            <summary>
+            简码:
+            </summary>
+        </member>
+        <member name="T:UP.Models.DB.BasicData.Organ">
+            <summary>
+            b_机构
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.Organ.id">
+            <summary>
+            id:机构id
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.Organ.上级id">
+            <summary>
+            上级id:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.Organ.编码">
+            <summary>
+            编码:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.Organ.名称">
+            <summary>
+            名称:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.Organ.简称">
+            <summary>
+            简称:机构简称
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.Organ.行政级别">
+            <summary>
+            行政级别:目前固定填写：0:省(自治区、直辖市);1:市(地级市、地区、州);2:县(区、县级市);3:乡(镇、街道办事处);4:村(居委会);5:组;9:其他，后续从基础编码表中读取
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.Organ.简码">
+            <summary>
+            简码:机构首字母简写
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.Organ.性质">
+            <summary>
+            性质:目前固定填写为：1-社区中心;2、乡镇卫生院; 3-服务站 4-村卫生室 5-妇幼保健院 6-综合医院,7 卫健委（管理机构），后续从基础编码表中读取
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.Organ.机构码">
+            <summary>
+            机构码:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.Organ.电话">
+            <summary>
+            电话:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.Organ.地址">
+            <summary>
+            地址:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.Organ.执业证代码">
+            <summary>
+            执业证代码:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.Organ.组织机构代码证">
+            <summary>
+            组织机构代码证:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.Organ.所属行政区划">
+            <summary>
+            所属行政区划:
+            </summary>
+        </member>
+        <member name="T:UP.Models.DB.BasicData.OrgPerson">
+            <summary>
+            b_机构人员
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.OrgPerson.id">
+            <summary>
+            id:人员id
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.OrgPerson.机构id">
+            <summary>
+            机构id:主要所属机构id,如果多点执行则由业务系统管理
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.OrgPerson.姓名">
+            <summary>
+            姓名:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.OrgPerson.简码">
+            <summary>
+            简码:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.OrgPerson.性别">
+            <summary>
+            性别:引用性别编码
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.OrgPerson.民族">
+            <summary>
+            民族:引用民族编码
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.OrgPerson.学历">
+            <summary>
+            学历:引用学历编码
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.OrgPerson.出生日期">
+            <summary>
+            出生日期:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.OrgPerson.身份证号">
+            <summary>
+            身份证号:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.OrgPerson.电话">
+            <summary>
+            电话:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.OrgPerson.手机">
+            <summary>
+            手机:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.OrgPerson.邮箱">
+            <summary>
+            邮箱:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.OrgPerson.职务">
+            <summary>
+            职务:引用职务编码
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.OrgPerson.简介">
+            <summary>
+            简介:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.OrgPerson.擅长">
+            <summary>
+            擅长:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.OrgPerson.状态">
+            <summary>
+            状态:数据状态:-1-删除;0-停用;1-正常
+            </summary>
+        </member>
+        <member name="T:UP.Models.DB.BasicData.rhBloodType">
+             <summary>
+            b_rh血型
+             </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.rhBloodType.编码">
+            <summary>
+            编码:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.rhBloodType.名称">
+            <summary>
+            名称:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.rhBloodType.简码">
+            <summary>
+            简码:
+            </summary>
+        </member>
+        <member name="T:UP.Models.DB.BasicData.SensitiveSource">
+             <summary>
+            b_过敏源
+             </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.SensitiveSource.编码">
+            <summary>
+            编码:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.SensitiveSource.名称">
+            <summary>
+            名称:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.SensitiveSource.简码">
+            <summary>
+            简码:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.SensitiveSource.药物">
+            <summary>
+            药物:
+            </summary>
+        </member>
+        <member name="T:UP.Models.DB.BasicData.SocialRelations">
+             <summary>
+            b_社会关系
+             </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.SocialRelations.编码">
+            <summary>
+            编码:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.SocialRelations.名称">
+            <summary>
+            名称:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.SocialRelations.简码">
+            <summary>
+            简码:
+            </summary>
+        </member>
+        <member name="T:UP.Models.DB.BasicData.sys_code_catgory">
+             <summary>
+            sys_code_catgory
+             </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.sys_code_catgory.id">
+            <summary>
+            id:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.sys_code_catgory.parent_id">
+            <summary>
+            parent_id:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.sys_code_catgory.name">
+            <summary>
+            name:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.sys_code_catgory.describe">
+            <summary>
+            describe:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.sys_code_catgory.ref_table">
+            <summary>
+            ref_table:动态生成的表名(非必填项目)
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.sys_code_catgory.stdd_code">
+            <summary>
+            stdd_code:引用外部的标准(非必填项目)
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.sys_code_catgory.stdd_source">
+            <summary>
+            stdd_source:设置的数据来源于某个标准
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.sys_code_catgory.status">
+            <summary>
+            status:用来标记数据的启用/停用状态，0-停用，1-启用,-1-未生效
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.sys_code_catgory.update_time">
+            <summary>
+            update_time:最后一次的更新时间
+            </summary>
+        </member>
+        <member name="T:UP.Models.DB.BasicData.sys_code_items">
+             <summary>
+            sys_code_items
+             </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.sys_code_items.id">
+            <summary>
+            id:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.sys_code_items.parent_id">
+            <summary>
+            parent_id:关联的上级id
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.sys_code_items.code_catgory_id">
+            <summary>
+            code_catgory_id:关联的分类id
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.sys_code_items.name">
+            <summary>
+            name:显示内容
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.sys_code_items.code">
+            <summary>
+            code:通常是编码值内容
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.sys_code_items.pinyin">
+            <summary>
+            pinyin:一般是记录拼音首字母
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.sys_code_items.describe">
+            <summary>
+            describe:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.sys_code_items.stdd_code">
+            <summary>
+            stdd_code:引用外部的标准
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.sys_code_items.status">
+            <summary>
+            use_sign:用来标记数据的启用/停用状态，0-停用，1-启用,-1-未生效
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.sys_code_items.update_time">
+            <summary>
+            update_time:最后一次的更新时间
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.sys_code_items.sno">
+            <summary>
+            sno:排序号
+            </summary>
+        </member>
+        <member name="T:UP.Models.DB.BasicData.Vocation">
+             <summary>
+            b_职业
+             </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.Vocation.编码">
+            <summary>
+            编码:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.Vocation.名称">
+            <summary>
+            名称:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BasicData.Vocation.简码">
+            <summary>
+            简码:
+            </summary>
+        </member>
+        <member name="T:UP.Models.DB.BusinessSys.AppInformation">
+             <summary>
+            系统_应用信息
+             </summary>
+        </member>
+        <member name="P:UP.Models.DB.BusinessSys.AppInformation.appid">
+            <summary>
+            appid:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BusinessSys.AppInformation.应用名称">
+            <summary>
+            应用名称:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BusinessSys.AppInformation.公钥">
+            <summary>
+            公钥:调用加密密钥
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BusinessSys.AppInformation.私钥">
+            <summary>
+            私钥:平台解密密钥
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BusinessSys.AppInformation.应用状态">
+            <summary>
+            应用状态:1:正常；0:停用
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BusinessSys.AppInformation.登记时间">
+            <summary>
+            登记时间:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BusinessSys.AppInformation.登记人id">
+            <summary>
+            登记人id:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BusinessSys.AppInformation.变更时间">
+            <summary>
+            变更时间:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BusinessSys.AppInformation.变更人id">
+            <summary>
+            变更人id:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BusinessSys.AppInformation.数据标识">
+            <summary>
+            数据标识: 1:正常； 0:删除
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BusinessSys.AppInformation.使用平台">
+            <summary>
+            使用平台:PC=1; h5=2;安卓=3;IOS=4
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BusinessSys.AppInformation.产品id">
+            <summary>
+            产品id:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BusinessSys.AppInformation.有效期">
+            <summary>
+            有效期:
+            </summary>
+        </member>
+        <member name="T:UP.Models.DB.BusinessSys.DataSource">
+             <summary>
+            系统_产品数据源
+             </summary>
+        </member>
+        <member name="P:UP.Models.DB.BusinessSys.DataSource.id">
+            <summary>
+            id:产品id
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BusinessSys.DataSource.产品id">
+            <summary>
+            产品id:关联的产品id
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BusinessSys.DataSource.名称">
+            <summary>
+            名称:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BusinessSys.DataSource.数据库类型">
+            <summary>
+            数据库类型:1：Oracle; 2：Pg;3：SqlServer;4：MySql
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BusinessSys.DataSource.ip">
+            <summary>
+            ip:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BusinessSys.DataSource.端口">
+            <summary>
+            端口:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BusinessSys.DataSource.实例名">
+            <summary>
+            实例名:mysql,pg,sqlserver则是数据库名
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BusinessSys.DataSource.用户名">
+            <summary>
+            用户名:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BusinessSys.DataSource.密码">
+            <summary>
+            密码:加密存储各数据库的访问密码
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BusinessSys.DataSource.说明">
+            <summary>
+            说明:数据源的配置信息
+            </summary>
+        </member>
+        <member name="T:UP.Models.DB.BusinessSys.Product">
+             <summary>
+            系统_产品
+             </summary>
+        </member>
+        <member name="P:UP.Models.DB.BusinessSys.Product.id">
+            <summary>
+            id:产品id
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BusinessSys.Product.名称">
+            <summary>
+            名称:产品名称
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BusinessSys.Product.简称">
+            <summary>
+            简称:产品简称
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BusinessSys.Product.产品ip">
+            <summary>
+            产品ip:产品的ip地址
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BusinessSys.Product.端口">
+            <summary>
+            端口:产品访问端口
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BusinessSys.Product.状态">
+            <summary>
+            状态:数据状态:-1-删除;0-停用;1-正常
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BusinessSys.Product.排序">
+            <summary>
+            排序:用于产品的排序id
+            </summary>
+        </member>
+        <member name="T:UP.Models.DB.BusinessSys.ProductSource">
+             <summary>
+            系统_产品服务源
+             </summary>
+        </member>
+        <member name="P:UP.Models.DB.BusinessSys.ProductSource.id">
+            <summary>
+            id:服务id
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BusinessSys.ProductSource.产品id">
+            <summary>
+            产品id:产品id
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BusinessSys.ProductSource.名称">
+            <summary>
+            名称:服务名称
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BusinessSys.ProductSource.服务地址">
+            <summary>
+            服务地址:访问服务的地址
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BusinessSys.ProductSource.授权码">
+            <summary>
+            授权码:如果是通过授权码访问则使用
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BusinessSys.ProductSource.用户名">
+            <summary>
+            用户名:访问的用户
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BusinessSys.ProductSource.密码">
+            <summary>
+            密码:加密后存储的访问密码
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.BusinessSys.ProductSource.授权方式">
+            <summary>
+            授权方式:1.token,2:basic
+            </summary>
+        </member>
+        <member name="T:UP.Models.DB.Interface.InterfaceAsync">
+            <summary>
+            接口异步方法DB实体类
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceAsync.id">
+            <summary>
+            guid
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceAsync.items_id">
+            <summary>
+            接口id
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceAsync.exchage_id">
+            <summary>
+            MQ exchage 下拉选择一个路由器
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceAsync.keyword">
+            <summary>
+            选择一个关键字
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceAsync.describe">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="T:UP.Models.DB.Interface.InterfaceAuth">
+            <summary>
+            外部接口授权DB实体类
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceAuth.id">
+            <summary>
+            GUID
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceAuth.items_id">
+            <summary>
+            接口ID
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceAuth.product_id">
+            <summary>
+            产品ID
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceAuth.frequency_interval">
+            <summary>
+            每分钟调用次数
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceAuth.efctime">
+             <summary>
+            可调用时间范围
+             </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceAuth.expitdate">
+             <summary>
+            失效的时间
+             </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceAuth.describe">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="T:UP.Models.DB.Interface.InterfaceCatgory">
+            <summary>
+            接口分类、分组映射对象
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceCatgory.id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceCatgory.parent_id">
+            <summary>
+            上级id
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceCatgory.name">
+            <summary>
+            分类、分组名称
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceCatgory.code">
+            <summary>
+            分类编码
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceCatgory.sno">
+            <summary>
+            分类序号
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceCatgory.describe">
+            <summary>
+            分类描述
+            </summary>
+        </member>
+        <member name="T:UP.Models.DB.Interface.InterfaceItem">
+            <summary>
+            外部注册接口DB映射类
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceItem.id">
+            <summary>
+            GUID
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceItem.catgory_id">
+            <summary>
+            分类id
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceItem.code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceItem.name">
+            <summary>
+            接口名称
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceItem.describe">
+            <summary>
+            描述描述
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceItem.path">
+            <summary>
+            接口的访问路径例如：/api/xxx/axxx
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceItem.access_type">
+            <summary>
+            1:post,2:get,3:put,4:delete
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceItem.proc_type">
+            <summary>
+            1:异常队列 2: 同步执行
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceItem.sno">
+            <summary>
+            序号
+            </summary>
+        </member>
+        <member name="T:UP.Models.DB.Interface.InterfaceParam">
+            <summary>
+            外部接口参数
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceParam.id">
+            <summary>
+            GUID
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceParam.items_id">
+            <summary>
+            接口ID
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceParam.name">
+             <summary>
+            参数名称，如name
+             </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceParam.title">
+            <summary>
+            参数标题
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceParam.type">
+            <summary>
+            参数类型
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceParam.sno">
+            <summary>
+             序号
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceParam.describe">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="T:UP.Models.DB.Interface.InterfaceSync">
+            <summary>
+            接口同步方法DB实体类
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceSync.id">
+            <summary>
+            GUID
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceSync.items_id">
+            <summary>
+            指向的接口id
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceSync.sno">
+            <summary>
+            排序号，也是执行顺序号
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceSync.service_id">
+            <summary>
+            引用的服务id
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceSync.call_address">
+            <summary>
+            消息转发调用地址或方法
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceSync.call_type">
+            <summary>
+            1:get,2:post
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceSync.auth_type">
+            <summary>
+            1:Basic,2:token（通过业务系统进行授权）
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceSync.user_name">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceSync.password">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:UP.Models.DB.Interface.InterfaceSync.describe">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:UP.Models.DB.Log.AppOperationLog">
+             <summary>
+            系统_接口请求日志
+             </summary>
+        </member>
+        <member name="P:UP.Models.DB.Log.AppOperationLog.请求模块">
+            <summary>
+            请求模块:请求接口名称/模块名称
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Log.AppOperationLog.请求接口">
+            <summary>
+            请求接口:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Log.AppOperationLog.来源方式">
+            <summary>
+            来源方式:1android,2 IOS
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Log.AppOperationLog.请求时间">
+            <summary>
+            请求时间:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Log.AppOperationLog.设备id">
+            <summary>
+            设备id:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Log.AppOperationLog.请求ip">
+            <summary>
+            请求ip:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Log.AppOperationLog.身份类型">
+            <summary>
+            身份类型:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Log.AppOperationLog.请求地址">
+            <summary>
+            请求地址:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Log.AppOperationLog.请求参数">
+            <summary>
+            请求参数:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Log.AppOperationLog.请求状态">
+            <summary>
+            请求状态:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Log.AppOperationLog.请求耗时">
+            <summary>
+            请求耗时:请求响应毫秒数
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Log.AppOperationLog.输出信息">
+            <summary>
+            输出信息:接口请求输出信息
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Log.AppOperationLog.失败原因">
+            <summary>
+            失败原因:操作失败详细信息
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Log.AppOperationLog.创建时间">
+            <summary>
+            创建时间:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Log.AppOperationLog.数据标识">
+            <summary>
+            数据标识:
+            </summary>
+        </member>
+        <member name="T:UP.Models.DB.Log.SysLogRecord">
+             <summary>
+            系统_运维操作日志
+             </summary>
+        </member>
+        <member name="P:UP.Models.DB.Log.SysLogRecord.用户id">
+            <summary>
+            用户id:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Log.SysLogRecord.登录账号">
+            <summary>
+            登录账号:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Log.SysLogRecord.客户端ip">
+            <summary>
+            客户端ip:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Log.SysLogRecord.访问页面">
+            <summary>
+            访问页面:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Log.SysLogRecord.执行动作">
+            <summary>
+            执行动作:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Log.SysLogRecord.操作说明">
+            <summary>
+            操作说明:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Log.SysLogRecord.登录设备">
+            <summary>
+            登录设备:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Log.SysLogRecord.记录id">
+            <summary>
+            记录id:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Log.SysLogRecord.操作模块">
+            <summary>
+            操作模块:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.Log.SysLogRecord.记录时间">
+            <summary>
+            记录时间:
+            </summary>
+        </member>
+        <member name="T:UP.Models.DB.RoleRight.ModulesFunction">
+             <summary>
+            模块功能
+             </summary>
+        </member>
+        <member name="T:UP.Models.DB.RoleRight.ModulesFunctionInterface">
+             <summary>
+            系统_功能接口
+             </summary>
+        </member>
+        <member name="P:UP.Models.DB.RoleRight.ModulesFunctionInterface.模块id">
+            <summary>
+            模块id:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.RoleRight.ModulesFunctionInterface.功能id">
+            <summary>
+            功能id:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.RoleRight.ModulesFunctionInterface.命名空间名称">
+            <summary>
+            命名空间名称:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.RoleRight.ModulesFunctionInterface.控制器名称">
+            <summary>
+            控制器名称:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.RoleRight.ModulesFunctionInterface.方法名">
+            <summary>
+            方法名:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.RoleRight.ModulesFunctionInterface.序号">
+            <summary>
+            序号:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.RoleRight.ModulesFunctionInterface.是否停用">
+            <summary>
+            是否停用:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.RoleRight.ModulesFunctionInterface.停用时间">
+            <summary>
+            停用时间:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.RoleRight.ModulesFunctionInterface.登记人">
+            <summary>
+            登记人:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.RoleRight.ModulesFunctionInterface.登记时间">
+            <summary>
+            登记时间:
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.RoleRight.ModulesFunctionInterface.更新时间">
+            <summary>
+            更新时间:
+            </summary>
+        </member>
+        <member name="T:UP.Models.DB.RoleRight.ModulesInfo">
+             <summary>
+            模块配置
+             </summary>
+        </member>
+        <member name="P:UP.Models.DB.RoleRight.ModulesInfo.parent_id">
+            <summary>
+            上级ID
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.RoleRight.ModulesInfo.code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.RoleRight.ModulesInfo.name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.RoleRight.ModulesInfo.title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.RoleRight.ModulesInfo.path">
+            <summary>
+            路径:访问路径
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.RoleRight.ModulesInfo.status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.RoleRight.ModulesInfo.sno">
+            <summary>
+            顺序
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.RoleRight.ModulesInfo.icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.RoleRight.ModulesInfo.is_firstpage">
+            <summary>
+            是否首页:0否，1是
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.RoleRight.ModulesInfo.resource_type">
+            <summary>
+            资源类型:1:菜单页面,2:功能按钮
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.RoleRight.ModulesInfo.is_child_page">
+            <summary>
+            是否子页:1:是，0：否（导航只加载为0的主页面）
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.RoleRight.ModulesInfo.describe">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.RoleRight.ModulesInfo.update_time">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="T:UP.Models.DB.RoleRight.RoleFunction">
+             <summary>
+            系统_角色功能
+             </summary>
+        </member>
+        <member name="T:UP.Models.DB.RoleRight.RoleFunctionInterface">
+             <summary>
+            系统_角色功能接口
+             </summary>
+        </member>
+        <member name="T:UP.Models.DB.RoleRight.RoleInfo">
+             <summary>
+            系统_角色
+             </summary>
+        </member>
+        <member name="P:UP.Models.DB.RoleRight.RoleInfo.是否停用">
+            <summary>
+            0启用,1停用
+            </summary>
+        </member>
+        <member name="T:UP.Models.DB.RoleRight.RoleModularInfo">
+             <summary>
+            系统_角色模块
+             </summary>
+        </member>
+        <member name="T:UP.Models.DB.RoleRight.SystemUser">
+             <summary>
+            系统_人员
+             </summary>
+        </member>
+        <member name="P:UP.Models.DB.RoleRight.SystemUser.用户状态">
+            <summary>
+            用户状态:1、启用 0 停用
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.RoleRight.SystemUser.face_token">
+            <summary>
+            face_token: 指纹认证token
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.RoleRight.SystemUser.数据标识">
+            <summary>
+            数据标识:1:正常； 0:删除
+            </summary>
+        </member>
+        <member name="T:UP.Models.DB.RoleRight.SystemUserRole">
+             <summary>
+            系统_人员角色
+             </summary>
+        </member>
+        <member name="P:UP.Models.DB.RoleRight.SystemUserRole.account_id">
+            <summary>
+            账户id
+            </summary>
+        </member>
+        <member name="P:UP.Models.DB.RoleRight.SystemUserRole.role_id">
+            <summary>
+            角色id
+            </summary>
+        </member>
+        <member name="P:UP.Models.Drug.Dic_DosageForm.ID">
+            <summary>
+            ID:
+            </summary>
+        </member>
+        <member name="P:UP.Models.Drug.Dic_DosageForm.Name">
+            <summary>
+            Name:
+            </summary>
+        </member>
+        <member name="T:UP.Models.Drug.Dic_Manufacturer">
+             <summary>
+            Dic_Manufacturer
+             </summary>
+        </member>
+        <member name="P:UP.Models.Drug.Dic_Manufacturer.ID">
+            <summary>
+            ID:
+            </summary>
+        </member>
+        <member name="P:UP.Models.Drug.Dic_Manufacturer.Name">
+            <summary>
+            Name:
+            </summary>
+        </member>
+        <member name="T:UP.Models.Drug.Dic_Storehouse">
+             <summary>
+            Dic_Storehouse
+             </summary>
+        </member>
+        <member name="P:UP.Models.Drug.Dic_Storehouse.ID">
+            <summary>
+            ID:
+            </summary>
+        </member>
+        <member name="P:UP.Models.Drug.Dic_Storehouse.Name">
+            <summary>
+            Name:
+            </summary>
+        </member>
+        <member name="P:UP.Models.Drug.DrugBasic.ID">
+            <summary>
+            ID:
+            </summary>
+        </member>
+        <member name="P:UP.Models.Drug.DrugBasic.Name">
+            <summary>
+            Name:
+            </summary>
+        </member>
+        <member name="P:UP.Models.Drug.DrugBasic.Code">
+            <summary>
+            Code:
+            </summary>
+        </member>
+        <member name="P:UP.Models.Drug.DrugBasic.EnglishName">
+            <summary>
+            EnglishName:
+            </summary>
+        </member>
+        <member name="P:UP.Models.Drug.DrugBasic.DosageFormID">
+            <summary>
+            DosageFormID:
+            </summary>
+        </member>
+        <member name="P:UP.Models.Drug.DrugBasic.ManufacturerID">
+            <summary>
+            ManufacturerID:
+            </summary>
+        </member>
+        <member name="T:UP.Models.Drug.Inventory">
+             <summary>
+            Inventory
+             </summary>
+        </member>
+        <member name="P:UP.Models.Drug.Inventory.ID">
+            <summary>
+            ID:唯一ID
+            </summary>
+        </member>
+        <member name="P:UP.Models.Drug.Inventory.DrugID">
+            <summary>
+            DrugID:
+            </summary>
+        </member>
+        <member name="P:UP.Models.Drug.Inventory.Amount">
+            <summary>
+            Amount:库存数量
+            </summary>
+        </member>
+        <member name="P:UP.Models.Drug.Inventory.UpdateTime">
+            <summary>
+            UpdateTime:更新时间
+            </summary>
+        </member>
+        <member name="P:UP.Models.Drug.Inventory.Operator">
+            <summary>
+            Operator:
+            </summary>
+        </member>
+        <member name="P:UP.Models.Drug.Inventory.StroehouseID">
+            <summary>
+            StroehouseID:
+            </summary>
+        </member>
+        <member name="T:UP.Models.Drug.InventorySchedule">
+             <summary>
+            InventorySchedule
+             </summary>
+        </member>
+        <member name="P:UP.Models.Drug.InventorySchedule.ID">
+            <summary>
+            ID:
+            </summary>
+        </member>
+        <member name="P:UP.Models.Drug.InventorySchedule.DrugID">
+            <summary>
+            DrugID:
+            </summary>
+        </member>
+        <member name="P:UP.Models.Drug.InventorySchedule.Count">
+            <summary>
+            Count:
+            </summary>
+        </member>
+        <member name="P:UP.Models.Drug.InventorySchedule.Operator">
+            <summary>
+            Operator:
+            </summary>
+        </member>
+        <member name="P:UP.Models.Drug.InventorySchedule.OperatorTime">
+            <summary>
+            OperatorTime:
+            </summary>
+        </member>
+        <member name="P:UP.Models.Drug.InventorySchedule.Storehouse">
+            <summary>
+            Storehouse:
+            </summary>
+        </member>
+    </members>
+</doc>

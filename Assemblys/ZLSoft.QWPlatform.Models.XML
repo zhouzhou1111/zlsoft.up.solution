@@ -1,0 +1,964 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZLSoft.QWPlatform.Models</name>
+    </assembly>
+    <members>
+        <member name="T:QWPlatform.Models.ColumnTypeAttribute">
+            <summary>
+            设置列类型
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.ColumnTypeAttribute.ColumnType">
+            <summary>
+            获取列类型
+            </summary>
+        </member>
+        <member name="M:QWPlatform.Models.ColumnTypeAttribute.#ctor(QWPlatform.DataIntface.DataType)">
+            <summary>
+            指定列类型
+            </summary>
+            <param name="dataType"></param>
+        </member>
+        <member name="T:QWPlatform.Models.DefaultValueAttribute">
+            <summary>
+            默认值对象描述
+            </summary>
+        </member>
+        <member name="M:QWPlatform.Models.DefaultValueAttribute.#ctor(System.String,QWPlatform.Models.DefaultValueType,QWPlatform.Models.ActionType)">
+            <summary>
+            默认值属性设置
+            </summary>
+            <param name="expression">值</param>
+            <param name="expressionType">默认值表达式</param>
+            <param name="deActionType">默认值类型</param> 
+        </member>
+        <member name="P:QWPlatform.Models.DefaultValueAttribute.Expression">
+            <summary>
+            默认值表达式
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.DefaultValueAttribute.ExpressionType">
+            <summary>
+            默认值表达式类型
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.DefaultValueAttribute.DeActionType">
+            <summary>
+            针对默认值的操作类型
+            </summary>
+        </member>
+        <member name="T:QWPlatform.Models.FieldBaseAttribute">
+            <summary>
+            字段基础属性：
+                1.字段名称
+                2.字段注释
+                3.默认值
+                4.非空属性
+                5.只读属性
+                6.正则表达式
+                7.数据长度
+                8.数据精度
+                9.数据库的数据类型
+            </summary> 
+        </member>
+        <member name="M:QWPlatform.Models.FieldBaseAttribute.#ctor(System.String)">
+            <summary>
+            初始化字段基础属性
+            </summary>
+            <param name="columnName">数据库字段名称</param> 
+        </member>
+        <member name="M:QWPlatform.Models.FieldBaseAttribute.#ctor(System.String,System.String)">
+            <summary>
+            初始化字段基础属性
+            </summary>
+            <param name="columnName">数据库字段名称</param>
+            <param name="comments">字段注释</param> 
+        </member>
+        <member name="M:QWPlatform.Models.FieldBaseAttribute.#ctor(System.String,System.String,System.Boolean)">
+            <summary>
+            初始化字段基础属性
+            </summary>
+            <param name="columnName">字段名称</param>
+            <param name="comments">备注</param>
+            <param name="isAutoIncrease">是否为自动增长</param>
+        </member>
+        <member name="M:QWPlatform.Models.FieldBaseAttribute.#ctor(System.String,System.String,System.Object)">
+            <summary>
+            初始化字段基础属性
+            </summary>
+            <param name="columnName">数据库字段名称</param>
+            <param name="comments">字段注释</param>
+            <param name="defaultVal">默认值</param> 
+        </member>
+        <member name="M:QWPlatform.Models.FieldBaseAttribute.#ctor(System.String,System.String,System.Object,System.Boolean)">
+            <summary>
+            初始化字段基础属性
+            </summary>
+            <param name="columnName">数据库字段名称</param>
+            <param name="comments">字段注释</param>
+            <param name="defaultVal">默认值</param>
+            <param name="notNull">是否非空</param> 
+        </member>
+        <member name="M:QWPlatform.Models.FieldBaseAttribute.#ctor(System.String,System.String,System.Object,System.Boolean,System.Boolean)">
+            <summary>
+            初始化字段基础属性
+            </summary>
+            <param name="columnName">数据库字段名称</param>
+            <param name="comments">字段注释</param>
+            <param name="defaultVal">默认值</param>
+            <param name="notNull">是否非空</param>
+            <param name="isReady">是否只读</param> 
+        </member>
+        <member name="M:QWPlatform.Models.FieldBaseAttribute.#ctor(System.String,System.String,System.Object,System.Boolean,System.Boolean,System.String)">
+            <summary>
+            初始化字段基础属性
+            </summary>
+            <param name="columnName">数据库字段名称</param>
+            <param name="comments">字段注释</param>
+            <param name="defaultVal">默认值</param>
+            <param name="notNull">是否非空</param>
+            <param name="isReady">是否只读</param>
+            <param name="regText">使用正则表达式验证</param>
+        </member>
+        <member name="M:QWPlatform.Models.FieldBaseAttribute.#ctor(System.String,System.String,System.Object,System.Boolean,System.Boolean,System.String,System.Int32)">
+            <summary>
+            初始化字段基础属性
+            </summary>
+            <param name="columnName">数据库字段名称</param>
+            <param name="comments">字段注释</param>
+            <param name="defaultVal">默认值</param>
+            <param name="notNull">是否非空</param>
+            <param name="isReady">是否只读</param>
+            <param name="regText">使用正则表达式验证</param>
+            <param name="length">数据长度</param>
+        </member>
+        <member name="M:QWPlatform.Models.FieldBaseAttribute.#ctor(System.String,System.String,System.Object,System.Boolean,System.Boolean,System.String,System.Int32,System.Int32)">
+            <summary>
+            初始化字段基础属性
+            </summary>
+            <param name="columnName">数据库字段名称</param>
+            <param name="comments">字段注释</param>
+            <param name="defaultVal">默认值</param>
+            <param name="notNull">是否非空</param>
+            <param name="isReady">是否只读</param>
+            <param name="regText">使用正则表达式验证</param>
+            <param name="length">数据长度</param>
+            <param name="scale">数据精度</param>
+        </member>
+        <member name="M:QWPlatform.Models.FieldBaseAttribute.#ctor(System.String,System.String,System.Object,System.Boolean,System.Boolean,System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            初始化字段基础属性
+            </summary>
+            <param name="columnName">数据库字段名称</param>
+            <param name="comments">字段注释</param>
+            <param name="defaultVal">默认值</param>
+            <param name="notNull">是否非空</param>
+            <param name="isReady">是否只读</param>
+            <param name="regText">使用正则表达式验证</param>
+            <param name="length">数据长度</param>
+            <param name="scale">数据精度</param>
+            <param name="dbType">数据库字段类型</param>
+        </member>
+        <member name="P:QWPlatform.Models.FieldBaseAttribute.ColumnName">
+            <summary>
+            字段名称
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.FieldBaseAttribute.Comments">
+            <summary>
+            字段注释
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.FieldBaseAttribute.DefaultVal">
+            <summary>
+            默认值
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.FieldBaseAttribute.NotNull">
+            <summary>
+            非空约束（true表示不可为空）
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.FieldBaseAttribute.IsReady">
+            <summary>
+            是否只读
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.FieldBaseAttribute.RegText">
+            <summary>
+            使用正则表达式验证
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.FieldBaseAttribute.Length">
+            <summary>
+            数据长度
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.FieldBaseAttribute.Scale">
+            <summary>
+            精度数字类型
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.FieldBaseAttribute.DBType">
+            <summary>
+            数据库类型
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.FieldBaseAttribute.IsAutoIncrease">
+            <summary>
+            是否自动递增，在SQLServer中常用（不参与计算）
+            </summary>
+        </member>
+        <member name="T:QWPlatform.Models.PGTypeAttribute">
+            <summary>
+            PG数据库类型
+            </summary>
+        </member>
+        <member name="T:QWPlatform.Models.PrimaryKeyAttribute">
+            <summary>
+            数据库主键标识
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.PrimaryKeyAttribute.AutoIdentity">
+            <summary>
+            主键为自动增加类型
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.PrimaryKeyAttribute.SequenceName">
+            <summary>
+            主键值文本
+            </summary>
+        </member>
+        <member name="M:QWPlatform.Models.PrimaryKeyAttribute.#ctor">
+            <summary>
+            主键标识
+            </summary>
+        </member>
+        <member name="M:QWPlatform.Models.PrimaryKeyAttribute.#ctor(System.String)">
+            <summary>
+            主键值文本
+            </summary>
+            <param name="sequenceName">使用了序列名的主键</param>
+        </member>
+        <member name="M:QWPlatform.Models.PrimaryKeyAttribute.#ctor(System.Boolean)">
+            <summary>
+            检查主键是否为自动增长类型
+            </summary>
+            <param name="autoIdentity"></param>
+        </member>
+        <member name="T:QWPlatform.Models.ForeignKeyAttribute">
+            <summary>
+            外键属性
+            </summary>
+        </member>
+        <member name="M:QWPlatform.Models.ForeignKeyAttribute.#ctor(System.String,System.String)">
+            <summary>
+            外键属性
+            </summary>
+            <param name="tableName">外键表名称</param>
+            <param name="columnName">外键字段名称</param>
+        </member>
+        <member name="P:QWPlatform.Models.ForeignKeyAttribute.TableName">
+            <summary>
+            外键表名称
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.ForeignKeyAttribute.ForeignKey">
+            <summary>
+            外键名称
+            </summary>
+        </member>
+        <member name="T:QWPlatform.Models.IgnoreAttribute">
+            <summary>
+            表示怱略的特性标识
+            </summary>
+        </member>
+        <member name="T:QWPlatform.Models.TableAttribute">
+            <summary>
+            表特性
+                1：表名称
+                2：表描述
+            </summary>
+        </member>
+        <member name="M:QWPlatform.Models.TableAttribute.#ctor(System.String,System.String)">
+            <summary>
+            对实体表描述
+            </summary>
+            <param name="tabName">表名称</param>
+            <param name="description">描述</param>
+        </member>
+        <member name="P:QWPlatform.Models.TableAttribute.TableName">
+            <summary>
+            获取表名称
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.TableAttribute.TableDescription">
+            <summary>
+            获取表描述
+            </summary>
+        </member>
+        <member name="T:QWPlatform.Models.Common.DataColumn">
+            <summary>
+            定义的数据列属性
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.Common.DataColumn.Name">
+            <summary>
+            列表名称
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.Common.DataColumn.ColumnType">
+            <summary>
+            列类型
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.Common.DataColumn.Value">
+            <summary>
+            列对应值
+            </summary>
+        </member>
+        <member name="T:QWPlatform.Models.Common.ModelOperation">
+            <summary>
+            Model的内部操作
+            </summary>
+        </member>
+        <member name="M:QWPlatform.Models.Common.ModelOperation.GetThisObjDBColumn(System.String@,System.Object)">
+            <summary>
+            获取实例对应中的列属性集合
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.Models.DataTableExtend">
+            <summary>
+            DataTable扩展类型,仅在modelbase中使用
+            </summary>
+        </member>
+        <member name="M:QWPlatform.Models.DataTableExtend.ToModels``1(System.Data.DataTable)">
+            <summary>
+            将DataTable转换为modelList
+            </summary>
+            <typeparam name="T">输入类型</typeparam>
+            <param name="dt">数据表</param>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.Models.MachingCode.MatcheCodeModel">
+            <summary>
+            对码原始模型
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.MachingCode.MatcheCodeModel.ID">
+            <summary>
+            对码ID
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.MachingCode.MatcheCodeModel.Name">
+            <summary>
+            对码名称
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.MachingCode.MatcheCodeModel.Items">
+            <summary>
+            对码项目集合
+            </summary>
+        </member>
+        <member name="T:QWPlatform.Models.MatcheDetailModel">
+            <summary>
+            对码详细内容
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.MatcheDetailModel.OriginalColumnName">
+            <summary>
+            原始列名
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.MatcheDetailModel.TargetColumnName">
+            <summary>
+            目标列名
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.MatcheDetailModel.MatchType">
+            <summary>
+            值对码方式
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.MatcheDetailModel.ValueSet">
+            <summary>
+            值表达式设置
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.MatcheDetailModel.Comment">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="T:QWPlatform.Models.ValueExpress">
+            <summary>
+            值表达式
+            </summary>
+        </member>
+        <member name="M:QWPlatform.Models.ValueExpress.#ctor">
+            <summary>
+            初始化值表达式
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.ValueExpress.Regular">
+            <summary>
+            正则表达式
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.ValueExpress.RegularResult">
+            <summary>
+            正则表达式结果值
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.ValueExpress.CaseList">
+            <summary>
+            case目录
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.ValueExpress.SQLText">
+            <summary>
+            SQL表达式
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.ValueExpress.FixValue">
+            <summary>
+            固定值
+            </summary>
+        </member>
+        <member name="T:QWPlatform.Models.AttrType">
+            <summary>
+            枚举模型中类型,
+            </summary>
+        </member>
+        <member name="F:QWPlatform.Models.AttrType.DBFieldName">
+            <summary>
+            数据库字段名称
+            </summary>
+        </member>
+        <member name="F:QWPlatform.Models.AttrType.MemberName">
+            <summary>
+            模型中的属性名称
+            </summary>
+        </member>
+        <member name="T:QWPlatform.Models.DataVerifyType">
+            <summary>
+            数据值验证简单类型枚举
+            </summary>
+        </member>
+        <member name="F:QWPlatform.Models.DataVerifyType.IdentityCard">
+            <summary>
+            身份证
+            </summary>
+        </member>
+        <member name="F:QWPlatform.Models.DataVerifyType.Email">
+            <summary>
+            邮箱验证
+            </summary>
+        </member>
+        <member name="F:QWPlatform.Models.DataVerifyType.MobileTel">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="F:QWPlatform.Models.DataVerifyType.CHDateFomat">
+            <summary>
+            中国日期格式验证YYYY-MM-DD
+            </summary>
+        </member>
+        <member name="F:QWPlatform.Models.DataVerifyType.CHDataTimeFomat">
+            <summary>
+            中国日期时间格式YYYY-MM-DD hh:mm:ss
+            </summary>
+        </member>
+        <member name="F:QWPlatform.Models.DataVerifyType.TimeFormat">
+            <summary>
+            时间格式
+            </summary>
+        </member>
+        <member name="F:QWPlatform.Models.DataVerifyType.IPAddress">
+            <summary>
+            IP地址验证
+            </summary>
+        </member>
+        <member name="F:QWPlatform.Models.DataVerifyType.NumberRange">
+            <summary>
+            数字类型范围
+            </summary>
+        </member>
+        <member name="T:QWPlatform.Models.DefaultValueType">
+            <summary>
+            默认值类型:
+            数据库序列
+            通过SQL查询数据
+            常量
+            </summary>
+        </member>
+        <member name="F:QWPlatform.Models.DefaultValueType.DBSequences">
+            <summary>
+            数据库序列
+            </summary>
+        </member>
+        <member name="F:QWPlatform.Models.DefaultValueType.SQLText">
+            <summary>
+            通过SQL脚本执行获取对应值
+            </summary>
+        </member>
+        <member name="F:QWPlatform.Models.DefaultValueType.Constant">
+            <summary>
+            常量值,直接使用值的内容
+            </summary>
+        </member>
+        <member name="F:QWPlatform.Models.DefaultValueType.IDentity">
+            <summary>
+            数据库自动增加列,一般在SQLserver中使用
+            </summary>
+        </member>
+        <member name="T:QWPlatform.Models.ActionType">
+            <summary>
+            数据库操作类型
+            </summary>
+        </member>
+        <member name="F:QWPlatform.Models.ActionType.Insert">
+            <summary>
+            插入数据
+            </summary>
+        </member>
+        <member name="F:QWPlatform.Models.ActionType.Update">
+            <summary>
+            更新数据
+            </summary>
+        </member>
+        <member name="F:QWPlatform.Models.ActionType.InsertAndUpdate">
+            <summary>
+            更新与插入数据
+            </summary>
+        </member>
+        <member name="T:QWPlatform.Models.MatchingCodeType">
+            <summary>
+            对码匹配方式
+            </summary>
+        </member>
+        <member name="F:QWPlatform.Models.MatchingCodeType.None">
+            <summary>
+            原始值输出
+            </summary>
+        </member>
+        <member name="F:QWPlatform.Models.MatchingCodeType.Reg">
+            <summary>
+            正则表达式匹配
+            </summary>
+        </member>
+        <member name="F:QWPlatform.Models.MatchingCodeType.CASE">
+            <summary>
+            CASE表达式
+            </summary>
+        </member>
+        <member name="F:QWPlatform.Models.MatchingCodeType.SQL">
+            <summary>
+            SQL查询匹配，如果带有参数，则参数名为列名称
+            </summary>
+        </member>
+        <member name="F:QWPlatform.Models.MatchingCodeType.Fix">
+            <summary>
+            固定值，如果默认值在此设置
+            </summary>
+        </member>
+        <member name="T:QWPlatform.Models.IDataModelBase">
+            <summary>
+            所有实体类接口
+            </summary>
+        </member>
+        <member name="M:QWPlatform.Models.IDataModelBase.Insert(System.String[])">
+            <summary>
+            指定插入列
+            </summary>
+            <param name="columns">指定数据列插入</param>
+            <returns>返回插入受影像的行数</returns>
+            <example>
+            Insert("A","B","C"); 其中A,B,C分别代码字段名称
+            </example>
+            <exception cref="!:异常处理">无</exception>
+        </member>
+        <member name="M:QWPlatform.Models.IDataModelBase.Update(System.String[])">
+            <summary>
+            执行数据更新,根据where条件更新
+            </summary>
+            <param name="columns">指定更新列</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.Models.IDataModelBase.Update(System.Collections.Generic.List{System.String},System.String[])">
+            <summary>
+            执行更新模型
+            </summary>
+            <param name="where">更新条件</param>
+            <param name="columns"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.Models.IDataModelBase.Delete">
+            <summary>
+            根据模型的主键进行删除,条件通过Where方法传递
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.Models.IDataModelBase.Delete(System.String[])">
+            <summary>
+            根据模型的主键进行删除
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.Models.IDataModelBase.Select(System.String[])">
+            <summary>
+            执行查询对当前对象进行赋值
+            返回True表示,查询成功,否则查询失败
+            </summary>
+        </member>
+        <member name="M:QWPlatform.Models.IDataModelBase.CheckExists">
+            <summary>
+            检查数据记录是否存在
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.Models.IDataModelBase.Where(System.String)">
+            <summary>
+            条件装载器
+            </summary>
+            <param name="dbColumnName">条件字符串,例如 字段A=:A,其中:A是参数</param> 
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.Models.IDataModelBase.SelectList(System.String[])">
+            <summary>
+            查询所有当前对象的列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.Models.IDataModelBase.Verify(System.String@)">
+            <summary>
+            验证Model的值是否合法
+            </summary>
+            <param name="msg">输出验证消息</param>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.Models.DataModelBase">
+            <summary>
+            所有实体基类
+            </summary>
+        </member>
+        <member name="M:QWPlatform.Models.DataModelBase.#ctor">
+            <summary>
+            实例化实体模型
+            </summary>
+        </member>
+        <member name="M:QWPlatform.Models.DataModelBase.#ctor(QWPlatform.DataIntface.Database.DataFactory)">
+            <summary>
+            存储对应的数据工厂
+            </summary>
+            <param name="dbfctory"></param>
+        </member>
+        <member name="M:QWPlatform.Models.DataModelBase.SetDataFactory(QWPlatform.DataIntface.Database.DataFactory)">
+            <summary>
+            手工设置数据工厂实例
+            </summary>
+            <param name="dbfctory">数据工厂实例</param>
+        </member>
+        <member name="P:QWPlatform.Models.DataModelBase.SqlServerPageColumnName">
+            <summary>
+            SQLServer分页列名称
+            </summary>
+        </member>
+        <member name="M:QWPlatform.Models.DataModelBase.Where(System.String)">
+            <summary>
+            查询附加条件,仅指定数据库的列名称即可,值通过Model获取
+            </summary>
+            <param name="dbColumnName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.Models.DataModelBase.SetWhereColumns(System.String[])">
+            <summary>
+            设置where条件列
+            </summary>
+            <param name="columns">条件列名称组合</param>
+        </member>
+        <member name="M:QWPlatform.Models.DataModelBase.Insert(System.String[])">
+            <summary>
+            将model的数据插入数据库中(根据指定数据列插入,未指定则全部列插入)
+            </summary>
+            <param name="columns">指定更新列(更新所有列,则使用string.Empty表示不指定列更新)</param>
+            <returns>返回受影像记录行数</returns>
+        </member>
+        <member name="M:QWPlatform.Models.DataModelBase.Insert(QWPlatform.DataIntface.ITransaction,System.String[])">
+            <summary>
+            数据插入(带有事务)
+            </summary>
+            <param name="trans">事务对象</param>
+            <param name="columns">指定列(更新所有列,则使用string.Empty表示不指定列更新)</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.Models.DataModelBase.Update(System.String[])">
+            <summary>
+            更新Model
+            </summary>
+            <param name="columns">指定更新列(更新所有列,则使用string.Empty表示不指定列更新)</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.Models.DataModelBase.Update(System.Collections.Generic.List{System.String},System.String[])">
+            <summary>
+            将model的数据更新到数据库中
+            </summary>
+            <param name="where">where参数列表</param>
+            <param name="columns">指定更新列(更新所有列,则使用string.Empty表示不指定列更新)</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.Models.DataModelBase.Update(QWPlatform.DataIntface.ITransaction,System.Collections.Generic.List{System.String},System.String[])">
+            <summary>
+            将model的数据更新到数据库中(带事务对象)
+            </summary>
+            <param name="trans">事务对象</param>
+            <param name="where">更新条件列</param>
+            <param name="columns">更新字段(更新所有列,则使用string.Empty表示不指定列更新)</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.Models.DataModelBase.Delete">
+            <summary>
+            根据模型的主键进行删除,条件通过Where方法传递
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.Models.DataModelBase.Delete(System.String[])">
+            <summary>
+            数据删除
+            </summary>
+            <param name="columns">指定条件列</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.Models.DataModelBase.Delete(QWPlatform.DataIntface.ITransaction,System.String[])">
+            <summary>
+            数据删除(事务控制)
+            </summary>
+            <param name="trans">事务控件</param>
+            <param name="columns">根据指条件列删除</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.Models.DataModelBase.Select(System.String[])">
+            <summary>
+            查询赋值(直接对当前对象[原型]赋值)
+            </summary>
+        </member>
+        <member name="M:QWPlatform.Models.DataModelBase.SelectList``1(System.String[])">
+            <summary>
+            指定泛型查询并返回对应的集合
+            </summary>
+            <typeparam name="T">继承于DataModelBase的数据实体</typeparam>
+            <param name="queryColumns">查询列集合,空值所有列查询</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.Models.DataModelBase.CheckExists">
+            <summary>
+            检查记录是否存在(根据where条件检查)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.Models.DataModelBase.DataTableRow">
+            <summary>
+            将实体转换为DataTable的Row
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.Models.DataModelBase.Verify(System.String@)">
+            <summary>
+            验证填写值是否合法
+            </summary>
+            <param name="msg">输出消息</param>
+            <returns>返回验证与否</returns>
+        </member>
+        <member name="M:QWPlatform.Models.DataModelBase.Compare``1(``0,System.String@)">
+            <summary>
+            两个对象的比较(主要是属性值的比较)
+            todo:why,未完成
+            </summary>
+            <typeparam name="T">比较对象类型</typeparam>
+            <param name="t">比较对象</param>
+            <param name="diffInfo">比较后差异的信息</param>
+            <returns>返回true表示相等,返回false表示两个对象值不等</returns>
+        </member>
+        <member name="M:QWPlatform.Models.DataModelBase.Compare``1(``0,System.String@,System.String[])">
+            <summary>
+            两个对象比较(主要是属性值的比较)
+            todo:why,未完成
+            </summary>
+            <typeparam name="T">比较对象类型</typeparam>
+            <param name="t">比较对象</param>
+            <param name="excludes">需要排除的比较属性</param>
+            <param name="diffInfo">比较后的差异信息</param>
+            <returns>返回true表示相等,返回false表示两个对象值不等</returns>
+        </member>
+        <member name="M:QWPlatform.Models.DataModelBase.ToJson">
+            <summary>
+            将当前Model转换为Json对象
+            </summary>
+            <returns>返回Json字符串对象</returns>
+        </member>
+        <member name="M:QWPlatform.Models.DataModelBase.ToXml">
+            <summary>
+            将Model转换为XML
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.Models.DataModelBase.GetChildrenModels``1">
+            <summary>
+            根据外键获取子级表的记录
+            </summary>
+            <typeparam name="T">数据Model名称</typeparam> 
+            <returns>返回子级列表</returns>
+        </member>
+        <member name="M:QWPlatform.Models.DataModelBase.GetChildrenModels``1(System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            提供分页查询子表记录
+            </summary>
+            <typeparam name="T">子级泛型类model</typeparam>
+            <param name="page">分页页码</param>
+            <param name="rows">分页数量</param>
+            <param name="total">总数</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.Models.DataModelBase.GetParentModel``1">
+            <summary>
+            根据主键获取主表记录Model
+            </summary>
+            <typeparam name="T">主表的泛型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.Models.DataModelBase.Delete``1(QWPlatform.DataIntface.ITransaction)">
+            <summary>
+            根据主键进行级联删除,即删除子级表的所有记录
+            </summary>
+            <param name="trans">事务对象,没有直接传空值</param>
+            <param name="columns">条件列</param>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.Models.ModelWhereExt">
+            <summary>
+            使用
+            </summary>
+        </member>
+        <member name="M:QWPlatform.Models.ModelWhereExt.Where``1(``0,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            使用Lambda表达式进行查询
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="t"></param>
+            <param name="func"></param>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.Models.SqlSnippet">
+            <summary>
+            SQL片断
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.SqlSnippet.Name">
+            <summary>
+            片断名称
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.SqlSnippet.SQLText">
+            <summary>
+            SQL内容
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.SqlSnippet.Comment">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="T:QWPlatform.Models.SqlObject">
+            <summary>
+            SQL管理模型
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.SqlObject.Author">
+            <summary>
+            作者
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.SqlObject.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.SqlObject.Comment">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.SqlObject.Tag">
+            <summary>
+            SQL标识
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.SqlObject.SQLText">
+            <summary>
+            SQL内容
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.SqlObject.SQLAttach">
+            <summary>
+            附加排序分组SQL
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.SqlObject.SlaveSQLInfos">
+            <summary>
+            从SQL信息
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.SqlObject.Conditions">
+            <summary>
+            条件SQL
+            </summary>
+        </member>
+        <member name="M:QWPlatform.Models.SqlObject.ToBytes">
+            <summary>
+            将当前对象转换为（直接转换为数组）
+            </summary>
+            <returns>返回转换后的Byte数组</returns>
+        </member>
+        <member name="M:QWPlatform.Models.SqlObject.ToModel(System.Byte[])">
+            <summary>
+            将Byte数组转换为对象
+            </summary>
+            <param name="data">数组内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.Models.SqlObject.ToSql(System.String[],System.String[])">
+            <summary>
+            返回SQL
+            </summary>
+            <param name="slaveSqlNames">SQL片段</param>
+            <param name="conditionNams">SQL条件</param>
+            <returns>返回指定的SQL</returns>
+        </member>
+        <member name="T:QWPlatform.Models.SQLTextModel">
+            <summary>
+            SQL文本模板
+            </summary>
+        </member>
+        <member name="M:QWPlatform.Models.SQLTextModel.#ctor(System.String,System.String)">
+            <summary>
+            实例化SQL文件模板
+            </summary>
+            <param name="file">文件路径</param>
+            <param name="id">SQLID</param>
+        </member>
+        <member name="P:QWPlatform.Models.SQLTextModel.SqlText">
+            <summary>
+            SQL文本内容
+            </summary>
+        </member>
+        <member name="P:QWPlatform.Models.SQLTextModel.Paratemters">
+            <summary>
+            参数名称集合
+            </summary>
+        </member>
+    </members>
+</doc>

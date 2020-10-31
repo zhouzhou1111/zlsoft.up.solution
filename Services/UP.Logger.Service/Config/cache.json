@@ -1,0 +1,26 @@
+{
+  //缓存配置
+  "Cache": {
+    //配置type映射的2种类型
+    //使用系统自带内存缓存配置:"QWPlatform.SystemLibrary.Caches.SysMemoryCache",
+    //使用Redis缓存配置:"QWPlatform.SystemLibrary.Caches.RedisCache"
+
+
+    "CacheType": "QWPlatform.SystemLibrary.Caches.RedisCache",
+
+    //只有类型是服务器缓存redis实现才配置以下节点
+    "Redis": {
+      //服务器ip
+      "Server": "192.168.31.27",
+
+      //远程端口示例
+      "Port": "6379",
+
+      //登录密码
+      "Password": "itany",
+
+      //指定默认数据库
+      "DefaultDatabase": 1
+    }
+  }
+}

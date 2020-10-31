@@ -1,0 +1,117 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{9052BBF9-BE00-42F2-AE8B-79404F17AFAF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UP.Models", "Modules\UP.Models\UP.Models.csproj", "{0257842F-5463-4EC5-943F-3F600B1F36B4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UP.Logics", "Modules\UP.Logics\UP.Logics.csproj", "{82651C9A-14BE-4079-ACD7-2C8BD3F84693}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UP.Interface", "Modules\UP.Interface\UP.Interface.csproj", "{3E7A5379-A2CC-4679-BB84-4DA0C95D3A74}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UP.Grains", "Modules\UP.Grains\UP.Grains.csproj", "{8776120A-D548-4D55-826A-CD3A5FBB8506}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UP.Web", "Modules\UP.Web\UP.Web.csproj", "{41A8D31B-2171-46F3-80F9-D48265B91BD6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assemblys", "Assemblys", "{AE4C5510-74CF-443C-8646-67AD7316246D}"
+	ProjectSection(SolutionItems) = preProject
+		Assemblys\ChnCharInfo.dll = Assemblys\ChnCharInfo.dll
+		Assemblys\edtFTPnet.dll = Assemblys\edtFTPnet.dll
+		Assemblys\ICSharpCode.SharpZipLib.dll = Assemblys\ICSharpCode.SharpZipLib.dll
+		Assemblys\ICSharpCode.TextEditor.dll = Assemblys\ICSharpCode.TextEditor.dll
+		Assemblys\log4net.dll = Assemblys\log4net.dll
+		Assemblys\Microsoft.QualityTools.Testing.Fakes.dll = Assemblys\Microsoft.QualityTools.Testing.Fakes.dll
+		Assemblys\Microsoft.Web.Administration.dll = Assemblys\Microsoft.Web.Administration.dll
+		Assemblys\MySql.Data.dll = Assemblys\MySql.Data.dll
+		Assemblys\Newtonsoft.Json.dll = Assemblys\Newtonsoft.Json.dll
+		Assemblys\Npgsql.dll = Assemblys\Npgsql.dll
+		Assemblys\NVelocity.dll = Assemblys\NVelocity.dll
+		Assemblys\Oracle.DataAccess.dll = Assemblys\Oracle.DataAccess.dll
+		Assemblys\Oracle.ManagedDataAccess.dll = Assemblys\Oracle.ManagedDataAccess.dll
+		Assemblys\QWPlatform.IService.txt = Assemblys\QWPlatform.IService.txt
+		Assemblys\QWPlatform.OraNoClientDataAccess.txt = Assemblys\QWPlatform.OraNoClientDataAccess.txt
+		Assemblys\QWPlatform.SystemLibaray.txt = Assemblys\QWPlatform.SystemLibaray.txt
+		Assemblys\readme.txt = Assemblys\readme.txt
+		Assemblys\StackExchange.Redis.dll = Assemblys\StackExchange.Redis.dll
+		Assemblys\SuperSocket.ClientEngine.dll = Assemblys\SuperSocket.ClientEngine.dll
+		Assemblys\SuperSocket.Common.dll = Assemblys\SuperSocket.Common.dll
+		Assemblys\SuperSocket.ProtoBase.dll = Assemblys\SuperSocket.ProtoBase.dll
+		Assemblys\SuperSocket.SocketBase.dll = Assemblys\SuperSocket.SocketBase.dll
+		Assemblys\SuperSocket.SocketEngine.dll = Assemblys\SuperSocket.SocketEngine.dll
+		Assemblys\System.Data.SQLite.dll = Assemblys\System.Data.SQLite.dll
+		Assemblys\System.Net.Http.dll = Assemblys\System.Net.Http.dll
+		Assemblys\System.Threading.Tasks.Extensions.dll = Assemblys\System.Threading.Tasks.Extensions.dll
+		Assemblys\System.ValueTuple.dll = Assemblys\System.ValueTuple.dll
+		Assemblys\System.ValueTuple.xml = Assemblys\System.ValueTuple.xml
+		Assemblys\TencentCloud.dll = Assemblys\TencentCloud.dll
+		Assemblys\ThoughtWorks.QRCode.dll = Assemblys\ThoughtWorks.QRCode.dll
+		Assemblys\zlBase.SharedLibrary.dll = Assemblys\zlBase.SharedLibrary.dll
+		Assemblys\ZLSoft.ORM映射工具.exe = Assemblys\ZLSoft.ORM映射工具.exe
+		Assemblys\ZLSoft.QWPlatform.DataIntface.dll = Assemblys\ZLSoft.QWPlatform.DataIntface.dll
+		Assemblys\ZLSoft.QWPlatform.DataIntface.XML = Assemblys\ZLSoft.QWPlatform.DataIntface.XML
+		Assemblys\ZLSoft.QWPlatform.IService.dll = Assemblys\ZLSoft.QWPlatform.IService.dll
+		Assemblys\ZLSoft.QWPlatform.IService.XML = Assemblys\ZLSoft.QWPlatform.IService.XML
+		Assemblys\ZLSoft.QWPlatform.Models.dll = Assemblys\ZLSoft.QWPlatform.Models.dll
+		Assemblys\ZLSoft.QWPlatform.Models.Extend.dll = Assemblys\ZLSoft.QWPlatform.Models.Extend.dll
+		Assemblys\ZLSoft.QWPlatform.Models.XML = Assemblys\ZLSoft.QWPlatform.Models.XML
+		Assemblys\ZLSoft.QWPlatform.MySql.dll = Assemblys\ZLSoft.QWPlatform.MySql.dll
+		Assemblys\ZLSoft.QWPlatform.OraDataAccess.dll = Assemblys\ZLSoft.QWPlatform.OraDataAccess.dll
+		Assemblys\ZLSoft.QWPlatform.OraNoClientDataAccess.dll = Assemblys\ZLSoft.QWPlatform.OraNoClientDataAccess.dll
+		Assemblys\ZLSoft.QWPlatform.SqliteDataAccess.dll = Assemblys\ZLSoft.QWPlatform.SqliteDataAccess.dll
+		Assemblys\ZLSoft.QWPlatform.SQLServerDataAccess.dll = Assemblys\ZLSoft.QWPlatform.SQLServerDataAccess.dll
+		Assemblys\ZLSoft.QWPlatform.SystemLibrary.dll = Assemblys\ZLSoft.QWPlatform.SystemLibrary.dll
+		Assemblys\ZLTools.exe = Assemblys\ZLTools.exe
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UP.Basics", "Basics\UP.Basics\UP.Basics.csproj", "{50CD4032-5DD2-4BD5-BB0B-496CE833C8CF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basics", "Basics", "{6E9A4CF8-3A6D-476D-9208-A57208665424}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0257842F-5463-4EC5-943F-3F600B1F36B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0257842F-5463-4EC5-943F-3F600B1F36B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0257842F-5463-4EC5-943F-3F600B1F36B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0257842F-5463-4EC5-943F-3F600B1F36B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82651C9A-14BE-4079-ACD7-2C8BD3F84693}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82651C9A-14BE-4079-ACD7-2C8BD3F84693}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82651C9A-14BE-4079-ACD7-2C8BD3F84693}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82651C9A-14BE-4079-ACD7-2C8BD3F84693}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E7A5379-A2CC-4679-BB84-4DA0C95D3A74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E7A5379-A2CC-4679-BB84-4DA0C95D3A74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E7A5379-A2CC-4679-BB84-4DA0C95D3A74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E7A5379-A2CC-4679-BB84-4DA0C95D3A74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8776120A-D548-4D55-826A-CD3A5FBB8506}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8776120A-D548-4D55-826A-CD3A5FBB8506}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8776120A-D548-4D55-826A-CD3A5FBB8506}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8776120A-D548-4D55-826A-CD3A5FBB8506}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41A8D31B-2171-46F3-80F9-D48265B91BD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41A8D31B-2171-46F3-80F9-D48265B91BD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41A8D31B-2171-46F3-80F9-D48265B91BD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41A8D31B-2171-46F3-80F9-D48265B91BD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50CD4032-5DD2-4BD5-BB0B-496CE833C8CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50CD4032-5DD2-4BD5-BB0B-496CE833C8CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50CD4032-5DD2-4BD5-BB0B-496CE833C8CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50CD4032-5DD2-4BD5-BB0B-496CE833C8CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0257842F-5463-4EC5-943F-3F600B1F36B4} = {9052BBF9-BE00-42F2-AE8B-79404F17AFAF}
+		{82651C9A-14BE-4079-ACD7-2C8BD3F84693} = {9052BBF9-BE00-42F2-AE8B-79404F17AFAF}
+		{3E7A5379-A2CC-4679-BB84-4DA0C95D3A74} = {9052BBF9-BE00-42F2-AE8B-79404F17AFAF}
+		{8776120A-D548-4D55-826A-CD3A5FBB8506} = {9052BBF9-BE00-42F2-AE8B-79404F17AFAF}
+		{41A8D31B-2171-46F3-80F9-D48265B91BD6} = {9052BBF9-BE00-42F2-AE8B-79404F17AFAF}
+		{50CD4032-5DD2-4BD5-BB0B-496CE833C8CF} = {6E9A4CF8-3A6D-476D-9208-A57208665424}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {832B6377-27E6-44D3-9440-4113FDB6B70C}
+	EndGlobalSection
+EndGlobal

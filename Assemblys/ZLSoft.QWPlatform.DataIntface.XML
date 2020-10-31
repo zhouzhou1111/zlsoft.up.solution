@@ -1,0 +1,1425 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZLSoft.QWPlatform.DataIntface</name>
+    </assembly>
+    <members>
+        <member name="T:QWPlatform.DataIntface.DBType">
+            <summary>
+            枚举数据库类型
+            </summary>
+        </member>
+        <member name="F:QWPlatform.DataIntface.DBType.Oracle">
+            <summary>
+            Oracle数据库
+            </summary>
+        </member>
+        <member name="F:QWPlatform.DataIntface.DBType.OracleNoClient">
+            <summary>
+            Oracle免客户端数据库
+            </summary>
+        </member>
+        <member name="F:QWPlatform.DataIntface.DBType.SQLServer">
+            <summary>
+            SQLServer数据库
+            </summary>
+        </member>
+        <member name="F:QWPlatform.DataIntface.DBType.PostGreSql">
+            <summary>
+            PostgreSQL数据库
+            </summary>
+        </member>
+        <member name="F:QWPlatform.DataIntface.DBType.MySql">
+            <summary>
+            MySql数据库
+            </summary>
+        </member>
+        <member name="F:QWPlatform.DataIntface.DBType.DB2">
+            <summary>
+            DB2数据库
+            </summary>
+        </member>
+        <member name="F:QWPlatform.DataIntface.DBType.SQLite">
+            <summary>
+            SQLite数据库
+            </summary>
+        </member>
+        <member name="T:QWPlatform.DataIntface.DataParameter">
+            <summary>
+            中联区卫的数据访问参数化
+            </summary>
+        </member>
+        <member name="M:QWPlatform.DataIntface.DataParameter.#ctor(System.String,System.Object,QWPlatform.DataIntface.DataType)">
+            <summary>
+            初始化数据参数
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+            <param name="dbtype"></param>
+        </member>
+        <member name="P:QWPlatform.DataIntface.DataParameter.QWDataType">
+            <summary>
+            区卫专用的数据库类型
+            </summary>
+        </member>
+        <member name="T:QWPlatform.DataIntface.IBuilder">
+            <summary>
+            所有SQLBuilder的基类接口
+            </summary>
+        </member>
+        <member name="P:QWPlatform.DataIntface.IBuilder.MyTransaction">
+            <summary>
+            内部事务
+            </summary>
+        </member>
+        <member name="T:QWPlatform.DataIntface.IMatchCodeBuilder">
+            <summary>
+            对码服务构造
+            </summary>
+        </member>
+        <member name="M:QWPlatform.DataIntface.IMatchCodeBuilder.Columns(System.String[])">
+            <summary>
+            设置有效的对码列
+            </summary>
+            <param name="columns">对码列集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.IMatchCodeBuilder.SetDataTable(System.Data.DataTable)">
+            <summary>
+            设置数据源表
+            </summary>
+            <param name="dataTable">对码的原始表</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.IMatchCodeBuilder.ToTable">
+            <summary>
+            返回对码后的数据表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.IMatchCodeBuilder.ToJson">
+            <summary>
+            返回对码后的Json字段
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.IMatchCodeBuilder.ToXml">
+            <summary>
+            返回对码后的XML属性
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.DataIntface.IDbContext">
+            <summary>
+            数据访问上下文
+            </summary>
+        </member>
+        <member name="M:QWPlatform.DataIntface.IDbContext.ReSetDBFctory(System.String)">
+            <summary>
+            通过数据工厂重置数据源
+            </summary>
+            <param name="conName"></param>
+        </member>
+        <member name="M:QWPlatform.DataIntface.IDbContext.ChangeDatabase(System.String,QWPlatform.DataIntface.DBType)">
+            <summary>
+            通过连接字符串重置数据源
+            </summary>
+            <param name="strCon"></param>
+            <param name="dBType"></param>
+        </member>
+        <member name="M:QWPlatform.DataIntface.IDbContext.Database">
+            <summary>
+            数据库相关的接口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.IDbContext.GetSql(System.String,System.String[],System.String[])">
+            <summary>
+            获取SQL内容
+            </summary>
+            <param name="sqlName">SQL名称</param>
+            <param name="slavesqlNames">SQL片断名称</param>
+            <param name="conditionNames">SQL条件集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.IDbContext.InitSql">
+            <summary>
+            初始化SQL脚本
+            </summary>
+        </member>
+        <member name="M:QWPlatform.DataIntface.IDbContext.MatchCode(System.String)">
+            <summary>
+            数据库的对码功能
+            </summary>
+            <param name="codeName">对码名称</param>
+            <returns>返回对码对象</returns>
+        </member>
+        <member name="T:QWPlatform.DataIntface.ColumnModel">
+            <summary>
+            列模型
+            </summary>
+        </member>
+        <member name="P:QWPlatform.DataIntface.ColumnModel.Name">
+            <summary>
+            列名
+            </summary>
+        </member>
+        <member name="P:QWPlatform.DataIntface.ColumnModel.DBTtype">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="P:QWPlatform.DataIntface.ColumnModel.Comment">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="T:QWPlatform.DataIntface.DataCopyAttribute">
+            <summary>
+            数据批量复制实体信息
+            </summary>
+        </member>
+        <member name="P:QWPlatform.DataIntface.DataCopyAttribute.FromValueType">
+            <summary>
+            数据来源类型
+            1.来源复制数据
+            2.来源于默认值固定
+            3.来源于序列
+            </summary>
+        </member>
+        <member name="P:QWPlatform.DataIntface.DataCopyAttribute.SequentExpress">
+            <summary>
+            序列表达式,只有序列时可以使用
+            </summary>
+        </member>
+        <member name="P:QWPlatform.DataIntface.DataCopyAttribute.FixValue">
+            <summary>
+            固定值
+            </summary>
+        </member>
+        <member name="P:QWPlatform.DataIntface.DataCopyAttribute.FromColName">
+            <summary>
+            源始列名称
+            </summary>
+        </member>
+        <member name="P:QWPlatform.DataIntface.DataCopyAttribute.TagetColName">
+            <summary>
+            目标列名
+            </summary>
+        </member>
+        <member name="P:QWPlatform.DataIntface.DataCopyAttribute.DBType">
+            <summary>
+            数据库类型
+            </summary>
+        </member>
+        <member name="T:QWPlatform.DataIntface.Database.DataFactory">
+            <summary>
+            数据工厂
+            </summary>
+        </member>
+        <member name="P:QWPlatform.DataIntface.Database.DataFactory.DataBaseConnectionString">
+            <summary>
+            获取当前数据库的连接对象
+            </summary>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Database.DataFactory.#ctor">
+            <summary>
+            工厂初始化(默认工厂)
+            </summary>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Database.DataFactory.#ctor(System.String)">
+            <summary>
+            指定配置节点中的连接串名称,实倒化工厂
+            </summary>
+            <param name="constrName">连接字符名</param>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Database.DataFactory.#ctor(System.String,QWPlatform.DataIntface.DBType)">
+            <summary>
+            指定数据库连接字符串与数据库类型, 创建实例对象
+            </summary>
+            <param name="connectionString">数据库连接字符串</param>
+            <param name="dbType">数据库类型</param>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Database.DataFactory.CreateFactory(System.String)">
+            <summary>
+            执行工厂创建
+            </summary>
+            <param name="constr"></param>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Database.DataFactory.CreateInstance``1(System.String)">
+            <summary>
+            数据工厂创建实例化对象
+            </summary>
+            <typeparam name="T">接口名称</typeparam>
+            <param name="className">类名称,如果有命名空间则前缀带命名空间,命名空间前不添加"."符号</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Database.DataFactory.CreateTransactionInstance``1(System.String)">
+            <summary>
+            创建事务的实例
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="className"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Database.DataFactory.ResetDataSource(System.String,System.String)">
+            <summary>
+            重写数据源,通过在运行时重新指定数据源
+            </summary>
+            <param name="connnection">数据库连接字符串</param>
+            <param name="providerName">数据源提供名称，必须在database.config中进行配置</param>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Database.DataFactory.CreateInsertBuilder">
+            <summary>
+            创建一个增加数据构造者
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Database.DataFactory.CreateUpdateBuilder">
+            <summary>
+            创建一个更新构造者
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Database.DataFactory.CreateDeleteBuilder">
+            <summary>
+            删除一个删除构造者
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Database.DataFactory.CreateSelectBuilder">
+            <summary>
+            创建一个查询构造者
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Database.DataFactory.CreateProcedureBuilder">
+            <summary>
+            创建一个存储过程调用构造者
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Database.DataFactory.CreateSqlBuilder">
+            <summary>
+            创建简单SQL语句构造者
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Database.DataFactory.CreateTransaction">
+             <summary>
+            创建事务对象
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Database.DataFactory.CreateDataBaseBuilder">
+            <summary>
+            创建数据库实现工具对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.DataIntface.Database.OnTableChangeEventHandler">
+            <summary>
+            委托订阅
+            </summary>
+            <param name="sender">源</param>
+            <param name="e">参数</param>
+        </member>
+        <member name="T:QWPlatform.DataIntface.Database.DependencyEventArgs">
+            <summary>
+            注册依赖事件参数信息
+            </summary>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Database.DependencyEventArgs.#ctor(System.String,System.String,QWPlatform.DataIntface.Database.ChanageType,System.String)">
+            <summary>
+            初始化参数
+            </summary>
+            <param name="tab"></param>
+            <param name="rowid"></param>
+            <param name="type"></param>
+            <param name="dbSource">数据源</param>
+        </member>
+        <member name="P:QWPlatform.DataIntface.Database.DependencyEventArgs.TableName">
+            <summary>
+            表名称
+            </summary>
+        </member>
+        <member name="P:QWPlatform.DataIntface.Database.DependencyEventArgs.RowID">
+            <summary>
+            行ID
+            </summary>
+        </member>
+        <member name="P:QWPlatform.DataIntface.Database.DependencyEventArgs.DoType">
+            <summary>
+            变更类型
+            </summary>
+        </member>
+        <member name="P:QWPlatform.DataIntface.Database.DependencyEventArgs.DbSource">
+            <summary>
+            当前数据库的连接字符串
+            </summary>
+        </member>
+        <member name="T:QWPlatform.DataIntface.Database.ChanageType">
+            <summary>
+            改变类型
+            </summary>
+        </member>
+        <member name="T:QWPlatform.DataIntface.Database.IDataProvider">
+            <summary>
+            数据支持接口
+            </summary>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Database.IDataProvider.DatabaseConnection(System.String)">
+            <summary>
+            数据库连接字符串
+            </summary>
+            <param name="conn"></param>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Database.IDataProvider.GetDALAssemblyNameSpace">
+            <summary>
+            获取DAL所在的命名空间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Database.IDataProvider.GetDALAssemblyNameTransSpace">
+            <summary>
+            事务接口的命名空间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.DataIntface.Builders.IDataBaseBuilder">
+            <summary>
+            数据库资源接口
+            </summary>
+        </member>
+        <member name="E:QWPlatform.DataIntface.Builders.IDataBaseBuilder.OnTableChangeEvent">
+            <summary>
+            当依赖表发生变更事件
+            </summary>  
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IDataBaseBuilder.OpenDataBase">
+            <summary>
+            打开数据库
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:QWPlatform.DataIntface.Builders.IDataBaseBuilder.GetDateTime">
+            <summary>
+            数据库时间获取
+            </summary>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IDataBaseBuilder.RegisterDependencyTable(System.String)">
+            <summary>
+            注册表名称
+            </summary>
+            <param name="tabName">监听表名称</param>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IDataBaseBuilder.UnRegisterDependencyTable(System.String)">
+            <summary>
+            取消监听
+            </summary>
+            <param name="tabName"></param>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IDataBaseBuilder.GetALLTables">
+            <summary>
+            获取数据库中所有表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IDataBaseBuilder.GetAllViews">
+            <summary>
+            获取数据库中所有视图
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IDataBaseBuilder.GetAllProcs">
+            <summary>
+            获取数据库所有存储过程
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IDataBaseBuilder.GetAllProcsIncodePackage">
+            <summary>
+            获取所有存储过程，包含包中的存储过程
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IDataBaseBuilder.GetPackages">
+            <summary>
+            获取数据库所有包
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IDataBaseBuilder.GetColumnByTabName(System.String)">
+            <summary>
+            获取指定表的列
+            </summary>
+            <param name="tabName">表名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IDataBaseBuilder.GetColumnModelByTabName(System.String)">
+            <summary>
+            获取列集合
+            </summary>
+            <param name="tabName">表名</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IDataBaseBuilder.CreateParameter">
+            <summary>
+            创建实例下的参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IDataBaseBuilder.CreateParameter(System.String,System.Object)">
+            <summary>
+            创建实例下的参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IDataBaseBuilder.GetProcedureParameter(System.String)">
+            <summary>
+            获取存储过程参数列表
+            </summary>
+            <param name="spName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IDataBaseBuilder.CheckTableExistes(System.String)">
+            <summary>
+            初始化创建SQL脚本管理表，创建之前检查数据库表是否存在 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IDataBaseBuilder.CreateSqlCatgroyTable">
+            <summary>
+            创建SQl分类表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IDataBaseBuilder.CreateSqlContentTable">
+            <summary>
+            创建SQL内容管理表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IDataBaseBuilder.CreateMatchingCodeTable">
+            <summary>
+            创建对码表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.DataIntface.Builders.IDeleteBulider">
+            <summary>
+            数据删除接口
+            </summary>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IDeleteBulider.Delete(System.String)">
+            <summary>
+            删除
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IDeleteBulider.Delete">
+            <summary>
+            删除指定的模型
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IDeleteBulider.Where``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            使用Lambda方式删除指定的数据
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="expression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IDeleteBulider.Where(System.String,System.Object)">
+            <summary>
+            删除条件
+            </summary>
+            <param name="key">数据列名称</param>
+            <param name="val">数据列值</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IDeleteBulider.Where(System.String)">
+            <summary>
+            删除条件
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IDeleteBulider.Parameters(System.String,System.Object)">
+            <summary>
+            条件参数
+            </summary>
+            <param name="pName">参数名称</param>
+            <param name="val">参数值</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IDeleteBulider.Execute">
+            <summary>
+            执行删除
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IDeleteBulider.Execute(QWPlatform.DataIntface.ITransaction)">
+            <summary>
+            执行删除带事务操作
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.DataIntface.Builders.IInsertBuilder">
+            <summary>
+            数据增加接口
+            </summary>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IInsertBuilder.Insert(System.String)">
+            <summary>
+            数据插入对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IInsertBuilder.Column(System.String,System.Object)">
+            <summary>
+            控制插入列
+            </summary>
+            <param name="column">列名称</param>
+            <param name="val">对应列值</param>
+            <param name="dataType">指定的数据类型</param>
+            <returns>返回当前对象</returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IInsertBuilder.Column(System.String,System.Object,QWPlatform.DataIntface.DataType)">
+            <summary>
+            控制插入列
+            </summary>
+            <param name="column">列名称</param>
+            <param name="val">对应列值</param>
+            <param name="dataType">指定的数据类型</param>
+            <returns>返回当前对象</returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IInsertBuilder.UpdateColumn(System.String)">
+            <summary>
+            设置合并更新列
+            </summary>
+            <param name="column"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IInsertBuilder.MergeOnColumn(System.String)">
+            <summary>
+            设置合并更新条件列
+            </summary>
+            <param name="column"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IInsertBuilder.BulkToDB(System.Data.DataTable,System.String)">
+            <summary>
+            执行批量数量导入
+            </summary>
+            <param name="dt">数据源DT</param>
+            <param name="targetTable">导入的目标表</param>
+            <returns>返回导入成功行数</returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IInsertBuilder.BulkToDB(System.Data.DataTable,System.String,System.Collections.Generic.List{QWPlatform.DataIntface.DataCopyAttribute})">
+            <summary>
+            批量复制数据,根据规则导入
+            </summary>
+            <param name="dt"></param>
+            <param name="targetTable"></param>
+            <param name="DataCopyAttribute"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IInsertBuilder.Execute">
+            <summary>
+            执行数据插入
+            </summary>
+            <returns>返回影像的行数</returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IInsertBuilder.Execute(QWPlatform.DataIntface.ITransaction)">
+            <summary>
+            执行数据插入带事务操作
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.DataIntface.Builders.IProcedureBuilder">
+            <summary>
+            存储过程构造
+            </summary>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IProcedureBuilder.Procedure(System.String)">
+            <summary>
+            存储过程
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IProcedureBuilder.Paramter(System.String,System.Object)">
+            <summary>
+            存储过程输入参数
+            </summary>
+            <param name="paraName">参数名称</param>
+            <param name="value">参数值</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IProcedureBuilder.Paramter(System.String,System.Data.DbType,System.Object)">
+            <summary>
+            指定存储过程输入参数类型
+            </summary>
+            <param name="paraName"></param>
+            <param name="dbtype"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IProcedureBuilder.Paramter(System.Data.IDataParameter)">
+            <summary>
+            SQL参数构造
+            </summary>
+            <param name="para">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IProcedureBuilder.Paramter(System.Data.IDataParameter[])">
+            <summary>
+            SQL参数构造
+            </summary>
+            <param name="paras">参数数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IProcedureBuilder.ParamterOut(System.String,System.Boolean)">
+            <summary>
+            存储过程输入参数(仅限游标使用,非游标类型需要指定输出参数类型与参数大小)
+            </summary>
+            <param name="paraName">参数名</param>
+            <param name="isRefCursor">是否为游标</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IProcedureBuilder.ParamterOut(System.String,System.Data.DbType,System.Int32)">
+            <summary>
+            存储过程输入参数
+            </summary>
+            <param name="paraName">参数名</param>
+            <param name="dbType">类型</param>
+            <param name="size">长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IProcedureBuilder.ParameterValue``1(System.String)">
+            <summary>
+            获取输出参数
+            </summary>
+            <typeparam name="T">输出参数类型</typeparam>
+            <param name="paraName">输出参数的名称</param>
+            <returns>返回输出参数值</returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IProcedureBuilder.Execute">
+            <summary>
+            执行存储过程
+            </summary>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IProcedureBuilder.Execute(QWPlatform.DataIntface.ITransaction)">
+            <summary>
+            执行存储过程带事务操作
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IProcedureBuilder.ExecuteDataReader(QWPlatform.DataIntface.ITransaction)">
+            <summary>
+            执行存储过程，输出参数游标（存储过程内部输出参数游标）
+            </summary>
+            <param name="trans">事务</param>
+            <returns>返回连接对象，读完游标后关闭</returns>
+        </member>
+        <member name="T:QWPlatform.DataIntface.Builders.ISelectBuilder">
+            <summary>
+            查询构造
+            </summary>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISelectBuilder.From(System.String)">
+            <summary>
+            表查询,通过构造查询多个表
+            </summary>
+            <param name="table"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISelectBuilder.Columns(System.String)">
+            <summary>
+            查询字段
+            </summary>
+            <param name="columnName">*表示所有列,空值表示所有列</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISelectBuilder.Columns(System.String[])">
+            <summary>
+            查询字段列表
+            </summary>
+            <param name="columnNames">查询字段</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISelectBuilder.Where(System.String)">
+            <summary>
+            查询where条件,and条件
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISelectBuilder.Where(System.String,System.Object)">
+            <summary>
+            根据查询条件直接查询，and条件
+            </summary>
+            <param name="column"></param>
+            <param name="val"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISelectBuilder.OrWhere(System.String)">
+            <summary>
+            查询where条件，or条件
+            </summary>
+            <param name="column">条件列</param>
+            <returns>返回当前查询对象</returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISelectBuilder.OrWhere(System.String,System.Object)">
+            <summary>
+            查询where条件，or条件
+            </summary>
+            <param name="column">条件列名称</param>
+            <param name="val">条件值</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISelectBuilder.Parameters(System.String,System.Object)">
+            <summary>
+            查询所需参数
+            </summary>
+            <param name="pName">参数名称</param>
+            <param name="val">参数值</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISelectBuilder.GroupBy(System.String)">
+            <summary>
+            分组
+            </summary>
+            <param name="column">分组条件列</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISelectBuilder.OrderBy(System.String)">
+            <summary>
+            排序
+            </summary>
+            <param name="column">自定义排序(指定列名,可带ASC,或DESC)</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISelectBuilder.Paging(System.Int32,System.Int32)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="start">开始页</param>
+            <param name="pageSize">页大小</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISelectBuilder.PagingColumnName(System.String)">
+            <summary>
+            分页主键字段(主要在于SQLServer使用)
+            </summary>
+            <param name="colName">主键名称</param> 
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISelectBuilder.Select">
+            <summary>
+            执行查询
+            </summary>
+            <returns>返回数据集</returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISelectBuilder.Select(System.Int32@)">
+            <summary>
+            执行查询,返回datatable
+            </summary>
+            <param name="total">使用分页后返回总行数</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISelectBuilder.Select(System.Boolean,System.Int32)">
+            <summary>
+            执行查询,首先检查缓存对象是否存在,如果存在,直接从缓存服务器获取
+            执行查询后会将该对象存储到缓存服务器中
+            </summary> 
+            <param name="hourTime">缓存小时数</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISelectBuilder.GetModel``1">
+            <summary>
+            返回指定的Model
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISelectBuilder.GetModelList``1">
+            <summary>
+            返回查询Model的集合
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISelectBuilder.GetModelList``1(System.Int32@)">
+            <summary>
+            返回查询Model的集合
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <param name="total">总数</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISelectBuilder.DataReader">
+            <summary>
+            提供一种方法来读取一个或多个通过在数据源执行命令所获得的只进结果集流
+            使用完成后必须释放DataReader
+            </summary> 
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISelectBuilder.Select``1">
+            <summary>
+            可用用于首行首列的查询对象返回
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISelectBuilder.Exists">
+            <summary>
+            检查数据记录是否存在
+            </summary>
+            <returns>返回检查结果,true表示已查询到记录,false表示未查询到记录</returns>
+        </member>
+        <member name="T:QWPlatform.DataIntface.Builders.ISqlBuilder">
+            <summary>
+            SQL语句构造
+            </summary>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISqlBuilder.SqlText(System.String)">
+            <summary>
+            SQL语句
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISqlBuilder.Parameters(System.String,System.Object)">
+            <summary>
+            SQL的参数
+            </summary>
+            <param name="pName"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISqlBuilder.Parameters(System.Data.IDataParameter)">
+            <summary>
+            SQL参数构造
+            </summary>
+            <param name="parametes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISqlBuilder.Parameters(System.Data.IDataParameter[])">
+            <summary>
+            SQL参数构造
+            </summary>
+            <param name="parametes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISqlBuilder.Paging(System.Int32,System.Int32)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="startPage">开始页</param>
+            <param name="pageSize">页大小</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISqlBuilder.PagingColumnName(System.String)">
+            <summary>
+            分页主键字段(主要在于SQLServer使用)
+            </summary>
+            <param name="colName">主键名称</param> 
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISqlBuilder.OracleOptimizer(System.String)">
+            <summary>
+            Oracle优化器设置 
+            </summary>
+            <param name="text">优化模式包括Rule,Choose,First rows,All rows,例如：/*+ first_rows +*/</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISqlBuilder.Select">
+            <summary>
+            执行查询返回指定的类型
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISqlBuilder.Select(System.Int32@)">
+            <summary>
+            执行查询,返回数据表与分页总行数
+            </summary>
+            <param name="total">输出分页调用的总行数</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISqlBuilder.Select(System.Boolean,System.Int32)">
+            <summary>
+            查询使用缓存(存在缓存则从缓存中获取)
+            </summary>
+            <param name="hourTime">缓存小时数</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISqlBuilder.DataReader">
+            <summary>
+            提供一种方法来读取一个或多个通过在数据源执行命令所获得的只进结果集流
+            使用完成后必须释放DataReader
+            </summary> 
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISqlBuilder.Exists">
+            <summary>
+            检查数据记录是否存在
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISqlBuilder.Select``1">
+            <summary>
+            根据查询对象返回指定类型(可以替代返回首行首列操作)
+            </summary>
+            <typeparam name="T">指定返回类型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISqlBuilder.GetModel``1">
+            <summary>
+            返回指定的Model
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISqlBuilder.GetModelList``1">
+            <summary>
+            返回查询Model的集合
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISqlBuilder.GetModelList``1(System.Int32@)">
+            <summary>
+            返回查询Model的集合
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <param name="total">总数</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISqlBuilder.Execute">
+            <summary>
+            执行非查询SQL语句
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.ISqlBuilder.Execute(QWPlatform.DataIntface.ITransaction)">
+            <summary>
+            执行非查询SQL语句带事务操作
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.DataIntface.Builders.IUpdateBuilder">
+            <summary>
+            更新数据库接口
+            </summary>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IUpdateBuilder.Update(System.String)">
+            <summary>
+            更新数据表
+            </summary>
+            <param name="table"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IUpdateBuilder.Column(System.String,System.Object)">
+            <summary>
+            更新字段
+            </summary>
+            <param name="column"></param>
+            <param name="val"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IUpdateBuilder.Column(System.String,System.Object,QWPlatform.DataIntface.DataType)">
+            <summary>
+            更新字段
+            </summary>
+            <param name="column">更新列名</param>
+            <param name="val">更新列值</param>
+            <param name="dataType">数据类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IUpdateBuilder.Column(System.String[])">
+            <summary>
+            更新指定的列
+            </summary>
+            <param name="columns"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IUpdateBuilder.Where(System.String,System.Object)">
+            <summary>
+            更新条件
+            </summary>
+            <param name="column">条件名称</param>
+            <param name="val">条件值</param>
+            <returns>返回更新的对象</returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IUpdateBuilder.Where``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            使用表达式查询
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="where"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IUpdateBuilder.Where(System.String)">
+            <summary>
+            使用SQL条件更新
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IUpdateBuilder.Parameters(System.String,System.Object)">
+            <summary>
+            更新参数
+            </summary>
+            <param name="pName">参数名称</param>
+            <param name="val">参数值</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IUpdateBuilder.Execute">
+            <summary>
+            执行更新
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IUpdateBuilder.Execute(QWPlatform.DataIntface.ITransaction)">
+            <summary>
+            执行更新带事务操作
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.DataIntface.Builders.IWebAPIBuilder">
+            <summary>
+            调用WebAPI接口
+            </summary>
+        </member>
+        <member name="T:QWPlatform.DataIntface.Builders.IWebServiceBuilder">
+            <summary>
+            WebService接口构建，可以快速调用WebService接口
+            </summary>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IWebServiceBuilder.Url(System.String)">
+            <summary>
+            调用WebService的Url地址
+            </summary>
+            <param name="address">具体Url地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IWebServiceBuilder.Method(System.String)">
+            <summary>
+            调用WebService方法名称
+            </summary>
+            <param name="methodName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IWebServiceBuilder.Parameters(System.String,System.Object)">
+            <summary>
+            执行具体参数
+            </summary>
+            <param name="name">参数名称</param>
+            <param name="value">参数值</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IWebServiceBuilder.User(System.String)">
+            <summary>
+            用户名称设置
+            </summary>
+            <param name="userName">用户名</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IWebServiceBuilder.Password(System.String)">
+            <summary>
+            访问的用户密码
+            </summary>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Builders.IWebServiceBuilder.Execute">
+            <summary>
+            执行WebService
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.DataIntface.IBuilders.IFTPBuilder">
+            <summary>
+            FTPBuilder存取设置
+            </summary>
+        </member>
+        <member name="T:QWPlatform.DataIntface.IBuilders.IMessageQueue">
+            <summary>
+            消息队列 
+            </summary>
+        </member>
+        <member name="T:QWPlatform.DataIntface.IBuilders.IReflectionBuilder">
+            <summary>
+            反射调用程序集
+            </summary>
+        </member>
+        <member name="M:QWPlatform.DataIntface.IBuilders.IReflectionBuilder.Path(System.String)">
+            <summary>
+            调用调用对象的路径
+            </summary>
+            <param name="path">路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.IBuilders.IReflectionBuilder.ClassName(System.String)">
+            <summary>
+            调用的类型名称
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.IBuilders.IReflectionBuilder.InitClass(System.Object[])">
+            <summary>
+            初始化类参数
+            </summary>
+            <param name="paras"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.IBuilders.IReflectionBuilder.MethodName(System.String,System.Boolean)">
+            <summary>
+            调用方法
+            </summary>
+            <param name="name">方法名称</param>
+            <param name="isStatic">是否静态方法，默认非静态方法</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.IBuilders.IReflectionBuilder.Parameters(System.String,System.Object)">
+            <summary>
+            参数设置
+            </summary>
+            <param name="name">参数名称</param>
+            <param name="value">参数值</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.DataIntface.IBuilders.IReflectionBuilder.Execute">
+            <summary>
+            执行方法的调用
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.DataIntface.ITransaction">
+            <summary>
+            事务控制
+            </summary>
+        </member>
+        <member name="M:QWPlatform.DataIntface.ITransaction.BeginTrans">
+            <summary>
+            开始事务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:QWPlatform.DataIntface.ITransaction.TransException">
+            <summary>
+            提交事务时异常
+            </summary>
+        </member>
+        <member name="M:QWPlatform.DataIntface.ITransaction.CommitTrans">
+            <summary>
+            提交事务
+            </summary>
+        </member>
+        <member name="P:QWPlatform.DataIntface.ITransaction.TransObject">
+            <summary>
+            事务对象
+            </summary>
+        </member>
+        <member name="M:QWPlatform.DataIntface.ITransaction.Rollback">
+            <summary>
+            事务回滚(全部)
+            </summary>
+        </member>
+        <member name="M:QWPlatform.DataIntface.ITransaction.Rollback(System.String)">
+            <summary>
+            事务回滚
+            </summary>
+        </member>
+        <member name="M:QWPlatform.DataIntface.ITransaction.SavePoint(System.String)">
+            <summary>
+            保存事务点
+            </summary>
+            <param name="pointName">事务点名称</param>
+        </member>
+        <member name="P:QWPlatform.DataIntface.ITransaction.TransID">
+            <summary>
+            获取事务ID
+            </summary>
+        </member>
+        <member name="P:QWPlatform.DataIntface.ITransaction.PointName">
+            <summary>
+            获取事务保存点名称集合
+            </summary>
+        </member>
+        <member name="T:QWPlatform.DataIntface.DataCopyValue">
+            <summary>
+            数据默认值
+            </summary>
+        </member>
+        <member name="F:QWPlatform.DataIntface.DataCopyValue.CopyData">
+            <summary>
+            复制的数据
+            </summary>
+        </member>
+        <member name="F:QWPlatform.DataIntface.DataCopyValue.SequentValue">
+            <summary>
+            序列数据
+            </summary>
+        </member>
+        <member name="F:QWPlatform.DataIntface.DataCopyValue.FixValue">
+            <summary>
+            固定值
+            </summary>
+        </member>
+        <member name="T:QWPlatform.DataIntface.DataType">
+            <summary>
+            数据库类型
+            </summary>
+        </member>
+        <member name="F:QWPlatform.DataIntface.DataType.None">
+            <summary>
+            未指定的数据类型
+            </summary>
+        </member>
+        <member name="F:QWPlatform.DataIntface.DataType.Raw">
+             <summary>
+            RAW格式 
+             </summary>
+        </member>
+        <member name="F:QWPlatform.DataIntface.DataType.Clob">
+            <summary>
+            Clob类型
+            </summary>
+        </member>
+        <member name="F:QWPlatform.DataIntface.DataType.Blob">
+            <summary>
+            数据字节类型
+            </summary>
+        </member>
+        <member name="F:QWPlatform.DataIntface.DataType.XML">
+            <summary>
+            XML类型
+            </summary>
+        </member>
+        <member name="F:QWPlatform.DataIntface.DataType.Json">
+            <summary>
+            Json类型，适用于PG数据库
+            </summary>
+        </member>
+        <member name="F:QWPlatform.DataIntface.DataType.DateTime">
+            <summary>
+            日期时间类型
+            </summary>
+        </member>
+        <member name="T:QWPlatform.DataIntface.DataOperation">
+            <summary>
+            数据操作关系符
+            </summary>
+        </member>
+        <member name="F:QWPlatform.DataIntface.DataOperation.Equal">
+            <summary>
+            相等
+            </summary>
+        </member>
+        <member name="F:QWPlatform.DataIntface.DataOperation.NotEqual">
+            <summary>
+            不相等
+            </summary>
+        </member>
+        <member name="F:QWPlatform.DataIntface.DataOperation.Like">
+            <summary>
+            大约
+            </summary>
+        </member>
+        <member name="F:QWPlatform.DataIntface.DataOperation.Greater">
+            <summary>
+            大于
+            </summary>
+        </member>
+        <member name="F:QWPlatform.DataIntface.DataOperation.Less">
+            <summary>
+            小于
+            </summary>
+        </member>
+        <member name="F:QWPlatform.DataIntface.DataOperation.In">
+            <summary>
+            使用In的查询
+            </summary>
+        </member>
+        <member name="T:QWPlatform.DataIntface.Plugins.IPlugins">
+            <summary>
+            插件的基本信息
+            </summary>
+        </member>
+        <member name="P:QWPlatform.DataIntface.Plugins.IPlugins.PluginName">
+            <summary>
+            插件中文名称
+            </summary>
+        </member>
+        <member name="P:QWPlatform.DataIntface.Plugins.IPlugins.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:QWPlatform.DataIntface.Plugins.IPlugins.Context">
+            <summary>
+            HttpListenerContext 如果需要使用,请强制转换.比如: var cxt = Context as HttpListenerContext;
+            </summary>
+        </member>
+        <member name="P:QWPlatform.DataIntface.Plugins.IPlugins.PluginIcon">
+            <summary>
+            控件图标控件
+            </summary>
+        </member>
+        <member name="M:QWPlatform.DataIntface.Plugins.IPlugins.Execute">
+            <summary>
+            执行控件调用
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="E:QWPlatform.DataIntface.Plugins.IPlugins.OnProcessStart">
+            <summary>
+            开始处理时的事件
+            </summary>
+        </member>
+        <member name="E:QWPlatform.DataIntface.Plugins.IPlugins.OnProccessEnd">
+            <summary>
+            完成处理时的事件
+            </summary>
+        </member>
+        <member name="T:QWPlatform.DataIntface.ServiceProxy.ServiceProxyParameter">
+            <summary>
+            WebServiceProxyParameter参数
+            </summary>
+        </member>
+        <member name="M:QWPlatform.DataIntface.ServiceProxy.ServiceProxyParameter.#ctor(System.String,System.Boolean)">
+            <summary>
+            输出游标参数
+            </summary>
+            <param name="name"></param>
+            <param name="isRefCursor"></param>
+        </member>
+        <member name="P:QWPlatform.DataIntface.ServiceProxy.ServiceProxyParameter.Length">
+            <summary>
+            参数长度
+            </summary>
+        </member>
+        <member name="T:QWPlatform.DataIntface.ServiceProxy.WebServiceFactory">
+            <summary>
+            创建Web服务的工厂
+            </summary>
+        </member>
+        <member name="M:QWPlatform.DataIntface.ServiceProxy.WebServiceFactory.#ctor(System.String)">
+            <summary>
+            Web服务工厂
+            </summary>
+        </member>
+        <member name="M:QWPlatform.DataIntface.ServiceProxy.WebServiceFactory.CreateWebServiceBuilder">
+            <summary>
+            创建Web访问的对象
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

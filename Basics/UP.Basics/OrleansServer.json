@@ -1,0 +1,12 @@
+{
+  "Orleans": {
+    //网关端口
+    "GatewayPort": 30002,
+    "GatewayAddress": "127.0.0.1",
+    "UseDashboard": false,
+
+    //仓库端口集群配置（服务端使用）
+    "SiloPort": 10001
+  }
+}
+  

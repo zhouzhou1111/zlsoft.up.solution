@@ -1,0 +1,14 @@
+﻿v2019041601:
+1.修改调用存储过程输出参数Blob的类型转换异常
+
+v2019102001
+1.简单数据库的访问方式（优雅简单的代码）
+	直接使用using(var db = new DbContext())
+			{
+				db.Insert..
+			}
+2.调试窗口输出SQL与异常信息(在调试时可以直接输出相应的SQL与异常信息)
+3.使用GetModel及GetModelList
+4.Inster & Update采用Model直接更新（Model更加简单生成，不产生关联）
+5.使用了隐式事务
+6.Where条件支持Lambda表达式（Delete & Update）

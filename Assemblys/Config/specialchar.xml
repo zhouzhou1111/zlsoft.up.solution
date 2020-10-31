@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+设置特殊字符集编码
+属性special表示为特殊字符,可能为其它编码字符集合
+属性GB2312表示为标准GB2312字符集合
+-->
+<string>
+  <char special="䶮" gb2312="" />
+  <char special="㙟" gb2312="塱"/>
+  <char special="䓬" gb2312=""/>
+</string>

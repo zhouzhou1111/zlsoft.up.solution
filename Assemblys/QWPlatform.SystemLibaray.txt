@@ -1,0 +1,20 @@
+﻿v1.19111102.sp3
+	1.修正RSA的加解密的长度问题
+
+v1.19111102.sp2(紧急补丁)
+	1.修正调用webService的授权key没有添加到调用服务中，报未授权错误
+v1.19111101:
+	1.扩展ToXml方法，简化输出内容
+	2.修改webservice方法使用header认证方式
+v1.19110801:
+	1.修正ObjectToJson默认不带格式输出，如果面要带格式输出直接设置Object.ToJson(true);
+
+v1.19042501:
+	1.解决datatable转json带有小数时移除0.00，例如1.0转为1
+	2.实现List copyToModel功能
+
+v1.19042001:
+	1.实现身份证号码校验功能，带校验位判断及性别判断（调用 Strings.IdentityCodeValidate(val); 成功则返回true,否则返回false）
+
+v1.19041601：
+	1.实现SQL监听功能（直接启动本地服务，不再安装基础服务，WebSqlHome必须放在Bin目录下）

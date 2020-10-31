@@ -1,0 +1,146 @@
+﻿/*以下代码由数据访问服务工具自动生成
+ *如有需要请自行修改
+ *
+ */
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using QWPlatform.DataIntface;
+using QWPlatform.IService;
+using $model_namespace; 
+
+namespace $objectServiceNamespace
+{
+    public class $objectService$ : DataServiceBase
+    {
+        /// <summary>
+        /// 重写数据工厂
+        /// </summary>
+        /// <param name="conName"></param>
+        protected override void DBFctory(string conName)
+        {
+            base.DBFctory(conName);
+        }
+
+        /// <summary>
+        /// 增加数据记录
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public int Add($modelname model)
+        {
+            model.SetDataFactory(this.DataFactoryObject);
+            return model.Insert();
+        }
+
+        /// <summary>
+        /// 增加数据记录
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public int Add($modelname model, ITransaction trans)
+        {
+            model.SetDataFactory(this.DataFactoryObject);
+            if(trans==null){
+                return model.Insert();
+            }else{
+                return model.Insert(trans);
+            }
+        }
+
+        /// <summary>
+        /// 更新数据库记录
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public int Update($modelname model)
+        {
+            model.SetDataFactory(this.DataFactoryObject);
+
+            List<string> where = new List<string>();
+            where.Add("ID");
+
+            return model.Update(where, string.Empty);
+        }
+
+
+        /// <summary>
+        /// 更新数据库记录
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public int Update($modelname model, ITransaction trans)
+        {
+            model.SetDataFactory(this.DataFactoryObject);
+
+            List<string> where = new List<string>();
+            where.Add("ID");
+
+            if(trans==null){
+                return model.Update(where, string.Empty);
+            }else{
+                return model.Update(trans, where, string.Empty);
+            }
+        }
+
+        /// <summary>
+        /// 删除数据记录
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public int Delete($modelname model)
+        {
+            model.SetDataFactory(this.DataFactoryObject);
+
+            return model.Delete("ID");
+        }
+
+		/// <summary>
+        /// 删除数据记录
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public int Delete($modelname model, ITransaction trans)
+        {
+            model.SetDataFactory(this.DataFactoryObject);
+            if(trans==null){
+                return model.Delete("ID");
+            }else{
+                return model.Delete(trans,"ID");
+            }
+        }
+
+        /// <summary>
+        /// 查询数据对象并进行赋值
+        /// </summary>
+        /// <returns></returns>
+        public $modelname Select($modelname model)
+        {
+            model.SetDataFactory(this.DataFactoryObject);
+            model.Select();
+            return model;
+        }
+
+        /// <summary>
+        /// 列表查询
+        /// </summary>
+        /// <returns></returns>
+        public List<$modelname> SelectList($modelname model)
+        {
+            model.SetDataFactory(this.DataFactoryObject);
+            return model.SelectList<$modelname>();
+        }
+
+        /// <summary>
+        /// 调用存储过程
+        /// </summary>
+        /// <returns></returns>
+		public void CallProcedure($modelname model)
+		{
+            this.ProcedureBuilder
+                .Procedure("$procName")$procParamter
+                .Execute();
+		}
+    }
+}

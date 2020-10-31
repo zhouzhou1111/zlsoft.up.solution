@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>ZLSoft.UP.Grains</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Admin\BasicData\aboBloodTypeGrains.cs" />
+    <Compile Remove="Admin\BasicData\NationalityGrains.cs" />
+    <Compile Remove="Admin\BasicData\rhBloodTypeGrains.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Orleans.CodeGenerator.MSBuild" Version="3.1.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Orleans.Core.Abstractions" Version="3.2.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Basics\UP.Basics\UP.Basics.csproj" />
+    <ProjectReference Include="..\UP.Interface\UP.Interface.csproj" />
+    <ProjectReference Include="..\UP.Logics\UP.Logics.csproj" />
+    <ProjectReference Include="..\UP.Models\UP.Models.csproj" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy $(TargetDir)ZLSoft.UP.Grains.dll  $(SolutionDir)..\zlsoft.up\Orleans-Server\Services" />
+  </Target>
+
+</Project>

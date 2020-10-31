@@ -1,0 +1,2695 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZLSoft.QWPlatform.IService</name>
+    </assembly>
+    <members>
+        <member name="T:QWPlatform.IService.AppConst.WebServiceConst">
+            <summary>
+            WebService常用常量
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.AppConst.WebServiceConst.WebServiceProxyPath">
+            <summary>
+            WebService代理的缓存路径
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.BHLicense">
+            <summary>
+            读取与访问BH的License使用
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.BHLicense.GetAppConfigFileName">
+            <summary>
+            从WebConfi中读取授权文件的名称l
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.IService.BHLicense.ReadLisence">
+            <summary>
+            读取授权文件
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.BHLicense.AuthorizeByID(System.String)">
+            <summary>
+            根据ID查询参加否允许
+            </summary>
+            <param name="id">授权模块ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.IService.BHLicense.AuthorizeByID(System.String,System.String)">
+            <summary>
+            根据ID查询参加否允许
+            </summary>
+            <param name="id">授权模块ID</param>
+            <param name="orgid">授权机构</param>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.IService.DbContext">
+            <summary>
+            中联数据库访问的上下文对象
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.DbContext.#ctor(System.Boolean)">
+            <summary>
+            实例化数据库访问对象(认配置的连接源)
+            </summary>
+            <param name="autoTrans">是否自动使用事务</param>
+        </member>
+        <member name="M:QWPlatform.IService.DbContext.#ctor(System.String,System.Boolean)">
+            <summary>
+            实例化数据库访问对象
+            </summary>
+            <param name="conName">连接数据源名称</param>
+            <param name="autoTrans">是否自动使用事务</param>
+        </member>
+        <member name="M:QWPlatform.IService.DbContext.#ctor(System.String,QWPlatform.DataIntface.DBType,System.Boolean)">
+            <summary>
+            实例化数据库访问对象
+            </summary>
+            <param name="conStr">数据库连接字符串</param>
+            <param name="dBType">数据库类型</param>
+            <param name="autoTrans">是否自动使用事务</param>
+        </member>
+        <member name="M:QWPlatform.IService.DbContext.InitSQL">
+            <summary>
+            初始化加载SQL集合
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.DbContext.MatchCode(System.String)">
+            <summary>
+            执行对码功能
+            </summary>
+            <param name="codeName">对码名称</param>
+            <returns>返回对码结果</returns>
+        </member>
+        <member name="T:QWPlatform.IService.DBContextProvider">
+            <summary>
+            数据库上下文件实现
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.DbService.DBLogger">
+            <summary>
+            使用数据库连接服务
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.DbService.DBLogger.instance">
+            <summary>
+            日志对象实例
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.DbService.DBLogger.Instance">
+            <summary>
+            判断是否有实例化过，确保只有一个
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.IService.DbService.DBLogger.SelectLastLog(System.String)">
+            <summary>
+            查询最后一条日志，以使用性能画图使用
+            </summary>
+            <param name="fid">功能ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.IService.DbService.DBLogger.SelectLog(QWPlatform.IService.ServiceInterface.LogType,System.String,System.Int32,System.Int32,System.String,System.Int32@)">
+            <summary>
+            使用分页查询
+            </summary>
+            <param name="logType"></param>
+            <param name="id"></param>
+            <param name="page"></param>
+            <param name="rows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.IService.DbService.DBLogger.GetMessageInfoCount(System.String,System.Int32@,System.Int32@,System.Int32@)">
+            <summary>
+            获取日志的数量
+            </summary>
+            <param name="userName">用户名称</param>
+            <param name="normalCnt">正常消息量</param>
+            <param name="waringCnt">警告消息</param>
+            <param name="errorCnt">错误消息</param>
+        </member>
+        <member name="T:QWPlatform.IService.DbService.LogModel">
+            <summary>
+            内部处理的日志model
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.DbService.LogModel.InsertBuilder">
+            <summary>
+            执行的插入对象
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.DbService.LogModel.FunctionID">
+            <summary>
+            功能ID
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.DbService.LogModel.Paramters">
+            <summary>
+            调用参数信息
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.MatchCodeBuilder">
+            <summary>
+            对码实现类
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.MatchCodeBuilder.Convert">
+            <summary>
+            将源表转换为目标表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.IService.MatchCodeBuilder.CellValue(QWPlatform.Models.MatcheDetailModel,System.Data.DataRow,System.Object)">
+            <summary>
+            将值进行转换
+            </summary>
+            <param name="mtype"></param>
+            <param name="dr"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.IService.GenerateCode.GeneraterWebApiCode.GetServerCode(System.String,System.Collections.Generic.List{QWPlatform.IService.ServiceInterface.ServiceModels.FunctionModel},QWPlatform.IService.ServiceInterface.WebType,System.Boolean)">
+            <summary>
+            获取webAPI的代码
+            </summary>
+            <param name="className">类名称</param>
+            <param name="functions">接口列表</param>
+            <param name="webtype">生成类型，webapi/webservice</param>
+            <param name="createSoapHeader">是否生成头信息</param>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.IService.GenerateCode.GenerateWebServiceCode">
+            <summary>
+            生成WebService代码
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.GenerateCode.GenerateWebServiceCode.GetServerCode(System.String,System.Collections.Generic.List{QWPlatform.IService.ServiceInterface.ServiceModels.FunctionModel},QWPlatform.IService.ServiceInterface.WebType,System.Boolean)">
+            <summary>
+            生成服务端DLL的代码
+            </summary>
+            <param name="className">类名称,即实例名称</param> 
+            <param name="functions"></param>
+            <param name="webtype">生成的类型</param>
+            <param name="createSoapHeader">是否生成soaphead</param>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.IService.GenerateCode.GenerateXml">
+            <summary>
+            生成XML
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.GenerateCode.GenerateXml.CreateXml(QWPlatform.IService.ServiceInterface.ServiceModels.FunctionModel,System.String,System.String)">
+            <summary>
+            创建方法的XML
+            </summary>
+            <param name="model">方法信息</param>
+            <param name="projectinfo">工程信息</param>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.IService.GenerateCode.AbstractWebCode">
+            <summary>
+            服务端口代码接口
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.GenerateCode.AbstractWebCode.GetServerCode(System.String,System.Collections.Generic.List{QWPlatform.IService.ServiceInterface.ServiceModels.FunctionModel},QWPlatform.IService.ServiceInterface.WebType,System.Boolean)">
+            <summary>
+            获取服务端的代码
+            </summary>
+            <param name="className">类型名</param>
+            <param name="functions">函数集合</param>
+            <param name="webtype">类型，webservice/webapi</param>
+            <param name="createSoapHeader">soap header</param>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.IService.Properties.Resources">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.Properties.Resources.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.Properties.Resources.Culture">
+            <summary>
+              重写当前线程的 CurrentUICulture 属性
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.Properties.Resources.add2">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.Properties.Resources.arrow_down_blue">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.Properties.Resources.arrow_up_blue">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.Properties.Resources.box_new">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.Properties.Resources.check2">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.Properties.Resources.copy">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.Properties.Resources.data_scroll">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.Properties.Resources.delete2">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.Properties.Resources.delete21">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.Properties.Resources.document_edit">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.Properties.Resources.earth_connection">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.Properties.Resources.index">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.Properties.Resources.paste">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.Properties.Resources.refresh">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceFactory`1">
+            <summary>
+            服务工厂
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceFactory`1.Instance">
+            <summary>
+            通过当前服务类型实例化对象
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.CustomExceptionHandler">
+            <summary>
+            服务层自定义异常捕获
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.DataServiceBase">
+            <summary>
+            数据基础服务类
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.DataServiceBase.Instance``1">
+            <summary>
+            提交服务访问的接口
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.DataServiceBase.dataFactoryDBTypeCache">
+            <summary>
+            缓存数据库连接类型
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.DataServiceBase.#ctor">
+            <summary>
+            默认实例化数据工厂
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.DataServiceBase.dataFctoryinstance">
+            <summary>
+            工厂对象实例
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.DataServiceBase.webServiceFactory">
+            <summary>
+            访问WebService的工厂对象
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.DataServiceBase.DataFactoryObject">
+            <summary>
+            返回当前的数据工厂实例
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.DataServiceBase.DBFctory(System.String)">
+            <summary>
+            创建数据工厂
+            </summary>
+            <param name="conName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.IService.DataServiceBase.DBFctory(System.String,QWPlatform.DataIntface.DBType)">
+            <summary>
+            创建用户自定义类型的数据库连接对象
+            </summary>
+            <param name="connectionString">数据库连接字符串</param>
+            <param name="dbType">指定数据库类型</param>
+        </member>
+        <member name="M:QWPlatform.IService.DataServiceBase.ResetDataSource(System.String,QWPlatform.DataIntface.DBType)">
+            <summary>
+            重置数据源
+            </summary>
+            <param name="connectionString"></param>
+            <param name="dbType"></param>
+        </member>
+        <member name="P:QWPlatform.IService.DataServiceBase.InsertBuilder">
+            <summary>
+            数据插入对象
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.DataServiceBase.UpdateBuilder">
+            <summary>
+            数据更新对象
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.DataServiceBase.DeleteBulider">
+            <summary>
+            数据删除对象
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.DataServiceBase.ProcedureBuilder">
+            <summary>
+            存储过程对象
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.DataServiceBase.SqlBuilder">
+            <summary>
+            返回一个SQL构造者对象
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.DataServiceBase.SelectBuilder">
+            <summary>
+            返回一个查询构造者对象
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.DataServiceBase.DBTransaction">
+            <summary>
+            返回执行事务对象
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.DataServiceBase.DataBaseBuilder">
+            <summary>
+            返回数据库对象
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.DataServiceBase.ResetWebService(System.String)">
+            <summary>
+            重新设置WebService的调用方式
+            </summary>
+            <param name="key"></param>
+        </member>
+        <member name="P:QWPlatform.IService.DataServiceBase.WebServiceBuilder">
+            <summary>
+            返回访问WebService的对象
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceBase`1">
+            <summary>
+            所有业务服务类的抽象类
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceBase`1.#ctor">
+            <summary>
+            默认实例化数据工厂
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceBase`1.dataFctoryinstance">
+            <summary>
+            工厂对象实例
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceBase`1.DataFactoryObject">
+            <summary>
+            返回当前的数据工厂实例
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceBase`1.DBFctory(System.String)">
+            <summary>
+            创建数据工厂
+            </summary>
+            <param name="conName"></param>
+            <returns></returns>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceBase`1.InsertBuilder">
+            <summary>
+            数据插入对象
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceBase`1.UpdateBuilder">
+            <summary>
+            数据更新对象
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceBase`1.DeleteBulider">
+            <summary>
+            数据删除对象
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceBase`1.ProcedureBuilder">
+            <summary>
+            存储过程对象
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceBase`1.SqlBuilder">
+            <summary>
+            返回一个SQL构造者对象
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceBase`1.SelectBuilder">
+            <summary>
+            返回一个查询构造者对象
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceBase`1.DBTransaction">
+            <summary>
+            返回执行事务对象
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceBase`1.ReadSqlTextTemplate(System.String,System.String)">
+            <summary>
+            读取SQL模板文件内容
+            </summary>
+            <param name="file">XML的文件相对路径</param>
+            <param name="id">SQLID</param>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.DBConnectionTestService">
+            <summary>
+            数据库连接测试服务
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.DBConnectionTestService.Test(System.String,QWPlatform.DataIntface.DBType)">
+            <summary>
+            连接数据库进行测试
+            </summary>
+            <param name="dbStrCon">连接字符串</param>
+            <param name="dbType">数据库类型</param>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.ExeType">
+            <summary>
+            调用方式
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.ExeType.调用存储过程">
+            <summary>
+            过程调用
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.ExeType.执行SQL脚本">
+            <summary>
+            执行SQL语句
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.ExeType.调用接口程序集">
+            <summary>
+            调用程序内部代码
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.ExeType.外部WebService">
+            <summary>
+            调用外部WebService
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.ExeType.调用自定义程序集">
+            <summary>
+            自定义Dll的调用
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.ExeType.电子病历转Pdf">
+            <summary>
+            电子病历转Pdf
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.ExeReturnType">
+            <summary>
+            执行过程返回类型
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.ExeReturnType.无返回">
+            <summary>
+            执行后不需要返回
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.ExeReturnType.返回影响行数">
+            <summary>
+            返回执行后的影像行数
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.ExeReturnType.数字">
+            <summary>
+            包括小数
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.ExeReturnType.字符串">
+            <summary>
+            包括XML
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.ExeReturnType.日期时间">
+            <summary>
+            日期时间
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.ExeReturnType.Byte数组">
+            <summary>
+            二进制数据
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.ExeReturnType.数据表">
+            <summary>
+            输出数据表(通常是序列化后base64)
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.ExeReturnType.数据表转Json">
+            <summary>
+            将数据表转换为json字符串
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.ExeReturnType.数据表转XML">
+            <summary>
+            将结果表转换为XML字符串
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.ExeReturnType.字符串数组">
+            <summary>
+            字符串数组
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.ExeReturnType.Json字符串">
+            <summary>
+            将结果直接转换为json字符串
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.CallParamterType">
+            <summary>
+            调用WS的服务参数类型
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.CallParamterDirection">
+            <summary>
+            参数方向
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.CallParamterDirection.扩展参数">
+            <summary>
+            扩展参数适用于不参与数据库计算的参数
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.LogType">
+            <summary>
+            日志类型
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.LogType.普通消息">
+            <summary>
+            普通消息
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.LogType.警告消息">
+            <summary>
+            警告消息
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.LogType.错误消息">
+            <summary>
+            错误消息
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.EasyUIJsonType">
+            <summary>
+            EasyUI的Json类型
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.EasyUIJsonType.None">
+            <summary>
+            不采用Easyui的数据格式
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.EasyUIJsonType.Tree">
+            <summary>
+            树形控件json
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.EasyUIJsonType.TreeGrid">
+            <summary>
+            树形表格Json
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.EasyUIJsonType.DataGrid">
+            <summary>
+            表格控件
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.EasyUIJsonType.ComboBox">
+            <summary>
+            下拉选择控件
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.CallBackParameterSource">
+            <summary>
+            完成调用参数类型
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.CallBackParameterSource.组合接口定义参数">
+            <summary>
+            当前接口定义的参数
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.CallBackParameterSource.其它接口返回值">
+            <summary>
+            参数为接口的返回值
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.CallBackParameterSource.其它接口输出参数">
+            <summary>
+            接口的输出参数
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.WebType">
+            <summary>
+            服务实例类型
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.WebType.WebService">
+            <summary>
+            系统接口，调用webService
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.WebType.WebAPI">
+            <summary>
+            调用接口WebAPI
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.WebType.WCFService">
+            <summary>
+            WCF服务
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.ResourceType">
+            <summary>
+            资源类型（目前三种资源）
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.ResourceType.DataBaseSource">
+            <summary>
+            数据源资源
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.ResourceType.WebService">
+            <summary>
+            WebService
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.ResourceType.MessageQueue">
+            <summary>
+            消息队列
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.SubEventCallType">
+            <summary>
+            子级事件处理类型
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.TimeCyc">
+            <summary>
+            任务周期
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.SmallTimeCyc">
+            <summary>
+            自定义时执行的时分秒周期
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.VarDataType">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.DateTimeCheck">
+            <summary>
+            时间类型参数检查
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.DateTimeCheck.MaxDateTime">
+            <summary>
+            最大时间(设计使用)
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.DateTimeCheck.MinDateTime">
+            <summary>
+            最小时间(设计使用)
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.DateTimeCheck.ExecuteCheck">
+            <summary>
+            执行检查
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.AbstractParaCheck">
+            <summary>
+            参数检查接口
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.AbstractParaCheck.ParaType">
+            <summary>
+            定义的参数类型
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.AbstractParaCheck.ExecuteCheck">
+            <summary>
+            执行检查
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.AbstractParaCheck.CheckValue">
+            <summary>
+            检查值
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.ParaChecks.JsonCheck">
+            <summary>
+            JSON对象检查
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ParaChecks.JsonCheck.CheckNodeExists">
+            <summary>
+            检查节点属性必须存在的集合
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.ParaChecks.JsonCheck.ExecuteCheck">
+            <summary>
+            执行json检查
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.ParaChecks.NumberCheck">
+            <summary>
+            数字检查
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ParaChecks.NumberCheck.MaxValue">
+            <summary>
+            最大值
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ParaChecks.NumberCheck.MinValue">
+            <summary>
+            最小值
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ParaChecks.NumberCheck.IsInteger">
+            <summary>
+            必须是整数
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.ParaChecks.NumberCheck.ExecuteCheck">
+            <summary>
+            执行检查
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.ParaChecks.StringCheck">
+            <summary>
+            字符串检查
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ParaChecks.StringCheck.StringLength">
+            <summary>
+            预定义的字符串长度
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ParaChecks.StringCheck.RegExperssText">
+            <summary>
+            正则文本
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.ParaChecks.StringCheck.ExecuteCheck">
+            <summary>
+            执行检查
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.ParaChecks.XmlNodeCheck">
+            <summary>
+            XML节点检查
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ParaChecks.XmlNodeCheck.NodePath">
+            <summary>
+            节点路径及属性名称
+            如果属性名为空，则表示不检查属性
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.ParaChecks.XmlNodeCheck.ExecuteCheck">
+            <summary>
+            执行检查
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.ServiceModels.CallModel">
+            <summary>
+            调用信息
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.CallModel.ID">
+            <summary>
+            接口ID
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.CallModel.CallType">
+            <summary>
+            调用类型
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.CallModel.SqlText">
+            <summary>
+            执行的SQL脚本
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.CallModel.ProcedureName">
+            <summary>
+            存储过程名称
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.CallModel.AssemblysName">
+            <summary>
+            程序集名称
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.CallModel.ClassName">
+            <summary>
+            调用程序集名称
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.CallModel.WebServiceUrl">
+            <summary>
+            外部调用WebServiceUrl地址
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.CallModel.MethodName">
+            <summary>
+            执行方法名称
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.CallModel.Authkey">
+            <summary>
+            WebService授权码
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.CallModel.IsAuthkeyToSoapHeader">
+            <summary>
+            将授权码写入调用头中
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.CallModel.Parameters">
+            <summary>
+            该方法的参数
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.CallModel.WebServiceAssemble">
+            <summary>
+            调用多个WebService集合。
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.CallModel.WebServiceSplitChar">
+            <summary>
+            处理Web调用的字符串拆分符
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.CallModel.IsWebSourceAssignOrgId">
+            <summary>
+            指定web源的调用（机构ID）
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.CallModel.WebSourceAssignOrgIdParametes">
+            <summary>
+            指定web源的调用参数
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.CallModel.RefWebServiceID">
+            <summary>
+            调用外部WebServiceID
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.CallModel.EmrToPdfInfo">
+            <summary>
+            电子病历转换设计信息
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.ServiceModels.CallOutWebServiceModel">
+            <summary>
+            调用的外部WebService的模型
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.ServiceModels.CallOutWebServiceModel.#ctor(System.String,System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            构建一个调用外部地webService对象
+            </summary>
+            <param name="id">ID</param>
+            <param name="refWebServieID">引用服务的ID</param>
+            <param name="url">引用地址</param>
+            <param name="method">引用方法</param>
+            <param name="authkey">该方法的授码码</param>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.CallOutWebServiceModel.ID">
+            <summary>
+            集合调用WS的ID
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.CallOutWebServiceModel.RefWebServiceID">
+            <summary>
+            引用WebServiceID
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.CallOutWebServiceModel.WebUrl">
+            <summary>
+            Web服务地址
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.CallOutWebServiceModel.Method">
+            <summary>
+            Web服务的执行方法
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.CallOutWebServiceModel.Authkey">
+            <summary>
+            调用授权码
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.CallOutWebServiceModel.IsAuthkeyToSoapHeader">
+            <summary>
+            是否将授权信息写入SOAP头中
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.CallOutWebServiceModel.IsNotConnection">
+            <summary>
+            当前连接是不可用的
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.ServiceModels.DataSourceModel">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.DataSourceModel.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.DataSourceModel.数据源名">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.DataSourceModel.数据库类型">
+            <summary>
+            数据库类型
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.DataSourceModel.服务器IP">
+            <summary>
+            服务器IP
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.DataSourceModel.端口">
+            <summary>
+            服务器端口
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.DataSourceModel.实例名">
+            <summary>
+            数据库或实例名称
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.DataSourceModel.用户名">
+            <summary>
+            登录用户名
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.DataSourceModel.用户密码">
+            <summary>
+            登录密码
+            </summary> 
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.ServiceModels.DataSourceModel.GetConnectionStr">
+            <summary>
+            获取数据库连接串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.ServiceModels.DataSourceModel.TestOpen">
+            <summary>
+            测试数据库连接是否正常
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.ServiceModels.EmrToPdfModel">
+            <summary>
+            电子病历转换的业务设计实体
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.EmrToPdfModel.EmrToPdfPort">
+            <summary>
+            电子病历转换服务端口
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.EmrToPdfModel.EmrToPdfIpaddress">
+            <summary>
+            电子病历转PDF的IP地址
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.EmrToPdfModel.EmrIsDownFile">
+            <summary>
+            是否直接提供下载文件
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.EmrToPdfModel.SQLText">
+            <summary>
+            提取电子病历的SQL语句
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.ServiceModels.FunctionExportModel">
+            <summary>
+            接口导入导出模型
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.ServiceModels.FunctionExportModel.#ctor(QWPlatform.IService.ServiceInterface.ServiceModels.FunctionModel)">
+            <summary>
+            初始化导出接口
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.FunctionExportModel.FunModel">
+            <summary>
+            导出的主要接口定义内容
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.FunctionExportModel.DataSources">
+            <summary>
+            数据库数据源
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.FunctionExportModel.RefWebServices">
+            <summary>
+            引用的WebService的服务源
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.FunctionExportModel.Users">
+            <summary>
+            引用的用户源
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.FunctionExportModel.SQLScript">
+            <summary>
+            存储过程脚本内容
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.ServiceModels.FunctionExportModel.SaveToFile(System.String)">
+            <summary>
+            保存到文件
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.ServiceModels.FunctionModel">
+            <summary>
+            方法原型
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.FunctionModel.授权码通过heade传递">
+            <summary>
+            设置输出类型的类型
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.FunctionModel.A执行前事件代码">
+            <summary>
+            执行前的事件
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.FunctionModel.B执行后事件代码">
+            <summary>
+            执行后的事件代码
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.ServiceModels.FunctionModel.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.ServiceModels.FunctionModel.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.ServiceModels.MessageQueueModel">
+            <summary>
+            消息队列服务资源
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.MessageQueueModel.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.MessageQueueModel.名称">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.MessageQueueModel.IP地址">
+            <summary>
+            IP
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.MessageQueueModel.端口">
+            <summary>
+            Port
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.MessageQueueModel.站点ID">
+            <summary>
+            SiteID
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.ServiceModels.MessageQueueModel.TestOpen">
+            <summary>
+            测试连接
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.ServiceModels.ParameterModel">
+            <summary>
+            参数Model
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.ParameterModel.名称">
+            <summary>
+            参数名称
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.ParameterModel.类型">
+            <summary>
+            自定义参数类型
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.ParameterModel.长度">
+            <summary>
+            参数长度
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.ParameterModel.方向">
+            <summary>
+            参数方向
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.ParameterModel.说明">
+            <summary>
+            参数说明
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.ServiceModels.ParameterModel.GetBaseTypeString">
+            <summary>
+            将定义类型转换为基本类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.ServiceModels.ParameterModel.GetDefaultValue">
+            <summary>
+            根据类型获取初始化
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.ServiceModels.ProjectModel">
+            <summary>
+            项目Model
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.ServiceModels.ProjectModel.address">
+            <summary>
+            访问地址
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.ServiceModels.RefWebServiceModel">
+            <summary>
+            引用的WebService地址
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.RefWebServiceModel.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.RefWebServiceModel.名称">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.RefWebServiceModel.服务地址">
+             <summary>
+             Web路径
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.RefWebServiceModel.描述">
+            <summary>
+            服务的描述介绍
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.RefWebServiceModel.机构ID">
+            <summary>
+            机构ID
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.RefWebServiceModel.机构名称">
+            <summary>
+            机构名称
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.ServiceModels.RefWebServiceModel.TestOpen">
+            <summary>
+            用于测试web连接
+            </summary> 
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.ServiceModels.ResourceModel">
+            <summary>
+            资源管理列表
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.ResourceModel.ID">
+            <summary>
+            资源ID，也是ServerObj中的ID
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.ResourceModel.RType">
+            <summary>
+            消息资源类型（数据源，服务源，消息源）
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.ResourceModel.ServerObj">
+            <summary>
+            服务资源（由使用者根据服务资源类型）进行拆箱
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.ServiceModels.ResourceModel.GetModel``1">
+            <summary>
+            获取原始模型
+            </summary>
+            <typeparam name="T">泛型是指数据源，服务源，消息源</typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.ServiceModels.TimerTaskModel">
+            <summary>
+            定时任务模型
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.TimerTaskModel.ID">
+            <summary>
+            任务ID
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.TimerTaskModel.Name">
+            <summary>
+            任务名称 
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.TimerTaskModel.IsRepart">
+            <summary>
+            是否重复
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.TimerTaskModel.ExecuteCyeType">
+            <summary>
+            重复周期类型
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.TimerTaskModel.StartDate">
+            <summary>
+            开始日期
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.TimerTaskModel.Month">
+            <summary>
+            执行月份
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.TimerTaskModel.Day">
+            <summary>
+            具体哪天执行
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.TimerTaskModel.ExecuteTime">
+            <summary>
+            执行时间
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.TimerTaskModel.StopDate">
+            <summary>
+            停止日期
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.TimerTaskModel.ExecuteWeek">
+            <summary>
+            每周星期几执行
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.TimerTaskModel.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.TimerTaskModel.IsRun">
+            <summary>
+            记录当前的任务是否在运行中
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.TimerTaskModel.RunTime">
+            <summary>
+            运行时间
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.TimerTaskModel.IntervalTime">
+            <summary>
+            间隔周期
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.TimerTaskModel.IntervalTimeUnit">
+            <summary>
+            自定义间隔周期单位
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.ServiceModels.TransactionModel">
+            <summary>
+            事务model
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.ServiceModels.TransactionModel.#ctor(System.Int32)">
+            <summary>
+            开始一个事务新对象
+            </summary>
+            <param name="id">事务ID</param>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.TransactionModel.GroupID">
+            <summary>
+            事务组ID
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.TransactionModel.TimeOut">
+            <summary>
+            事务超时(默认为秒)
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.ServiceModels.TransactionModel.TransList">
+            <summary>
+            事务集合
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.ServiceModels.UserModel">
+            <summary>
+            用户模型
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.UserModel.ID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.UserModel.分组名称">
+            <summary>
+            默认用户组
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.UserModel.机构名称">
+            <summary>
+            机构名称
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.UserModel.调用系统名称">
+            <summary>
+            调用方系统名称
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.UserModel.备注">
+            <summary>
+            备注信息
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.UserModel.授权码">
+            <summary>
+            授权码
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.UserModel.登录账号">
+            <summary>
+            账号
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.UserModel.登录密码">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.UserModel.授权码生成时间">
+            <summary>
+            授权码生成时间
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.UserModel.公钥">
+            <summary>
+            公钥
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.UserModel.授权码有效期">
+            <summary>
+            授权码有效期
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.ServiceModels.WebServiceInfoModel">
+            <summary>
+            调用WebService的信息结构
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.WebServiceInfoModel.Parametes">
+            <summary>
+            参数管理
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.WebServiceInfoModel.Url">
+            <summary>
+            调用WebService的地址
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.ServiceModels.WebServiceInfoModel.MethodName">
+            <summary>
+            方法名称
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.ServiceModels.WebServiceInfoModel.AddParameters(System.String,System.Object)">
+            <summary>
+            添加参数
+            </summary>
+            <param name="name">参数名称</param>
+            <param name="value">参数值</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.ServiceModels.WebServiceInfoModel.GetParameters">
+            <summary>
+            获取参数信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.ServiceModels.WebServiceInfoModel.GetParametersHashtable">
+            <summary>
+            获取参数的hashtable
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.WebServiceRead">
+            <summary>
+            服务读取功能目录
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.WebServiceRead.GetFunctions(System.String,System.String)">
+            <summary>
+            获取功能目录
+            </summary>
+            <param name="userid">用户id</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.WebServiceRead.GetFunctions">
+            <summary>
+            获取所有功能目录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.WebServiceRead.GetFunctionJson(System.String,System.Collections.Generic.List{QWPlatform.IService.ServiceInterface.ServiceModels.FunctionModel},System.String,System.String)">
+            <summary>
+            获取功能Json
+            </summary>
+            <param name="id"></param>
+            <param name="functionlist"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.WebServiceRead.GetFunctionModel(System.String)">
+            <summary>
+            根据文件名称获取功能信息
+            </summary>
+            <param name="name">文件名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.WebServiceRead.GetProjectModel(System.String)">
+            <summary>
+            获取WebService实例名称
+            </summary>
+            <param name="projectid">功能ID</param>
+            <returns></returns> 
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.WebServiceRead.GetFunctionLogJson(System.String,System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            根据功能ID获取功能日志
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.WebServiceRead.UserLogin(System.String,System.String)">
+            <summary>
+            用户登录
+            </summary>
+            <param name="user"></param>
+            <param name="pwd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.WebServiceRead.DeleteFunctionLog(System.Int32,System.String,System.String)">
+            <summary>
+            删除接口日志
+            </summary>
+            <param name="type">日志类型</param>
+            <param name="orgName">调用机构名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.WebServiceRead.GetRefWebServiceUrlById(System.String)">
+            <summary>
+            获取WebService服务源
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.WebServiceRead.GetRefWebServiceModel(System.String)">
+            <summary>
+            获取对应的model
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.WebServiceRead.SaveDataSourceList(System.Collections.Generic.List{QWPlatform.IService.ServiceInterface.ServiceModels.DataSourceModel})">
+            <summary>
+            保存数据源
+            </summary>
+            <param name="list">数据源列表</param>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.WebServiceRead.SaveUserList(System.Collections.Generic.List{QWPlatform.IService.ServiceInterface.ServiceModels.UserModel})">
+            <summary>
+            保存用户列表
+            </summary>
+            <param name="list"></param>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.WebServiceRead.SaveRefWebServiceList(System.Collections.Generic.List{QWPlatform.IService.ServiceInterface.ServiceModels.RefWebServiceModel})">
+            <summary>
+            保存引用的WebService列表
+            </summary>
+            <param name="list"></param>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.WinEditUI.AuthKeyControl.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.WinEditUI.AuthKeyControl.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.WinEditUI.AuthKeyControl.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.WinEditUI.DataSourceControl">
+            <summary>
+            数据源控件
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.WinEditUI.DataSourceControl.DataSource">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.WinEditUI.DataSourceControl.DataSourceFile">
+            <summary>
+            数据源存储的文件
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.WinEditUI.DataSourceControl.#ctor(QWPlatform.IService.ServiceInterface.ServiceModels.DataSourceModel)">
+            <summary>
+            构造
+            </summary>
+            <param name="ds"></param>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.WinEditUI.DataSourceControl.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.WinEditUI.DataSourceControl.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.WinEditUI.DataSourceControl.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.WinEditUI.EventCodeControl">
+            <summary>
+            事件代码编辑器
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.WinEditUI.FrmEventCode.CodeText">
+            <summary>
+            代码内容
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.WinEditUI.FrmEventCode.#ctor(System.String)">
+            <summary>
+            初始化事件代码编辑器
+            </summary>
+            <param name="code">代码</param>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.WinEditUI.FrmEventCode.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.WinEditUI.FrmEventCode.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.WinEditUI.FrmEventCode.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.WinEditUI.FrmParaCheck.ParaCheck">
+            <summary>
+            检查对象
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.WinEditUI.FrmParaCheck.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.WinEditUI.FrmParaCheck.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.WinEditUI.FrmParaCheck.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.WinEditUI.FrmTextEdit">
+            <summary>
+            调用模型
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.WinEditUI.FrmTextEdit.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.WinEditUI.FrmTextEdit.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.WinEditUI.FrmTextEdit.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.WinEditUI.FrmXml.Value">
+            <summary>
+            编辑值
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.WinEditUI.FrmXml.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.WinEditUI.FrmXml.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.WinEditUI.FrmXml.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.ServiceInterface.WinEditUI.ParaCheckEditor">
+            <summary>
+            参数检查
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ServiceInterface.WinEditUI.UserAuth.AuthUsers">
+            <summary>
+            哪些被授权的用户
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ServiceInterface.WinEditUI.UserAuth.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.WinEditUI.UserAuth.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:QWPlatform.IService.ServiceInterface.WinEditUI.UserAuth.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.CSharpWebServiceBuilder">
+            <summary>
+            使用C#的方式实现的调用WebService的接口
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.CSharpWebServiceBuilder.callWebServiceInfo">
+            <summary>
+            调用WebService的信息结构
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.CSharpWebServiceBuilder.Execute">
+            <summary>
+            执行调用WebService
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.IService.CSharpWebServiceBuilder.Method(System.String)">
+            <summary>
+            调用WebServie的方法
+            </summary>
+            <param name="methodName">方法名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.IService.CSharpWebServiceBuilder.Parameters(System.String,System.Object)">
+            <summary>
+            参数添加
+            </summary>
+            <param name="name">参数名称</param>
+            <param name="value">参数值</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.IService.CSharpWebServiceBuilder.Url(System.String)">
+            <summary>
+            设置调用地址
+            </summary>
+            <param name="address">调用地址</param>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.IService.JavaWebServiceBuilder">
+            <summary>
+            调用Java的接口
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.JavaWebServiceBuilder.callWebServiceInfo">
+            <summary>
+            调用WebService的信息结构
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.JavaWebServiceBuilder.Execute">
+            <summary>
+            执行调用
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.IService.WebServiceInterface.IWebService">
+            <summary>
+            WebService基础接口
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.WebServiceInterface.IWebService.CallFunction(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            WebService调用方法入口
+            </summary>
+            <param name="dict">接口参数</param>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.IService.WebServiceInterface.IWinService">
+            <summary>
+            Windows服务接口
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.WebServiceInterface.IWinService.Start">
+            <summary>
+            启用服务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.IService.WebServiceInterface.IWinService.Stop">
+            <summary>
+            停止服务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.IService.WebServiceInterface.IWinService.ReStart">
+            <summary>
+            重启服务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.IService.WebServiceInterface.WebServiceFactory">
+            <summary>
+            WebService工厂
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.WebServiceInterface.WebServiceFactory.LoadWebServiceAssemblys(System.String,System.String)">
+            <summary>
+            创建实例
+            </summary>
+            <param name="path">程序集名称</param>
+            <param name="className">加载的类名与命名空间</param>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.IService.WebService.CallInterfaceService">
+            <summary>
+            执行Model
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.WebService.CallInterfaceService.#ctor(System.String,QWPlatform.DataIntface.DBType,QWPlatform.IService.ServiceInterface.ServiceModels.FunctionModel,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            创建执行接口对象
+            </summary>
+            <param name="conStr">连接字符串</param>
+            <param name="dbType"></param>
+            <param name="fmodel"></param>
+            <param name="paras"></param>
+        </member>
+        <member name="M:QWPlatform.IService.WebService.CallInterfaceService.#ctor(System.String,QWPlatform.DataIntface.DBType,QWPlatform.IService.ServiceInterface.ServiceModels.FunctionModel,System.Collections.Generic.Dictionary{System.String,System.Object},System.String)">
+            <summary>
+            创建执行接口对象
+            </summary>
+            <param name="conStr">数据库连接字符串</param>
+            <param name="dbType">执行类型</param>
+            <param name="fmodel">功能原型</param>
+            <param name="paras">参数</param>
+            <param name="webServiceModel">外部服务地址</param>
+        </member>
+        <member name="M:QWPlatform.IService.WebService.CallInterfaceService.Execute(System.String)">
+            <summary>
+            执行对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.IService.WebService.OutWebServiceModel">
+            <summary>
+            调用外部WebService的返回信息（用于多个webService的分布调用参数集中处理）
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.WebService.OutWebServiceModel.Result">
+            <summary>
+            返回值 
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.WebService.OutWebServiceModel.Args">
+            <summary>
+            执行参数
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.WebService.DBConnectionTest">
+            <summary>
+            数据库连接测试对象
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.WebService.DBConnectionTest.TestConnection(System.String,QWPlatform.DataIntface.DBType)">
+            <summary>
+            测试数据库连接
+            </summary>
+            <param name="conStr"></param>
+            <param name="dbtype"></param>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.IService.WebService.ExecuteWebService">
+            <summary>
+            执行WebService
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.WebService.ExecuteWebService.ProjectList">
+            <summary>
+            获取所有Web服务接口实例
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.WebService.ExecuteWebService.FunctionList">
+            <summary>
+            获取所有接口功能列表
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.WebService.ExecuteWebService.UserList">
+            <summary>
+            获取所有用户目录
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.WebService.ExecuteWebService.RefWebServices">
+            <summary>
+            返回引用的Web数据源列表
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.WebService.ExecuteWebService.DataSourceList">
+            <summary>
+            返回当前工具的所有数据源
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.WebService.ExecuteWebService.GetToken(System.String,System.String)">
+            <summary>
+            根据用户名与密码获取用户的Token
+            </summary>
+            <param name="userName">用户名</param>
+            <param name="password">用户密码</param>
+            <returns>返回对应的Token</returns>
+        </member>
+        <member name="M:QWPlatform.IService.WebService.ExecuteWebService.Call(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            带有参数的动态执行WebService
+            </summary>
+            <param name="authkey">授权码</param>
+            <param name="functionid">功能ID</param>
+            <param name="dict">调用参数(包括输出参数)</param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.IService.WebService.ExecuteWebService.Call(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},QWPlatform.SystemLibrary.Service.QWPlatformSoapHeader)">
+            <summary>
+            动态调用WebService，生成的代码调用
+            </summary>
+            <param name="authkey"></param>
+            <param name="functionid"></param>
+            <param name="dict"></param>
+            <param name="header"></param>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.IService.WebService.NetWorkData">
+            <summary>
+            网络连接数据管理
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.WebService.NetWorkData.Send(System.String,System.Int32,System.Object)">
+            <summary>
+            发送并接收数据
+            </summary>
+            <param name="host">目标地址</param>
+            <param name="port">端口</param>
+            <param name="data">数据</param>
+            <returns>返回的Byte[]内容</returns>
+        </member>
+        <member name="T:QWPlatform.IService.WebService.WebServiceTransaction">
+            <summary>
+            WebService事务管理(主要针对数据库级别的事务操作)
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.Global">
+            <summary>
+            全局参数
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.Global.Version">
+            <summary>
+            版本信息
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.Global.CompanyName">
+            <summary>
+            公司名称
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ZLBase.Controls.EventProcessControl.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.Controls.EventProcessControl.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.Controls.EventProcessControl.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要修改
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ZLBase.Controls.FrmEventEdit.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.Controls.FrmEventEdit.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.Controls.FrmEventEdit.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ZLBase.Controls.FrmTimeTask.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.Controls.FrmTimeTask.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.Controls.FrmTimeTask.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.Controls.ParameterCollectionControl.GetParameters">
+            <summary>
+            获取参数列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.Controls.ParameterCollectionControl.LoadParameters(System.Collections.Generic.List{QWPlatform.IService.ZLBase.Model.ExecuteParamterModel})">
+            <summary>
+            根据参数自动生成参数个数
+            </summary>
+            <param name="list"></param>
+        </member>
+        <member name="F:QWPlatform.IService.ZLBase.Controls.ParameterCollectionControl.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.Controls.ParameterCollectionControl.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.Controls.ParameterCollectionControl.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要修改
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.Controls.ParameterControl.GetParaModels">
+            <summary>
+            获取用户设置的参数集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:QWPlatform.IService.ZLBase.Controls.ParameterControl.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.Controls.ParameterControl.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.Controls.ParameterControl.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要修改
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ZLBase.Controls.Timers.CustomTimeControl.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.Controls.Timers.CustomTimeControl.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.Controls.Timers.CustomTimeControl.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要修改
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ZLBase.Controls.Timers.DateDayControl.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.Controls.Timers.DateDayControl.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.Controls.Timers.DateDayControl.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要修改
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ZLBase.Controls.Timers.DateMonthControl.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.Controls.Timers.DateMonthControl.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.Controls.Timers.DateMonthControl.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要修改
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ZLBase.Controls.Timers.DateWeekControl.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.Controls.Timers.DateWeekControl.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.Controls.Timers.DateWeekControl.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要修改
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ZLBase.Controls.Timers.DateYearControl.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.Controls.Timers.DateYearControl.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.Controls.Timers.DateYearControl.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要修改
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.Controls.Timers.TimeBaseControl.LoadDataToControl">
+            <summary>
+            加载数据
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.Controls.Timers.TimeBaseControl.CheckInput">
+            <summary>
+            检查录入项目
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.Controls.Timers.TimeBaseControl.SetModel">
+            <summary>
+            给当前model赋值
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ZLBase.Controls.Timers.TimeBaseControl.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.Controls.Timers.TimeBaseControl.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.Controls.Timers.TimeBaseControl.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要修改
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="F:QWPlatform.IService.ZLBase.Controls.VarDefineControl.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.Controls.VarDefineControl.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.Controls.VarDefineControl.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要修改
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.DataService.DBService.GetDataTables(QWPlatform.DataIntface.DBType,System.String)">
+            <summary>
+            根据连接字符串获取数据表
+            </summary>
+            <param name="dbtype"></param>
+            <param name="conStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.DataService.DBService.ResetDataBase(System.String,QWPlatform.DataIntface.DBType)">
+            <summary>
+            重置数据源
+            </summary>
+            <param name="con"></param>
+            <param name="dbtype"></param>
+        </member>
+        <member name="T:QWPlatform.IService.ZLBase.DataService.EventProcessService">
+            <summary>
+            事件处理过程
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.DataService.EventProcessService.ResourceList">
+            <summary>
+            所有的资源列表（数据库,ws,queue地址等）
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.DataService.EventProcessService.EventVars">
+            <summary>
+            返回当前执行结果的变量集合
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.ZLBase.DataService.TableListenService">
+            <summary>
+            数据表监听服务
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.DataService.TableListenService.StartListener(QWPlatform.IService.ZLBase.Model.ListenerModel)">
+            <summary>
+            开始监听数据表
+            </summary>
+            <param name="model"></param>
+            <param name="dbSrouce"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.DataService.TableListenService.Stop(QWPlatform.IService.ZLBase.Model.ListenerModel)">
+            <summary>
+            向数据库发起注销
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="T:QWPlatform.IService.ZLBase.FrmParamater">
+            <summary>
+            基础服务的参数配置
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.FrmParamater.#ctor">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.FrmParamater.SetParameter(System.Object)">
+            <summary>
+            设置为参数信息
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.FrmParamater.GetParameter">
+            <summary>
+            获取参数信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.FrmParamater.GetOtherParameter">
+            <summary>
+            获取其它配置的参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.FrmParamater.SetOtherParameter(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            获取到其它插件的参数
+            </summary>
+            <param name="dict">返回的其它插件参数</param>
+        </member>
+        <member name="F:QWPlatform.IService.ZLBase.FrmParamater.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.FrmParamater.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.FrmParamater.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.ZLBase.IWinService">
+            <summary>
+            所有基础服务的接口类
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.IWinService.Name">
+            <summary>
+            功能名称
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.IWinService.Start(System.Object)">
+            <summary>
+            启动服务
+            </summary>
+            <param name="state">传入指定的参数内容</param>
+            <returns>返回启动结果</returns>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.IWinService.Stop">
+            <summary>
+            停止服务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.IWinService.Settings">
+            <summary>
+            调用设置窗口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.IWinService.ReceiveData(System.Object)">
+            <summary>
+            向组件发送消息
+            </summary>
+            <param name="data">消息内容</param>
+            <returns>返回是否成功</returns>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.IWinService.SetResource(System.Object)">
+            <summary>
+            向各实例对象传递服务配置信息
+            </summary>
+            <param name="data"><![CDATA[List<ResourceModel>]]></param>
+        </member>
+        <member name="T:QWPlatform.IService.ZLBase.Model.AbstractEventBase">
+            <summary>
+            事件抽象类
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.AbstractEventBase.SourceID">
+            <summary>
+            资源ID，可能是数据源，队列源，服务源ID
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.ZLBase.Model.ExecuteParamterModel">
+            <summary>
+            任务的具体参数模型
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.ExecuteParamterModel.Name">
+            <summary>
+            参数名称
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.ExecuteParamterModel.VarID">
+            <summary>
+            选择的变量名称
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.ExecuteParamterModel.ParaDirection">
+            <summary>
+            执行的参数方向
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.ExecuteParamterModel.ToJson">
+            <summary>
+            是否需要将变量转换为Json数据
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.ZLBase.Model.ListenerModel">
+            <summary>
+            监听表的模型
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.Model.ListenerModel.SetDBSource(QWPlatform.IService.ServiceInterface.ServiceModels.DataSourceModel)">
+            <summary>
+            注入数据源
+            </summary>
+            <param name="dbModel"></param>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.ListenerModel.DataSourceID">
+            <summary>
+            设置的数据源
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.ListenerModel.Tables">
+            <summary>
+            监听的表集合
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.ListenerModel.EventProcss">
+            <summary>
+            事件处理过程（key:表名，EventProcess处理过程）
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.ListenerModel.TableEvent">
+            <summary>
+            每个表的处理事件类型
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.Model.ListenerModel.GetCurrentDataModel">
+            <summary>
+            获取当前数据源
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:QWPlatform.IService.ZLBase.Model.SingleEventModel">
+            <summary>
+            执行过程模型定义(单个模型)
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.SingleEventModel.ID">
+            <summary>
+            主键ID
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.SingleEventModel.Name">
+            <summary>
+            事件处理对象名称
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.SingleEventModel.SubType">
+            <summary>
+            调用的类型
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.SingleEventModel.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.SingleEventModel.CallObject">
+            <summary>
+            调用对象
+            </summary>
+        </member>
+        <member name="M:QWPlatform.IService.ZLBase.Model.SingleEventModel.SetSubObjID">
+            <summary>
+            设置子级节点的ID
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.ZLBase.Model.EventProcessModel">
+            <summary>
+            事件的调用集合模型（事件中包括的处理f）
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.EventProcessModel.ID">
+            <summary>
+            唯一ID
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.EventProcessModel.Name">
+            <summary>
+            名称（可能是表名，也有可能是定时器名称）
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.EventProcessModel.ExeObject">
+            <summary>
+            执行对象（可以是定时器对象，也可能是监听表对象）
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.EventProcessModel.Vars">
+            <summary>
+            声明的变量集合
+            </summary> 
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.EventProcessModel.ExecuteSubFunctions">
+            <summary>
+            执行过程集合
+            </summary> 
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.EventExecuteQueueModel.QueueName">
+            <summary>
+            队列名称
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.EventExecuteQueueModel.VarID">
+            <summary>
+            队列参数ID
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.EventExecuteQueueModel.IsSerialize">
+            <summary>
+            是否序列化
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.ZLBase.Model.EventExecuteProcModel">
+            <summary>
+            执行存储过程
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.EventExecuteProcModel.ProcName">
+            <summary>
+            过程名称
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.EventExecuteProcModel.SQLParameters">
+            <summary>
+            执行过程的参数集合
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.EventExecuteSQLModel.SQLText">
+            <summary>
+            SQL脚本
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.EventExecuteSQLModel.SQLParameters">
+            <summary>
+            定义的SQL参数集合
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.EventExecuteSQLModel.ExeResoultVarBinds">
+            <summary>
+            查询结果列与变量进行绑定,存储的是列名称,与变量ID
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.EventExecuteSQLModel.ResoultSaveVarID">
+            <summary>
+            结果输出到变量名称
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.EventExecuteSQLModel.ResoultToJson">
+            <summary>
+            是否将结果转换为Json数据
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.EventExecuteWebServiceModel.WebAddress">
+            <summary>
+            调用地址
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.EventExecuteWebServiceModel.IsRefWebService">
+            <summary>
+            是否为引用的WebService
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.EventExecuteWebServiceModel.WebMethod">
+            <summary>
+            调用方法
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.EventExecuteWebServiceModel.CallParameters">
+            <summary>
+            调用参数集合
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.EventExecuteWebServiceModel.ResoultSaveVarID">
+            <summary>
+            返回的结果输出到变量名称
+            </summary>
+        </member>
+        <member name="T:QWPlatform.IService.ZLBase.Model.EventVarDefineModel">
+            <summary>
+            事件变量定义
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.EventVarDefineModel.ID">
+            <summary>
+            变量ID
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.EventVarDefineModel.名称">
+            <summary>
+            变量名称
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.EventVarDefineModel.类型">
+            <summary>
+            变量类型
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.EventVarDefineModel.值">
+            <summary>
+            变量值
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.EventVarDefineModel.备注">
+            <summary>
+            备注信息
+            </summary>
+        </member>
+        <member name="P:QWPlatform.IService.ZLBase.Model.EventVarDefineModel.显示名称">
+            <summary>
+            显示当前变量及数据类型
+            </summary>
+        </member>
+    </members>
+</doc>

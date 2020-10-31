@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>ZLSoft.UP.Basics</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Security\SM4.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.3" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.3" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.3" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="3.1.3" />
+    <PackageReference Include="Microsoft.Orleans.Client" Version="3.1.6" />
+    <PackageReference Include="Microsoft.Orleans.Clustering.AdoNet" Version="3.1.6" />
+    <PackageReference Include="Microsoft.Orleans.CodeGenerator.MSBuild" Version="3.1.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Orleans.Core" Version="3.1.6" />
+    <PackageReference Include="Microsoft.Orleans.EventSourcing" Version="3.1.6" />
+    <PackageReference Include="Microsoft.Orleans.OrleansRuntime" Version="3.1.6" />
+    <PackageReference Include="Microsoft.Orleans.Persistence.AdoNet" Version="3.1.6" />
+    <PackageReference Include="Microsoft.Orleans.Serialization.Bond" Version="3.1.6" />
+    <PackageReference Include="OrleansDashboard" Version="3.0.8" />
+    <PackageReference Include="RestSharp" Version="106.11.4" />
+    <PackageReference Include="ZLSoft.QWPlatform.DBServiceCore" Version="3.0.7.23" />
+    <PackageReference Include="ZLSoft.QWPlatform.SystemLibraryCore" Version="3.0.5.19" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ChnCharInfo">
+      <HintPath>..\..\Assemblys\ChnCharInfo.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy $(TargetDir)ZLSoft.UP.Basics.dll  $(SolutionDir)..\zlsoft.up\Orleans-Server" />
+  </Target>
+
+</Project>

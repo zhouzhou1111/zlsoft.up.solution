@@ -1,0 +1,35 @@
+﻿/*以下代码由原型工具自动生成
+ *如有需要请自行修改
+ *
+ */
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using QWPlatform.Models;
+using QWPlatform.DataIntface.Database;
+
+namespace $modelnamespace
+{
+    /// <summary>
+    /// $tabname
+    /// </summary>
+    [Table("$tabname")]
+    public class $modelName : DataModelBase
+    {
+        //默认不带数据工厂构造
+        public $modelName()
+        {
+
+        }
+
+        //带有数据工厂的实例化,可以直接操作数据
+        public $modelName(DataFactory factory)
+            : base(factory)
+        {
+
+        }
+
+	$codes
+    }
+}
